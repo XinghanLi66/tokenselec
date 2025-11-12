@@ -59,30 +59,29 @@ COMBINATIONS = [
 def run_prepare(policy: str, temperature: float, args) -> Path:
     """Invoke prepare_data.py for one policy & temperature.
 
-    Returns path to the *train* parquet produced.
+    Returns path to the dataset directory created under base_output_dir.
     """
     input_parquet = Path("data-preparation/input-data") / f"{policy}_r128.parquet"
     if not input_parquet.exists():
         raise FileNotFoundError(f"Missing input parquet: {input_parquet}")
 
-    out_dir = Path(args.base_output_dir) / policy / f"temp_{temperature}" / "raw"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    base_name = f"{policy}_temp{temperature}".replace(".", "_")
-    output_parquet = out_dir / f"{base_name}.parquet"
-    output_csv = out_dir / f"{base_name}.csv"
+    # Dataset directory name: e.g., data/pi1_temp_0_2
+    dataset_name = f"{policy}_temp_{str(temperature).replace('.', '_')}"
+    dataset_dir = Path(args.base_output_dir) / dataset_name
+    dataset_dir.mkdir(parents=True, exist_ok=True)
 
     cmd = [
         sys.executable,
         "data-preparation/prepare_data.py",
         "--model_path", args.model_path,
         "--input_data", str(input_parquet),
-        "--output_parquet", str(output_parquet),
-        "--output_csv", str(output_csv),
+        "--output_dir", str(dataset_dir),
         "--n_samples", str(args.n_samples),
         "--n_train", str(args.n_train),
         "--batch_size", str(args.batch_size),
         "--temperature", str(temperature),
         "--precision", args.precision,
+        "--split", "none",
     ]
 
     print(f"[run] {' '.join(cmd)}")
@@ -91,16 +90,12 @@ def run_prepare(policy: str, temperature: float, args) -> Path:
     else:
         print("[dry-run] skipped generation")
 
-    train_parquet = output_parquet  # valid file will have suffix _valid.parquet
-    return train_parquet
+    return dataset_dir
 
 
-def collect_split_paths(policy: str, temperature: float, args):
-    base_name = f"{policy}_temp{temperature}".replace(".", "_")
-    out_dir = Path(args.base_output_dir) / policy / f"temp_{temperature}" / "raw"
-    train = out_dir / f"{base_name}.parquet"
-    valid = out_dir / f"{base_name}_valid.parquet"
-    return train, valid
+def get_run_files(dataset_dir: Path):
+    """Return paths to correct/incorrect parquet files for a run."""
+    return dataset_dir / "correct.parquet", dataset_dir / "incorrect.parquet"
 
 
 def load_responses(path: Path) -> pd.DataFrame:
@@ -115,81 +110,56 @@ def load_responses(path: Path) -> pd.DataFrame:
     return df
 
 
-def merge_and_equal_split(dfs: list[pd.DataFrame], output_dir: Path, prefix: str):
+def merge_and_write(dfs: list[pd.DataFrame], output_dir: Path, filename_stem: str):
     output_dir.mkdir(parents=True, exist_ok=True)
     merged = pd.concat(dfs, ignore_index=True)
     merged = merged.sample(frac=1.0, random_state=42).reset_index(drop=True)
-    n_total = len(merged)
-    n_half = n_total // 2
-    train = merged.iloc[:n_half].copy()
-    valid = merged.iloc[n_half: n_half * 2].copy()
-    print(f"[combine] total={n_total} train={len(train)} valid={len(valid)}")
-    train.to_parquet(output_dir / f"{prefix}_train.parquet", index=False)
-    valid.to_parquet(output_dir / f"{prefix}_valid.parquet", index=False)
-    train.to_csv(output_dir / f"{prefix}_train.csv", index=False)
-    valid.to_csv(output_dir / f"{prefix}_valid.csv", index=False)
-    return train, valid
-
-
-def equalize_and_save_single(policy: str, temperature: float, args):
-    """Downsample train/valid to equal sizes and save under a 'final' folder."""
-    train_p, valid_p = collect_split_paths(policy, temperature, args)
-    train_df = load_responses(train_p)
-    valid_df = load_responses(valid_p)
-    equal_n = min(len(train_df), len(valid_df), args.n_train)
-    if equal_n == 0:
-        raise ValueError(f"No data to equalize for {policy} temp={temperature}.")
-    train_eq = train_df.sample(n=equal_n, random_state=42).reset_index(drop=True)
-    valid_eq = valid_df.sample(n=equal_n, random_state=43).reset_index(drop=True)
-    out_dir = Path(args.base_output_dir) / policy / f"temp_{temperature}" / "final"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    prefix = f"{policy}_temp{temperature}".replace(".", "_")
-    train_eq.to_parquet(out_dir / f"{prefix}_train.parquet", index=False)
-    valid_eq.to_parquet(out_dir / f"{prefix}_valid.parquet", index=False)
-    train_eq.to_csv(out_dir / f"{prefix}_train.csv", index=False)
-    valid_eq.to_csv(out_dir / f"{prefix}_valid.csv", index=False)
-    return out_dir
+    merged.to_parquet(output_dir / f"{filename_stem}.parquet", index=False)
+    merged.to_csv(output_dir / f"{filename_stem}.csv", index=False)
+    print(f"[combine] wrote {len(merged)} rows -> {output_dir / (filename_stem + '.{parquet,csv}')}")
+    return merged
 
 
 def generate_single_policy_temperatures(args):
     results = []
     for policy in POLICIES_SINGLE:
         for temp in TEMPERATURES:
-            run_prepare(policy, temp, args)
-            final_dir = equalize_and_save_single(policy, temp, args)
-            train_p, valid_p = collect_split_paths(policy, temp, args)
-            results.append((policy, temp, train_p, valid_p, final_dir))
+            dataset_dir = run_prepare(policy, temp, args)
+            c_pq, i_pq = get_run_files(dataset_dir)
+            results.append((policy, temp, dataset_dir, c_pq, i_pq))
     return results
 
 
 def generate_combinations(args):
-    """For each combination run per-policy generation at temperature=1.0 if not already done, then merge outputs."""
+    """For each combination at temperature=1.0, merge correct and incorrect sets into a single dataset directory under data/."""
     combo_outputs = []
     for combo in COMBINATIONS:
         print(f"[combo] building combination: {'+'.join(combo)}")
-        per_policy_train_dfs = []
-        per_policy_valid_dfs = []
+        correct_dfs = []
+        incorrect_dfs = []
         for policy in combo:
-            # Ensure single-policy temp=1.0 run exists (generate if missing)
-            train_p, valid_p = collect_split_paths(policy, 1.0, args)
-            if not train_p.exists() or not valid_p.exists():
-                print(f"[combo] missing generation for {policy} temp=1.0; generating now.")
-                run_prepare(policy, 1.0, args)
-            per_policy_train_dfs.append(load_responses(train_p))
-            per_policy_valid_dfs.append(load_responses(valid_p))
+            dataset_name = f"{policy}_temp_{str(1.0).replace('.', '_')}"
+            dataset_dir = Path(args.base_output_dir) / dataset_name
+            c_pq, i_pq = dataset_dir / "correct.parquet", dataset_dir / "incorrect.parquet"
+            if not c_pq.exists() or not i_pq.exists():
+                print(f"[combo] missing run for {policy} temp=1.0; generating now.")
+                dataset_dir = run_prepare(policy, 1.0, args)
+                c_pq, i_pq = get_run_files(dataset_dir)
+            correct_dfs.append(load_responses(c_pq))
+            incorrect_dfs.append(load_responses(i_pq))
 
-        merged_train_valid = per_policy_train_dfs + per_policy_valid_dfs
         combo_name = "_".join(combo)
-        out_dir = Path(args.base_output_dir) / "combined" / combo_name
-        merge_and_equal_split(merged_train_valid, out_dir, prefix=combo_name)
-        combo_outputs.append(combo_name)
+        out_dir = Path(args.base_output_dir) / combo_name
+        merge_and_write(correct_dfs, out_dir, filename_stem="correct")
+        merge_and_write(incorrect_dfs, out_dir, filename_stem="incorrect")
+        combo_outputs.append(str(out_dir))
     return combo_outputs
 
 
 def parse_args():
     p = argparse.ArgumentParser(description="Generate diverse datasets via prepare_data.py orchestration.")
     p.add_argument("--model_path", type=str, default="/homes/gws/lxh22/models/Qwen2.5-Math-1.5B")
-    p.add_argument("--base_output_dir", type=str, default="generated-data")
+    p.add_argument("--base_output_dir", type=str, default="data")
     p.add_argument("--n_samples", type=int, default=8000, help="Samples to generate per run (pre-filter).")
     p.add_argument("--n_train", type=int, default=4000, help="Train samples to keep; valid will be the remainder from prepare_data then rebalanced later for combos.")
     p.add_argument("--batch_size", type=int, default=256)
@@ -202,16 +172,16 @@ def main():
     args = parse_args()
     Path(args.base_output_dir).mkdir(parents=True, exist_ok=True)
 
-    print("=== Phase 1: pi1 temperature sweep ===")
+    print("=== Phase 1: pi1 temperature sweep (no train/valid split) ===")
     single_runs = generate_single_policy_temperatures(args)
-    for policy, temp, train_p, valid_p in single_runs:
-        print(f"[done] {policy} temp={temp} train={train_p} valid={valid_p}")
+    for policy, temp, dataset_dir, c_pq, i_pq in single_runs:
+        print(f"[done] {policy} temp={temp} -> {dataset_dir} (correct/incorrect)")
 
-    print("\n=== Phase 2: Combinations at temp=1.0 ===")
+    print("\n=== Phase 2: Combinations at temp=1.0 (merged correct/incorrect) ===")
     combos = generate_combinations(args)
     print(f"[complete] combinations generated: {combos}")
 
-    print("\nAll done. You can inspect generated parquet/csv under", args.base_output_dir)
+    print("\nAll done. You can inspect datasets under:", args.base_output_dir)
 
 
 if __name__ == "__main__":
