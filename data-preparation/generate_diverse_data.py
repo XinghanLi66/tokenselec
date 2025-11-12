@@ -19,12 +19,12 @@ You can customize parameters via CLI flags.
 Example usage (inside repo root):
     python data-preparation/generate_diverse_data.py \
         --model_path /homes/gws/lxh22/models/Qwen2.5-Math-1.5B \
-        --base_output_dir generated-data \
-        --n_samples 8000 --n_train 4000
+        --base_output_dir data \
+        --n_samples 16000
 
 After completion you'll have directories:
-  generated-data/pi1/temp_0.2/ ... etc
-  generated-data/combined/pi1_pi2/ ... etc
+  data/pi1/temp_0.2/ ... etc
+  data/combined/pi1_pi2/ ... etc
 
 Requires: pandas.
 Heavy generation dependencies (accelerate, transformers, etc.) must be
@@ -126,23 +126,31 @@ def generate_single_policy_temperatures(args):
 
 
 def generate_combinations(args):
-    """For each combination at temperature=1.0, concatenate input dataframes first, then run one generation."""
+    """For each combination at temperature=1.0, concatenate input dataframes first, then run one generation.
+
+    Concatenated parquet is stored under data-preparation/input-data/<combo>.parquet.
+    If it already exists, it is reused without re-writing.
+    """
     combo_outputs = []
-    tmp_dir = Path(args.base_output_dir) / "_tmp_inputs"
-    tmp_dir.mkdir(parents=True, exist_ok=True)
+    input_dir = Path("data-preparation/input-data")
+    input_dir.mkdir(parents=True, exist_ok=True)
     for combo in COMBINATIONS:
         print(f"[combo] building combination: {'+'.join(combo)}")
         # Load input parquets and concatenate
         dfs = []
         for policy in combo:
-            p = Path("data-preparation/input-data") / f"{policy}_r128.parquet"
+            p = input_dir / f"{policy}_r128.parquet"
             if not p.exists():
                 raise FileNotFoundError(f"Missing input parquet: {p}")
             dfs.append(pd.read_parquet(p))
         concat_df = pd.concat(dfs, ignore_index=True)
         combo_name = "_".join(combo)
-        concat_path = tmp_dir / f"{combo_name}.parquet"
-        concat_df.to_parquet(concat_path, index=False)
+        concat_path = input_dir / f"{combo_name}.parquet"
+        if not concat_path.exists():
+            concat_df.to_parquet(concat_path, index=False)
+            print(f"[combo] wrote concatenated input -> {concat_path}")
+        else:
+            print(f"[combo] using existing concatenated input -> {concat_path}")
 
         # Output dataset dir
         out_dir = Path(args.base_output_dir) / combo_name
