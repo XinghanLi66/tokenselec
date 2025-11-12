@@ -2,13 +2,9 @@
 
 Phases:
 1. Single-source (pi1) generations across temperature sweep: 0.2,0.4,0.6,0.8,1.0.
-2. Combination datasets at temperature=1.0 formed by union of individual
-   generations: (pi1+pi2), (pi1+pi2+pi13), (pi1+pi2+pi13+pi1209).
-
-We DO NOT modify `prepare_data.py`; instead we call it repeatedly, then
-merge its outputs. Each call to `prepare_data.py` produces a *train*
-and *valid* parquet/csv pair; we ensure final merged outputs have
-equal train/valid sizes (50/50 split) by re-shuffling and re-splitting.
+2. Combination datasets at temperature=1.0 formed by concatenating their
+    input dataframes first, then running one generation over the union:
+    (pi1+pi2), (pi1+pi2+pi13), (pi1+pi2+pi13+pi1209).
 
 Assumptions:
 - Each input parquet lives under `data-preparation/input-data/{policy}_r128.parquet`.
@@ -32,7 +28,7 @@ After completion you'll have directories:
 
 Requires: pandas.
 Heavy generation dependencies (accelerate, transformers, etc.) must be
-installed for prepare_data.py to run.
+installed for generation to run.
 """
 
 from __future__ import annotations
@@ -56,8 +52,8 @@ COMBINATIONS = [
 ]
 
 
-def run_prepare(policy: str, temperature: float, args) -> Path:
-    """Invoke prepare_data.py for one policy & temperature.
+def run_single(policy: str, temperature: float, args) -> Path:
+    """Invoke generate_all_responses.py for one policy & temperature.
 
     Returns path to the dataset directory created under base_output_dir.
     """
@@ -72,16 +68,14 @@ def run_prepare(policy: str, temperature: float, args) -> Path:
 
     cmd = [
         sys.executable,
-        "data-preparation/prepare_data.py",
+        "data-preparation/generate_all_responses.py",
         "--model_path", args.model_path,
         "--input_data", str(input_parquet),
         "--output_dir", str(dataset_dir),
-        "--n_samples", str(args.n_samples),
-        "--n_train", str(args.n_train),
+        "--total_samples", str(args.total_samples),
         "--batch_size", str(args.batch_size),
         "--temperature", str(temperature),
         "--precision", args.precision,
-        "--split", "none",
     ]
 
     print(f"[run] {' '.join(cmd)}")
@@ -124,44 +118,61 @@ def generate_single_policy_temperatures(args):
     results = []
     for policy in POLICIES_SINGLE:
         for temp in TEMPERATURES:
-            dataset_dir = run_prepare(policy, temp, args)
+            dataset_dir = run_single(policy, temp, args)
             c_pq, i_pq = get_run_files(dataset_dir)
             results.append((policy, temp, dataset_dir, c_pq, i_pq))
+            print(f"[info] done for {policy} temp={temp} -> {dataset_dir} (correct/incorrect)")
     return results
 
 
 def generate_combinations(args):
-    """For each combination at temperature=1.0, merge correct and incorrect sets into a single dataset directory under data/."""
+    """For each combination at temperature=1.0, concatenate input dataframes first, then run one generation."""
     combo_outputs = []
+    tmp_dir = Path(args.base_output_dir) / "_tmp_inputs"
+    tmp_dir.mkdir(parents=True, exist_ok=True)
     for combo in COMBINATIONS:
         print(f"[combo] building combination: {'+'.join(combo)}")
-        correct_dfs = []
-        incorrect_dfs = []
+        # Load input parquets and concatenate
+        dfs = []
         for policy in combo:
-            dataset_name = f"{policy}_temp_{str(1.0).replace('.', '_')}"
-            dataset_dir = Path(args.base_output_dir) / dataset_name
-            c_pq, i_pq = dataset_dir / "correct.parquet", dataset_dir / "incorrect.parquet"
-            if not c_pq.exists() or not i_pq.exists():
-                print(f"[combo] missing run for {policy} temp=1.0; generating now.")
-                dataset_dir = run_prepare(policy, 1.0, args)
-                c_pq, i_pq = get_run_files(dataset_dir)
-            correct_dfs.append(load_responses(c_pq))
-            incorrect_dfs.append(load_responses(i_pq))
-
+            p = Path("data-preparation/input-data") / f"{policy}_r128.parquet"
+            if not p.exists():
+                raise FileNotFoundError(f"Missing input parquet: {p}")
+            dfs.append(pd.read_parquet(p))
+        concat_df = pd.concat(dfs, ignore_index=True)
         combo_name = "_".join(combo)
+        concat_path = tmp_dir / f"{combo_name}.parquet"
+        concat_df.to_parquet(concat_path, index=False)
+
+        # Output dataset dir
         out_dir = Path(args.base_output_dir) / combo_name
-        merge_and_write(correct_dfs, out_dir, filename_stem="correct")
-        merge_and_write(incorrect_dfs, out_dir, filename_stem="incorrect")
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        # Run one generation over the concatenated inputs at temp=1.0
+        cmd = [
+            sys.executable,
+            "data-preparation/generate_all_responses.py",
+            "--model_path", args.model_path,
+            "--input_data", str(concat_path),
+            "--output_dir", str(out_dir),
+            "--total_samples", str(args.total_samples),
+            "--batch_size", str(args.batch_size),
+            "--temperature", "1.0",
+            "--precision", args.precision,
+        ]
+        print(f"[run combo] {'+'.join(combo)} -> {' '.join(cmd)}")
+        if not args.dry_run:
+            subprocess.run(cmd, check=True)
         combo_outputs.append(str(out_dir))
+        print(f"[info] complete combination: {'+'.join(combo)} -> {out_dir}")
     return combo_outputs
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Generate diverse datasets via prepare_data.py orchestration.")
+    p = argparse.ArgumentParser(description="Generate diverse datasets by orchestrating single and concatenated runs.")
     p.add_argument("--model_path", type=str, default="/homes/gws/lxh22/models/Qwen2.5-Math-1.5B")
     p.add_argument("--base_output_dir", type=str, default="data")
-    p.add_argument("--n_samples", type=int, default=8000, help="Samples to generate per run (pre-filter).")
-    p.add_argument("--n_train", type=int, default=4000, help="Train samples to keep; valid will be the remainder from prepare_data then rebalanced later for combos.")
+    p.add_argument("--total_samples", type=int, default=16000, help="Total samples to generate per run.")
     p.add_argument("--batch_size", type=int, default=256)
     p.add_argument("--precision", type=str, default="bf16", choices=["bf16", "fp16", "fp32"])
     p.add_argument("--dry_run", action="store_true", help="Print subprocess commands without executing generation.")
@@ -174,12 +185,9 @@ def main():
 
     print("=== Phase 1: pi1 temperature sweep (no train/valid split) ===")
     single_runs = generate_single_policy_temperatures(args)
-    for policy, temp, dataset_dir, c_pq, i_pq in single_runs:
-        print(f"[done] {policy} temp={temp} -> {dataset_dir} (correct/incorrect)")
 
-    print("\n=== Phase 2: Combinations at temp=1.0 (merged correct/incorrect) ===")
+    print("\n=== Phase 2: Combinations at temp=1.0 (concatenate inputs, then generate) ===")
     combos = generate_combinations(args)
-    print(f"[complete] combinations generated: {combos}")
 
     print("\nAll done. You can inspect datasets under:", args.base_output_dir)
 
