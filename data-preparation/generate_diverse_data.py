@@ -17,10 +17,25 @@ Assumptions:
 You can customize parameters via CLI flags.
 
 Example usage (inside repo root):
+    # Single GPU (debug)
     python data-preparation/generate_diverse_data.py \
         --model_path /homes/gws/lxh22/models/Qwen2.5-Math-1.5B \
         --base_output_dir data \
-        --total_samples 16000
+        --total_samples 16000 --dry_run
+
+    # Multi-GPU with Accelerate (recommended for large generations)
+    python data-preparation/generate_diverse_data.py \
+        --model_path /homes/gws/lxh22/models/Qwen2.5-Math-1.5B \
+        --base_output_dir data \
+        --total_samples 16000 \
+        --launcher accelerate --num_processes 4
+
+    # Multi-GPU with torchrun
+    python data-preparation/generate_diverse_data.py \
+        --model_path /homes/gws/lxh22/models/Qwen2.5-Math-1.5B \
+        --base_output_dir data \
+        --total_samples 16000 \
+        --launcher torchrun --num_processes 4
 
 After completion you'll have directories:
   data/pi1/temp_0.2/ ... etc
@@ -29,6 +44,12 @@ After completion you'll have directories:
 Requires: pandas.
 Heavy generation dependencies (accelerate, transformers, etc.) must be
 installed for generation to run.
+
+Multi-GPU note:
+`generate_all_responses.py` internally uses `Accelerator`; to actually spawn
+multiple processes you must launch it via `accelerate launch` or `torchrun`.
+This orchestration script now supports a `--launcher` flag so each internal
+call automatically uses multi-GPU when requested.
 """
 
 from __future__ import annotations
@@ -40,6 +61,7 @@ import subprocess
 import sys
 import random
 from pathlib import Path
+import torch
 import pandas as pd
 
 
@@ -50,6 +72,22 @@ COMBINATIONS = [
     ["pi1", "pi2", "pi13"],
     ["pi1", "pi2", "pi13", "pi1209"],
 ]
+
+
+def build_launch_prefix(args):
+    """Return list of command components that launches a Python script with the
+    chosen launcher. Empty list means direct python execution.
+    """
+    if args.launcher == "accelerate":
+        parts = ["accelerate", "launch"]
+        if args.num_processes:
+            parts += ["--num_processes", str(args.num_processes)]
+        return parts
+    elif args.launcher == "torchrun":
+        num = args.num_processes or torch.cuda.device_count() or 1
+        return ["torchrun", "--standalone", f"--nproc_per_node={num}"]
+    else:
+        return [sys.executable]
 
 
 def run_single(policy: str, temperature: float, args) -> Path:
@@ -66,9 +104,9 @@ def run_single(policy: str, temperature: float, args) -> Path:
     dataset_dir = Path(args.base_output_dir) / dataset_name
     dataset_dir.mkdir(parents=True, exist_ok=True)
 
-    cmd = [
-        sys.executable,
-        "data-preparation/generate_all_responses.py",
+    prefix = build_launch_prefix(args)
+    script = ["data-preparation/generate_all_responses.py"]
+    cmd = prefix + script + [
         "--model_path", args.model_path,
         "--input_data", str(input_parquet),
         "--output_dir", str(dataset_dir),
@@ -157,9 +195,9 @@ def generate_combinations(args):
         out_dir.mkdir(parents=True, exist_ok=True)
 
         # Run one generation over the concatenated inputs at temp=1.0
-        cmd = [
-            sys.executable,
-            "data-preparation/generate_all_responses.py",
+        prefix = build_launch_prefix(args)
+        script = ["data-preparation/generate_all_responses.py"]
+        cmd = prefix + script + [
             "--model_path", args.model_path,
             "--input_data", str(concat_path),
             "--output_dir", str(out_dir),
@@ -183,6 +221,10 @@ def parse_args():
     p.add_argument("--total_samples", type=int, default=16000, help="Total samples to generate per run.")
     p.add_argument("--batch_size", type=int, default=256)
     p.add_argument("--precision", type=str, default="bf16", choices=["bf16", "fp16", "fp32"])
+    p.add_argument("--launcher", type=str, default="accelerate", choices=["none", "accelerate", "torchrun"],
+                   help="Launcher to use for spawning multi-GPU processes for each generation run.")
+    p.add_argument("--num_processes", type=int, default=None,
+                   help="Number of processes (GPUs) to use when --launcher is accelerate/torchrun. Defaults to torch.cuda.device_count().")
     p.add_argument("--dry_run", action="store_true", help="Print subprocess commands without executing generation.")
     return p.parse_args()
 
@@ -190,6 +232,15 @@ def parse_args():
 def main():
     args = parse_args()
     Path(args.base_output_dir).mkdir(parents=True, exist_ok=True)
+
+    if args.launcher != "none" and args.num_processes is None:
+        # Best-effort default: detect available GPUs
+        detected = torch.cuda.device_count()
+        if detected > 1:
+            print(f"[auto] num_processes not set; using detected GPU count: {detected}")
+            args.num_processes = detected
+        else:
+            print("[auto] single GPU detected; proceeding with 1 process.")
 
     print("=== Phase 1: pi1 temperature sweep (no train/valid split) ===")
     single_runs = generate_single_policy_temperatures(args)
