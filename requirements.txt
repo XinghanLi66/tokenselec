@@ -1,0 +1,7 @@
+torch==2.4.0
+pandas
+accelerate
+latex2sympy2
+transformers
+pyarrow
+fastparquet

@@ -1,4 +1,4 @@
-import os, math, re
+import os, math, re, ast
 import argparse
 from dataclasses import dataclass
 from typing import List, Dict, Any
@@ -38,18 +38,48 @@ def load_model_and_tokenizer(ckpt: str, mp: str = "bf16"):
 
 
 def extract_prompt(prompt_raw):
-    """Support both legacy np.ndarray format and plain string."""
-    if isinstance(prompt_raw, str):
-        return prompt_raw
+    """Extract plain user text from merged CSV format.
+
+    CSV stores a stringified Python list of dicts:
+        "[{ 'content': '...', 'role': 'user'}]"
+    We parse with ast.literal_eval and return the first element's 'content'.
+    Legacy ndarray support retained.
+    """
     if isinstance(prompt_raw, np.ndarray):
         return prompt_raw[0]["content"]
+    if isinstance(prompt_raw, str):
+        text = prompt_raw.strip()
+        if text.startswith("[") and text.endswith("]"):
+            try:
+                parsed = ast.literal_eval(text)
+                if isinstance(parsed, list) and parsed and isinstance(parsed[0], dict):
+                    return parsed[0].get("content", prompt_raw)
+            except Exception:
+                return prompt_raw
+        return prompt_raw
+    if isinstance(prompt_raw, dict):  # unexpected but try common key
+        return prompt_raw.get("content", str(prompt_raw))
     raise ValueError(f"Unsupported prompt_raw type: {type(prompt_raw)}")
 
 
 def extract_answer(answer_raw):
-    """Support dict with 'ground_truth' or direct numeric/str value."""
+    """Return ground truth numeric/string value.
+
+    CSV stores a stringified dict: "{'ground_truth': '12.8', 'style': 'rule'}".
+    Handles LaTeX fractions (e.g. '\\frac{4}{3}').
+    """
     if isinstance(answer_raw, dict):
-        return answer_raw.get("ground_truth", list(answer_raw.values())[0])
+        return str(answer_raw.get("ground_truth", list(answer_raw.values())[0]))
+    if isinstance(answer_raw, str):
+        text = answer_raw.strip()
+        if text.startswith("{") and text.endswith("}"):
+            try:
+                parsed = ast.literal_eval(text)
+                if isinstance(parsed, dict):
+                    return str(parsed.get("ground_truth", next(iter(parsed.values()), text)))
+            except Exception:
+                return text
+        return text
     return str(answer_raw)
 
 
@@ -166,39 +196,44 @@ def extract_last_boxed_content(text: str) -> str:
     
 
 def keep_correct_answers(texts: List[str], answer: str) -> List[str]:
-    """Retain responses that contain the reference answer as a substring."""
-    correct_answers = []
-    answer_value = float(answer)
-    lower_bound = answer_value * 0.9
-    upper_bound = answer_value * 1.1
-    if lower_bound > upper_bound:
-        lower_bound, upper_bound = upper_bound, lower_bound
-    for id, text in enumerate(tqdm(texts, desc="Filtering valid responses")):
-        print(f"current candidate id: {id}")
-        prediction = extract_last_boxed_content(text)
-        if prediction is not None:
-            print(f"################################# format correct, answer: {answer}, prediction: {prediction}")
-            try:
-                sympy_expr = latex2sympy(prediction)
-                predicted_value = sympy_expr.evalf()
-                print(f"################################# predicted_value: {predicted_value}")
-                if lower_bound <= predicted_value <= upper_bound:
-                    correct_answers.append(text)
-            except TypeError:
-                print(f"TypeError, prediction: {prediction}")
-            except ValueError:
-                print(f"ValueError, prediction: {prediction}")
-            except Exception as e:
-                print(f"Other error: {e}, prediction: {prediction}")
+    """Retain responses whose last boxed value numerically matches answer within ±10%.
 
+    Attempts to interpret answer as float first; if that fails, try latex2sympy.
+    """
+    correct_answers = []
+    try:
+        answer_value = float(answer)
+    except Exception:
+        try:
+            answer_value = float(latex2sympy(answer).evalf())
+        except Exception:
+            # fallback: no numeric comparison possible
+            answer_value = None
+    if answer_value is not None:
+        lower_bound = answer_value * 0.9
+        upper_bound = answer_value * 1.1
+        if lower_bound > upper_bound:
+            lower_bound, upper_bound = upper_bound, lower_bound
+    for id, text in enumerate(tqdm(texts, desc="Filtering valid responses")):
+        prediction = extract_last_boxed_content(text)
+        if prediction is None:
+            continue
+        try:
+            sympy_expr = latex2sympy(prediction)
+            predicted_value = sympy_expr.evalf()
+            if answer_value is not None and lower_bound <= predicted_value <= upper_bound:
+                correct_answers.append(text)
+        except Exception as e:
+            # ignore malformed predictions
+            continue
     return correct_answers
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate responses for ALL prompts in an input dataset.")
+    parser = argparse.ArgumentParser(description="Generate responses for ALL prompts in a merged CSV dataset.")
     # Model and data arguments
-    parser.add_argument("--model_path", type=str, default="/homes/gws/lxh22/models/Qwen2.5-Math-1.5B")
-    parser.add_argument("--input_data", type=str, required=True, help="Input parquet/csv (single or concatenated).")
+    parser.add_argument("--model_path", type=str, default="/cephfs/lxh/models/qwen2.5-math-1.5b")
+    parser.add_argument("--input_data", type=str, required=True, help="Input merged CSV (pi_merged.csv format).")
     parser.add_argument("--output_dir", type=str, required=True, help="Directory to save outputs (correct/incorrect).")
 
     # Sampling arguments
@@ -214,6 +249,7 @@ def parse_args():
 
     # Model arguments
     parser.add_argument("--precision", type=str, default="bf16", choices=["bf16", "fp16", "fp32"])
+    parser.add_argument("--dry_run", action="store_true", help="Parse CSV and plan generation without model load or sampling.")
     return parser.parse_args()
 
 
@@ -230,13 +266,10 @@ def main():
 
     os.makedirs(out_dir, exist_ok=True)
 
-    # Load input dataset (parquet or csv)
-    if input_path.endswith('.parquet'):
-        df = pd.read_parquet(input_path)
-    elif input_path.endswith('.csv'):
-        df = pd.read_csv(input_path)
-    else:
-        raise ValueError("input_data must be parquet or csv")
+    # Enforce CSV-only input
+    if not input_path.endswith('.csv'):
+        raise ValueError("input_data must be a CSV file (merged format)")
+    df = pd.read_csv(input_path)
 
     required_cols = {"prompt", "reward_model"}
     if not required_cols.issubset(df.columns):
@@ -255,6 +288,14 @@ def main():
     actual_total = per_prompt_target * num_prompts
     print(f"Planning to generate {actual_total} responses: {per_prompt_target} per prompt * {num_prompts} prompts")
 
+    if args.dry_run:
+        print("[dry-run] Loaded CSV with", len(df), "rows")
+        for i, row in df.head(3).iterrows():
+            p_txt = extract_prompt(row["prompt"])[:100].replace("\n", " ")
+            a_txt = extract_answer(row["reward_model"])[:50]
+            print(f"  Row {i}: prompt='{p_txt}...' answer='{a_txt}'")
+        return
+
     acc, model, tok = load_model_and_tokenizer(ckpt, mp=precision)
     gen_kwargs = {
         "max_new_tokens": args.max_new_tokens,
@@ -267,10 +308,8 @@ def main():
     all_records: List[Dict[str, Any]] = []
 
     for idx, row in tqdm(df.iterrows(), total=len(df), desc="Prompts"):
-        prompt_struct = row["prompt"]
-        answer_struct = row["reward_model"]
-        prompt_text = extract_prompt(prompt_struct)
-        answer_text = extract_answer(answer_struct)
+        prompt_text = extract_prompt(row["prompt"])
+        answer_text = extract_answer(row["reward_model"])
         formatted_prompt = chat_wrap(tok, prompt_text)
 
         gen_texts = sample_many(acc, model, tok, formatted_prompt,
@@ -294,13 +333,10 @@ def main():
         out_df = pd.DataFrame(all_records)
         correct_df = out_df[out_df.correct == 1].copy()
         incorrect_df = out_df[out_df.correct == 0].copy()
-        correct_df.to_parquet(os.path.join(out_dir, "correct.parquet"), index=False)
-        correct_df.to_csv(os.path.join(out_dir, "correct.csv"), index=False)
-        incorrect_df.to_parquet(os.path.join(out_dir, "incorrect.parquet"), index=False)
-        incorrect_df.to_csv(os.path.join(out_dir, "incorrect.csv"), index=False)
-        out_df.to_parquet(os.path.join(out_dir, "all.parquet"), index=False)
-        out_df.to_csv(os.path.join(out_dir, "all.csv"), index=False)
-        print(f"Saved: correct={len(correct_df)} incorrect={len(incorrect_df)} total={len(out_df)} in {out_dir}")
+    correct_df.to_csv(os.path.join(out_dir, "correct.csv"), index=False)
+    incorrect_df.to_csv(os.path.join(out_dir, "incorrect.csv"), index=False)
+    out_df.to_csv(os.path.join(out_dir, "all.csv"), index=False)
+    print(f"Saved CSV files: correct={len(correct_df)} incorrect={len(incorrect_df)} total={len(out_df)} in {out_dir}")
 
 
 if __name__ == "__main__":

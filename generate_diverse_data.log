@@ -1,0 +1,220 @@
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 160 responses: 160 per prompt * 1 prompts
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.53s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.53s/it]
+gathered_ids.shape, torch.Size([160, 795])
+
+Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 2907.31it/s]
+Prompts: 100%|██████████| 1/1 [00:38<00:00, 38.64s/it]Prompts: 100%|██████████| 1/1 [00:38<00:00, 38.64s/it]
+Saved CSV files: correct=129 incorrect=31 total=160 in data/pi1_temp_0_2
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 160 responses: 160 per prompt * 1 prompts
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:42<00:00, 42.60s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:42<00:00, 42.60s/it]
+gathered_ids.shape, torch.Size([160, 840])
+
+Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
+Filtering valid responses:  44%|████▍     | 71/160 [00:00<00:00, 556.84it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 900.13it/s]
+Prompts: 100%|██████████| 1/1 [00:42<00:00, 42.83s/it]Prompts: 100%|██████████| 1/1 [00:42<00:00, 42.83s/it]
+Saved CSV files: correct=134 incorrect=26 total=160 in data/pi1_temp_0_4
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 160 responses: 160 per prompt * 1 prompts
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.73s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.73s/it]
+gathered_ids.shape, torch.Size([160, 1420])
+
+Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
+Filtering valid responses:  32%|███▎      | 52/160 [00:00<00:00, 386.08it/s][A
+Filtering valid responses:  57%|█████▋    | 91/160 [00:00<00:00, 298.94it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 462.13it/s]
+Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.13s/it]Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.13s/it]
+Saved CSV files: correct=127 incorrect=33 total=160 in data/pi1_temp_0_6
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 160 responses: 160 per prompt * 1 prompts
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [01:48<00:00, 108.07s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:48<00:00, 108.07s/it]
+gathered_ids.shape, torch.Size([160, 1420])
+
+Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
+Filtering valid responses:   2%|▏         | 3/160 [00:00<00:08, 17.77it/s][A
+Filtering valid responses:   7%|▋         | 11/160 [00:00<00:03, 42.54it/s][A
+Filtering valid responses:  44%|████▍     | 70/160 [00:00<00:00, 239.48it/s][A
+Filtering valid responses:  61%|██████▏   | 98/160 [00:00<00:00, 173.05it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 222.74it/s]
+Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.85s/it]Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.85s/it]
+Saved CSV files: correct=112 incorrect=48 total=160 in data/pi1_temp_0_8
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 160 responses: 160 per prompt * 1 prompts
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.75s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.75s/it]
+gathered_ids.shape, torch.Size([160, 1420])
+
+Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
+Filtering valid responses:   1%|          | 1/160 [00:00<00:23,  6.66it/s][A
+Filtering valid responses:  28%|██▊       | 45/160 [00:00<00:00, 210.10it/s][A
+Filtering valid responses:  44%|████▍     | 71/160 [00:00<00:00, 228.70it/s][A
+Filtering valid responses:  86%|████████▋ | 138/160 [00:00<00:00, 364.42it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 325.46it/s]
+Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.29s/it]Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.29s/it]
+Saved CSV files: correct=76 incorrect=84 total=160 in data/pi1_temp_1_0
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 160 responses: 80 per prompt * 2 prompts
+Prompts:   0%|          | 0/2 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 80 samples per process, total 80 samples (requested 80)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [01:00<00:00, 60.91s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:00<00:00, 60.91s/it]
+gathered_ids.shape, torch.Size([80, 1420])
+
+Filtering valid responses:   0%|          | 0/80 [00:00<?, ?it/s][A
+Filtering valid responses:   1%|▏         | 1/80 [00:00<00:11,  6.72it/s][A
+Filtering valid responses:  48%|████▊     | 38/80 [00:00<00:00, 170.74it/s][AFiltering valid responses: 100%|██████████| 80/80 [00:00<00:00, 231.01it/s]
+Prompts:  50%|█████     | 1/2 [01:01<01:01, 61.30s/it]Multi-GPU sampling: 1 processes, 80 samples per process, total 80 samples (requested 80)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:56<00:00, 56.67s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:56<00:00, 56.67s/it]
+gathered_ids.shape, torch.Size([80, 1345])
+
+Filtering valid responses:   0%|          | 0/80 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 80/80 [00:00<00:00, 2809.71it/s]
+Prompts: 100%|██████████| 2/2 [01:58<00:00, 58.61s/it]Prompts: 100%|██████████| 2/2 [01:58<00:00, 59.01s/it]
+Saved CSV files: correct=49 incorrect=111 total=160 in data/pi1_pi2_temp_1_0
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 162 responses: 54 per prompt * 3 prompts
+Prompts:   0%|          | 0/3 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 54 samples per process, total 54 samples (requested 54)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:46<00:00, 46.15s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:46<00:00, 46.15s/it]
+gathered_ids.shape, torch.Size([54, 1420])
+
+Filtering valid responses:   0%|          | 0/54 [00:00<?, ?it/s][A
+Filtering valid responses:   4%|▎         | 2/54 [00:00<00:03, 13.25it/s][A
+Filtering valid responses:  43%|████▎     | 23/54 [00:00<00:00, 104.08it/s][A
+Filtering valid responses:  93%|█████████▎| 50/54 [00:00<00:00, 169.04it/s][AFiltering valid responses: 100%|██████████| 54/54 [00:00<00:00, 148.71it/s]
+Prompts:  33%|███▎      | 1/3 [00:46<01:33, 46.55s/it]Multi-GPU sampling: 1 processes, 54 samples per process, total 54 samples (requested 54)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:43<00:00, 43.58s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:43<00:00, 43.58s/it]
+gathered_ids.shape, torch.Size([54, 1345])
+
+Filtering valid responses:   0%|          | 0/54 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 54/54 [00:00<00:00, 2157.95it/s]
+Prompts:  67%|██████▋   | 2/3 [01:30<00:44, 44.83s/it]Multi-GPU sampling: 1 processes, 54 samples per process, total 54 samples (requested 54)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:45<00:00, 45.30s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:45<00:00, 45.30s/it]
+gathered_ids.shape, torch.Size([54, 1414])
+
+Filtering valid responses:   0%|          | 0/54 [00:00<?, ?it/s][A
+Filtering valid responses:  24%|██▍       | 13/54 [00:00<00:00, 43.34it/s][A
+Filtering valid responses:  44%|████▍     | 24/54 [00:00<00:00, 49.57it/s][A
+Filtering valid responses:  87%|████████▋ | 47/54 [00:00<00:00, 86.23it/s][AFiltering valid responses: 100%|██████████| 54/54 [00:00<00:00, 66.67it/s]
+Prompts: 100%|██████████| 3/3 [02:16<00:00, 45.43s/it]Prompts: 100%|██████████| 3/3 [02:16<00:00, 45.44s/it]
+Saved CSV files: correct=34 incorrect=128 total=162 in data/pi1_pi2_pi13_temp_1_0
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Planning to generate 160 responses: 40 per prompt * 4 prompts
+Prompts:   0%|          | 0/4 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.58s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.58s/it]
+gathered_ids.shape, torch.Size([40, 1420])
+
+Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][A
+Filtering valid responses:   2%|▎         | 1/40 [00:00<00:04,  9.55it/s][A
+Filtering valid responses:  20%|██        | 8/40 [00:00<00:00, 41.42it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 129.95it/s]
+Prompts:  25%|██▌       | 1/4 [00:39<01:59, 39.92s/it]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:37<00:00, 37.42s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:37<00:00, 37.42s/it]
+gathered_ids.shape, torch.Size([40, 1345])
+
+Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 1306.74it/s]
+Prompts:  50%|█████     | 2/4 [01:17<01:16, 38.48s/it]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.60s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.60s/it]
+gathered_ids.shape, torch.Size([40, 1414])
+
+Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][A
+Filtering valid responses:  52%|█████▎    | 21/40 [00:00<00:00, 73.65it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 107.96it/s]
+Prompts:  75%|███████▌  | 3/4 [01:56<00:38, 38.71s/it]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
+
+Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
+Sampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.74s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.74s/it]
+gathered_ids.shape, torch.Size([40, 1489])
+
+Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 2550.39it/s]
+Prompts: 100%|██████████| 4/4 [02:36<00:00, 39.13s/it]Prompts: 100%|██████████| 4/4 [02:36<00:00, 39.04s/it]
+Saved CSV files: correct=30 incorrect=130 total=160 in data/pi1_pi2_pi13_pi1209_temp_1_0
+[auto] single GPU detected or torch not available; proceeding with 1 process.
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_2 --total_samples 160 --batch_size 256 --temperature 0.2 --precision bf16
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_4 --total_samples 160 --batch_size 256 --temperature 0.4 --precision bf16
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_6 --total_samples 160 --batch_size 256 --temperature 0.6 --precision bf16
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_8 --total_samples 160 --batch_size 256 --temperature 0.8 --precision bf16
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1_pi2.csv --output_dir data/pi1_pi2_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1_pi2_pi13.csv --output_dir data/pi1_pi2_pi13_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
+[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1_pi2_pi13_pi1209.csv --output_dir data/pi1_pi2_pi13_pi1209_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
+[summary] Completed 8 runs.
+
+All done. You can inspect datasets under: data
