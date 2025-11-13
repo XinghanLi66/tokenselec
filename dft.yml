@@ -1,4 +1,4 @@
-name: one-shot-em
+name: dft
 channels:
   - defaults
   - https://repo.anaconda.com/pkgs/main
