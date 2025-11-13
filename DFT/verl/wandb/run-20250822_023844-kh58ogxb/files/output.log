@@ -1,0 +1,104 @@
+Total training steps: 116
+Epoch 1/2:   2%|▏         | 1/58 [00:17<17:00, 17.90s/it]
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122,  0.7122, -1.4042,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122, -1.4042, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([0.7122, 0.7122, 0.7122, 0.7122], device='cuda:0', dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([0.7122, 0.7122, 0.7122, 0.7122], device='cuda:0', dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042, -1.4042, -1.4042, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042,  0.7122,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+step:1 - train/loss:0.048 - train/lr(1e-3):0.001 - train/original_loss:0.133
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042,  0.7122,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042, -1.4042,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([0.7122, 0.7122, 0.7122, 0.7122], device='cuda:0', dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042, -1.4042,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122,  0.7122,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([0.7122, 0.7122, 0.7122, 0.7122], device='cuda:0', dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+step:2 - train/loss:0.048 - train/lr(1e-3):0.002 - train/original_loss:0.135
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122,  0.7122, -1.4042,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122,  0.7122, -1.4042, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042,  0.7122,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042,  0.7122,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042,  0.7122,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([0.7122, 0.7122, 0.7122, 0.7122], device='cuda:0', dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+step:3 - train/loss:0.048 - train/lr(1e-3):0.003 - train/original_loss:0.122
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042, -1.4042,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042,  0.7122,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042, -1.4042, -1.4042, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([0.7122, 0.7122, 0.7122, 0.7122], device='cuda:0', dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042, -1.4042,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([-1.4042,  0.7122,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122,  0.7122, -1.4042,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+step:4 - train/loss:0.048 - train/lr(1e-3):0.004 - train/original_loss:0.126
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042, -1.4042,  0.7122], device='cuda:0',
+       dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([0.7122, 0.7122, 0.7122, 0.7122], device='cuda:0', dtype=torch.float64)
+Batch keys: _StringKeys(dict_keys(['input_ids', 'attention_mask', 'position_ids', 'loss_mask', 'reward']))
+Rewards: tensor([ 0.7122, -1.4042,  0.7122, -1.4042], device='cuda:0',
+       dtype=torch.float64)

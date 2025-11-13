@@ -20,7 +20,7 @@ Example usage (inside repo root):
     python data-preparation/generate_diverse_data.py \
         --model_path /homes/gws/lxh22/models/Qwen2.5-Math-1.5B \
         --base_output_dir data \
-        --n_samples 16000
+        --total_samples 16000
 
 After completion you'll have directories:
   data/pi1/temp_0.2/ ... etc

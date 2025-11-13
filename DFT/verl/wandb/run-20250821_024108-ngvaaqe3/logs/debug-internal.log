@@ -1,0 +1,11 @@
+{"time":"2025-08-21T02:41:08.77957769-07:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-21T02:41:08.987270657-07:00","level":"INFO","msg":"stream: created new stream","id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:08.987315387-07:00","level":"INFO","msg":"stream: started","id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:08.987353487-07:00","level":"INFO","msg":"writer: started","stream_id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:08.987369086-07:00","level":"INFO","msg":"sender: started","stream_id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:08.987424236-07:00","level":"INFO","msg":"handler: started","stream_id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:50.806233708-07:00","level":"INFO","msg":"stream: closing","id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:51.083946765-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-21T02:41:51.267148079-07:00","level":"INFO","msg":"handler: closed","stream_id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:51.269084133-07:00","level":"INFO","msg":"sender: closed","stream_id":"ngvaaqe3"}
+{"time":"2025-08-21T02:41:51.269098663-07:00","level":"INFO","msg":"stream: closed","id":"ngvaaqe3"}

@@ -1,0 +1,12 @@
+{"time":"2025-08-22T14:21:54.387726157-07:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-22T14:21:54.606605031-07:00","level":"INFO","msg":"stream: created new stream","id":"ipd0ga87"}
+{"time":"2025-08-22T14:21:54.606652281-07:00","level":"INFO","msg":"stream: started","id":"ipd0ga87"}
+{"time":"2025-08-22T14:21:54.606690411-07:00","level":"INFO","msg":"writer: started","stream_id":"ipd0ga87"}
+{"time":"2025-08-22T14:21:54.606708881-07:00","level":"INFO","msg":"handler: started","stream_id":"ipd0ga87"}
+{"time":"2025-08-22T14:21:54.606747401-07:00","level":"INFO","msg":"sender: started","stream_id":"ipd0ga87"}
+{"time":"2025-08-22T14:35:01.514511179-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-22T14:35:01.654901979-07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-08-22T14:35:01.660684813-07:00","level":"INFO","msg":"stream: closing","id":"ipd0ga87"}
+{"time":"2025-08-22T14:35:01.660716203-07:00","level":"INFO","msg":"handler: closed","stream_id":"ipd0ga87"}
+{"time":"2025-08-22T14:35:01.662699838-07:00","level":"INFO","msg":"sender: closed","stream_id":"ipd0ga87"}
+{"time":"2025-08-22T14:35:01.662742007-07:00","level":"INFO","msg":"stream: closed","id":"ipd0ga87"}

@@ -1,0 +1,13 @@
+- data.train_files=data/pi1/pi1_r128_responses_16000.parquet
+- data.val_files=data/pi1/pi1_r128_responses_16000_valid.parquet
+- data.max_length=1920
+- data.prompt_key=prompt
+- data.response_key=response
+- data.micro_batch_size_per_gpu=2
+- model.partial_pretrain=/homes/gws/lxh22/models/Qwen2.5-Math-1.5B
+- trainer.default_local_dir=/local1/lxh/save/offline_grpo/1.5b_pi1_ndft
+- trainer.project_name=dft
+- trainer.experiment_name=1.5b_pi1_ndft_0821-0240
+- trainer.total_epochs=2
+- trainer.logger=[console,wandb]
+- trainer.default_hdfs_dir=null

@@ -1,0 +1,13 @@
+{"time":"2025-09-05T11:57:26.078577935-07:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-09-05T11:57:26.29606124-07:00","level":"INFO","msg":"stream: created new stream","id":"epgcm7bv"}
+{"time":"2025-09-05T11:57:26.296184232-07:00","level":"INFO","msg":"stream: started","id":"epgcm7bv"}
+{"time":"2025-09-05T11:57:26.296230188-07:00","level":"INFO","msg":"writer: started","stream_id":"epgcm7bv"}
+{"time":"2025-09-05T11:57:26.296252886-07:00","level":"INFO","msg":"sender: started","stream_id":"epgcm7bv"}
+{"time":"2025-09-05T11:57:26.296275096-07:00","level":"INFO","msg":"handler: started","stream_id":"epgcm7bv"}
+{"time":"2025-09-05T12:07:56.814136598-07:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/coder66-RL-lab/dft/epgcm7bv/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-05T12:29:17.993869599-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-05T12:29:18.131570346-07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-09-05T12:29:18.139192812-07:00","level":"INFO","msg":"stream: closing","id":"epgcm7bv"}
+{"time":"2025-09-05T12:29:18.139248685-07:00","level":"INFO","msg":"handler: closed","stream_id":"epgcm7bv"}
+{"time":"2025-09-05T12:29:18.141139722-07:00","level":"INFO","msg":"sender: closed","stream_id":"epgcm7bv"}
+{"time":"2025-09-05T12:29:18.141166611-07:00","level":"INFO","msg":"stream: closed","id":"epgcm7bv"}

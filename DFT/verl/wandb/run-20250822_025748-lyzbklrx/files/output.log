@@ -1,0 +1,27 @@
+len of train dataloader: 58
+Total training steps: 116
+Epoch 1/2:   0%|          | 0/58 [00:00<?, ?it/s]
+Rewards: tensor([[ 0.7122],
+        [ 0.7122],
+        [-1.4042],
+        [ 0.7122]], device='cuda:0', dtype=torch.float64)
+Rewards: tensor([[-1.4042],
+        [ 0.7122],
+        [-1.4042],
+        [-1.4042]], device='cuda:0', dtype=torch.float64)
+Rewards: tensor([[0.7122],
+        [0.7122],
+        [0.7122],
+        [0.7122]], device='cuda:0', dtype=torch.float64)
+Rewards: tensor([[0.7122],
+        [0.7122],
+        [0.7122],
+        [0.7122]], device='cuda:0', dtype=torch.float64)
+Rewards: tensor([[ 0.7122],
+        [ 0.7122],
+        [ 0.7122],
+        [-1.4042]], device='cuda:0', dtype=torch.float64)
+Rewards: tensor([[-1.4042],
+        [-1.4042],
+        [-1.4042],
+        [-1.4042]], device='cuda:0', dtype=torch.float64)

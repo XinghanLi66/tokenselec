@@ -1,0 +1,827 @@
+Total training steps: 781
+Epoch 1/1:   0%|          | 1/781 [00:11<2:27:21, 11.33s/it]
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:1 - train/loss:0.078 - train/lr(1e-3):0.001 - train/original_loss:0.541
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:2 - train/loss:0.081 - train/lr(1e-3):0.001 - train/original_loss:0.720
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:3 - train/loss:0.078 - train/lr(1e-3):0.002 - train/original_loss:0.484
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:4 - train/loss:0.077 - train/lr(1e-3):0.003 - train/original_loss:0.431
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:5 - train/loss:0.082 - train/lr(1e-3):0.003 - train/original_loss:0.536
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:6 - train/loss:0.075 - train/lr(1e-3):0.004 - train/original_loss:0.531
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:7 - train/loss:0.076 - train/lr(1e-3):0.004 - train/original_loss:0.518
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:8 - train/loss:0.079 - train/lr(1e-3):0.005 - train/original_loss:0.634
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:9 - train/loss:0.079 - train/lr(1e-3):0.006 - train/original_loss:0.691
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+step:10 - train/loss:0.075 - train/lr(1e-3):0.006 - train/original_loss:0.547
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')
+loss_mask shape: torch.Size([8188]), loss shape: torch.Size([8188])
+loss_mask: tensor([0, 0, 0,  ..., 0, 0, 0], device='cuda:0'), attention_mask: tensor([[1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0],
+        [1, 1, 1,  ..., 0, 0, 0]], device='cuda:0')

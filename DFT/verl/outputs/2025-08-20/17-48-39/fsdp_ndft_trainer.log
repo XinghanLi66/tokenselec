@@ -1,0 +1,6 @@
+[2025-08-20 17:48:44,364][liger_kernel.transformers.monkey_patch][INFO] - Applying Liger kernels to model instance with model type: qwen2 with kwargs: {}
+[2025-08-20 17:48:44,487][liger_kernel.transformers.monkey_patch][INFO] - Applying Liger kernels to model instance with model type: qwen2 with kwargs: {}
+[2025-08-20 17:48:44,630][liger_kernel.transformers.monkey_patch][INFO] - Applying Liger kernels to model instance with model type: qwen2 with kwargs: {}
+[2025-08-20 17:48:44,672][liger_kernel.transformers.monkey_patch][INFO] - Applying Liger kernels to model instance with model type: qwen2 with kwargs: {}
+[2025-08-20 17:48:44,706][liger_kernel.transformers.monkey_patch][INFO] - Applying Liger kernels to model instance with model type: qwen2 with kwargs: {}
+[2025-08-20 17:48:44,715][liger_kernel.transformers.monkey_patch][INFO] - Applying Liger kernels to model instance with model type: qwen2 with kwargs: {}

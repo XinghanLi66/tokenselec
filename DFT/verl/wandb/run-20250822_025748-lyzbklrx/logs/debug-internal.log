@@ -1,0 +1,6 @@
+{"time":"2025-08-22T02:57:48.78580635-07:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-22T02:57:48.994854684-07:00","level":"INFO","msg":"stream: created new stream","id":"lyzbklrx"}
+{"time":"2025-08-22T02:57:48.994911084-07:00","level":"INFO","msg":"stream: started","id":"lyzbklrx"}
+{"time":"2025-08-22T02:57:48.994955154-07:00","level":"INFO","msg":"writer: started","stream_id":"lyzbklrx"}
+{"time":"2025-08-22T02:57:48.994970974-07:00","level":"INFO","msg":"sender: started","stream_id":"lyzbklrx"}
+{"time":"2025-08-22T02:57:48.995035714-07:00","level":"INFO","msg":"handler: started","stream_id":"lyzbklrx"}

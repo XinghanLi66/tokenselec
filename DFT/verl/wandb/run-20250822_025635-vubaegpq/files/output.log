@@ -1,0 +1,4 @@
+len of train dataloader: 58
+Total training steps: 116
+Epoch 1/2:   2%|▏         | 1/58 [00:18<17:07, 18.03s/it]
+step:1 - train/loss:0.001 - train/lr(1e-3):0.001 - train/original_loss:-0.009

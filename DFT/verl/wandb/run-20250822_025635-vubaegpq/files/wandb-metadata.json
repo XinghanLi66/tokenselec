@@ -1,0 +1,105 @@
+{
+  "os": "Linux-5.14.0-570.28.1.el9_6.x86_64-x86_64-with-glibc2.34",
+  "python": "CPython 3.10.18",
+  "startedAt": "2025-08-22T09:56:35.074442Z",
+  "args": [
+    "data.train_files=data/pi1/pi1_r128_pm_responses_16000.parquet",
+    "data.val_files=data/pi1/pi1_r128_pm_responses_16000_valid.parquet",
+    "data.max_length=1920",
+    "data.prompt_key=prompt",
+    "data.response_key=response",
+    "data.train_batch_size=256",
+    "data.micro_batch_size_per_gpu=4",
+    "model.partial_pretrain=/homes/gws/lxh22/models/Qwen2.5-Math-1.5B",
+    "trainer.default_local_dir=/local1/lxh/save/offline_grpo/1.5b_pi1_ofrl",
+    "trainer.project_name=dft",
+    "trainer.experiment_name=1.5b_pi1_ofrl_0822-0256",
+    "trainer.total_epochs=2",
+    "trainer.test_freq=5",
+    "trainer.save_freq=10",
+    "trainer.logger=[console,wandb]",
+    "trainer.default_hdfs_dir=null"
+  ],
+  "program": "-m verl.trainer.fsdp_ofrl_trainer",
+  "git": {
+    "remote": "https://github.com/xh092113/DFT.git",
+    "commit": "78d0ca2f31eb7771fa67345dea377bce3a301d86"
+  },
+  "email": "lixinghan2013@163.com",
+  "root": "/homes/gws/lxh22/rl-sft/DFT/verl",
+  "host": "du-exxact-0.cs.washington.edu",
+  "executable": "/homes/gws/lxh22/miniconda3/envs/DFT/bin/python3.10",
+  "cpu_count": 128,
+  "cpu_count_logical": 255,
+  "gpu": "NVIDIA A40",
+  "gpu_count": 8,
+  "disk": {
+    "/": {
+      "total": "137371844608",
+      "used": "43051470848"
+    }
+  },
+  "memory": {
+    "total": "1081981837312"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-3f1d0711-9b0a-f0d3-7bfd-d86c03be6e20"
+    },
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-6dae52a7-515c-e39f-9be0-ed10d7224d11"
+    },
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-51dc802a-0e98-7114-e16a-05e1d189b564"
+    },
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-50ceae54-e443-bbd7-1cf5-017952a91545"
+    },
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-9e63af74-5304-12ae-dc5f-7fb92bb0f27e"
+    },
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-9da0de31-e059-4cb8-a2eb-107570a77dca"
+    },
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-4ba1d24a-b789-4ed5-3d83-552fef8d3f2c"
+    },
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-1a95ee14-4732-0786-edff-1ec1d55b6cc6"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "7a6i0gxt77u6t6y13nqa7e6ds96vu3bi"
+}

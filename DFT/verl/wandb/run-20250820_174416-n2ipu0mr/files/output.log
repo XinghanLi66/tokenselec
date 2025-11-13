@@ -1,0 +1,4 @@
+Total training steps: 781
+Epoch 1/1:   0%|          | 2/781 [00:17<1:47:51,  8.31s/it]
+step:1 - train/loss:0.078 - train/lr(1e-3):0.001 - train/original_loss:0.541
+step:2 - train/loss:0.081 - train/lr(1e-3):0.001 - train/original_loss:0.720

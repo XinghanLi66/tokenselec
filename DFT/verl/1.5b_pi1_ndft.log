@@ -1,0 +1,168 @@
+W0821 02:42:31.690000 3075328 site-packages/torch/distributed/run.py:792] 
+W0821 02:42:31.690000 3075328 site-packages/torch/distributed/run.py:792] *****************************************
+W0821 02:42:31.690000 3075328 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0821 02:42:31.690000 3075328 site-packages/torch/distributed/run.py:792] *****************************************
+Running normalized dynamic fine-tuning (NDFT).
+Running normalized dynamic fine-tuning (NDFT).
+Running normalized dynamic fine-tuning (NDFT).Running normalized dynamic fine-tuning (NDFT).
+
+Running normalized dynamic fine-tuning (NDFT).
+Running normalized dynamic fine-tuning (NDFT).
+Running normalized dynamic fine-tuning (NDFT).
+Running normalized dynamic fine-tuning (NDFT).
+Normalize batch size by dp 8
+Using sequence parallel size: 1
+Using remove padding: False
+Using FSDP rank 0 and size 8 for data distribution
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+functools.partial(<function _or_policy at 0x7f205e6a4280>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7f205e6a4160>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])
+NCCL version 2.21.5+cuda12.4
+Total training steps: 78
+Total training steps: 78
+Total training steps: 78
+Total training steps: 78
+Total training steps: 78
+Total training steps: 78
+Total training steps: 78
+Number of steps/epoch 39, number of epochs 2, total number of steps 78
+{'data': {'train_batch_size': 32, 'micro_batch_size': None, 'micro_batch_size_per_gpu': 2, 'train_files': 'data/pi1/pi1_r128_responses_16000.parquet', 'val_files': 'data/pi1/pi1_r128_responses_16000_valid.parquet', 'prompt_key': 'prompt', 'response_key': 'response', 'prompt_dict_keys': None, 'response_dict_keys': None, 'multiturn': {'enable': False, 'messages_key': 'messages', 'tools_key': 'tools', 'enable_thinking_key': 'enable_thinking'}, 'max_length': 1920, 'truncation': 'right', 'balance_dp_token': False, 'chat_template': None, 'custom_cls': {'path': None, 'name': None}, 'use_shm': False}, 'model': {'partial_pretrain': '/homes/gws/lxh22/models/Qwen2.5-Math-1.5B', 'use_shm': False, 'fsdp_config': {'model_dtype': 'fp32', 'wrap_policy': {'min_num_params': 0}, 'cpu_offload': False, 'offload_params': False}, 'external_lib': None, 'enable_gradient_checkpointing': True, 'trust_remote_code': False, 'lora_rank': 0, 'lora_alpha': 16, 'target_modules': 'all-linear', 'use_liger': False, 'strategy': 'fsdp2'}, 'optim': {'lr': 1e-05, 'betas': [0.9, 0.95], 'weight_decay': 0.01, 'warmup_steps_ratio': 0.1, 'clip_grad': 1.0, 'lr_scheduler': 'cosine'}, 'ulysses_sequence_parallel_size': 1, 'use_remove_padding': False, 'trainer': {'default_local_dir': '/local1/lxh/save/offline_grpo/1.5b_pi1_ndft', 'default_hdfs_dir': None, 'resume_path': None, 'project_name': 'dft', 'experiment_name': '1.5b_pi1_ndft_0821-0242', 'total_epochs': 2, 'total_training_steps': None, 'logger': ['console', 'wandb'], 'seed': 1, 'save_freq': 10, 'test_freq': 5, 'nnodes': 1, 'n_gpus_per_node': 8, 'max_ckpt_to_keep': None}}
+wandb: Currently logged in as: lixinghan2013 (coder66-RL-lab) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.1
+wandb: Run data is saved locally in /homes/gws/lxh22/rl-sft/DFT/verl/wandb/run-20250821_024254-p5e4ufbz
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run 1.5b_pi1_ndft_0821-0242
+wandb: ⭐️ View project at https://wandb.ai/coder66-RL-lab/dft
+wandb: 🚀 View run at https://wandb.ai/coder66-RL-lab/dft/runs/p5e4ufbz
+Total training steps: 78
+Epoch 1/2:   0%|          | 0/39 [00:00<?, ?it/s]step:1 - train/loss:0.045 - train/lr(1e-3):0.001 - train/original_loss:0.124
+Epoch 1/2:   3%|▎         | 1/39 [00:24<15:44, 24.85s/it]step:2 - train/loss:0.047 - train/lr(1e-3):0.003 - train/original_loss:0.129
+Epoch 1/2:   5%|▌         | 2/39 [00:47<14:33, 23.61s/it]step:3 - train/loss:0.046 - train/lr(1e-3):0.004 - train/original_loss:0.125
+Epoch 1/2:   8%|▊         | 3/39 [01:10<13:51, 23.09s/it]step:4 - train/loss:0.046 - train/lr(1e-3):0.006 - train/original_loss:0.127
+Epoch 1/2:  10%|█         | 4/39 [01:32<13:20, 22.88s/it]step:5 - train/loss:0.042 - train/lr(1e-3):0.007 - train/original_loss:0.124
+step:5 - val/loss:0.041 - val/original_loss:0.124
+Epoch 1/2:  13%|█▎        | 5/39 [02:08<15:35, 27.51s/it]step:6 - train/loss:0.043 - train/lr(1e-3):0.009 - train/original_loss:0.124
+Epoch 1/2:  15%|█▌        | 6/39 [02:30<14:12, 25.83s/it]step:7 - train/loss:0.032 - train/lr(1e-3):0.010 - train/original_loss:0.123
+Epoch 1/2:  18%|█▊        | 7/39 [02:53<13:13, 24.81s/it]step:8 - train/loss:0.030 - train/lr(1e-3):0.010 - train/original_loss:0.154
+Epoch 1/2:  21%|██        | 8/39 [03:15<12:24, 24.00s/it]step:9 - train/loss:0.017 - train/lr(1e-3):0.010 - train/original_loss:0.207
+Epoch 1/2:  23%|██▎       | 9/39 [03:38<11:50, 23.68s/it]step:10 - train/loss:0.015 - train/lr(1e-3):0.010 - train/original_loss:0.233
+step:10 - val/loss:0.014 - val/original_loss:0.245
+Epoch 1/2:  26%|██▌       | 10/39 [04:20<14:10, 29.33s/it]step:11 - train/loss:0.015 - train/lr(1e-3):0.010 - train/original_loss:0.256
+Epoch 1/2:  28%|██▊       | 11/39 [04:43<12:47, 27.41s/it]step:12 - train/loss:0.009 - train/lr(1e-3):0.010 - train/original_loss:0.355
+Epoch 1/2:  31%|███       | 12/39 [05:06<11:37, 25.84s/it]step:13 - train/loss:0.008 - train/lr(1e-3):0.010 - train/original_loss:0.430
+Epoch 1/2:  33%|███▎      | 13/39 [05:29<10:49, 24.98s/it]step:14 - train/loss:0.007 - train/lr(1e-3):0.010 - train/original_loss:0.465
+Epoch 1/2:  36%|███▌      | 14/39 [05:51<10:03, 24.16s/it]step:15 - train/loss:0.007 - train/lr(1e-3):0.010 - train/original_loss:0.479
+step:15 - val/loss:0.007 - val/original_loss:0.458
+Epoch 1/2:  38%|███▊      | 15/39 [06:27<11:06, 27.79s/it]step:16 - train/loss:0.007 - train/lr(1e-3):0.010 - train/original_loss:0.482
+Epoch 1/2:  41%|████      | 16/39 [06:49<10:00, 26.11s/it]step:17 - train/loss:0.007 - train/lr(1e-3):0.010 - train/original_loss:0.478
+Epoch 1/2:  44%|████▎     | 17/39 [07:12<09:12, 25.11s/it]step:18 - train/loss:0.006 - train/lr(1e-3):0.009 - train/original_loss:0.420
+Epoch 1/2:  46%|████▌     | 18/39 [07:35<08:30, 24.33s/it]step:19 - train/loss:0.006 - train/lr(1e-3):0.009 - train/original_loss:0.465
+Epoch 1/2:  49%|████▊     | 19/39 [07:57<07:55, 23.77s/it]step:20 - train/loss:0.006 - train/lr(1e-3):0.009 - train/original_loss:0.514
+step:20 - val/loss:0.006 - val/original_loss:0.519
+Epoch 1/2:  51%|█████▏    | 20/39 [08:40<09:18, 29.38s/it]step:21 - train/loss:0.006 - train/lr(1e-3):0.009 - train/original_loss:0.524
+Epoch 1/2:  54%|█████▍    | 21/39 [09:02<08:12, 27.37s/it]step:22 - train/loss:0.005 - train/lr(1e-3):0.009 - train/original_loss:0.490
+Epoch 1/2:  56%|█████▋    | 22/39 [09:25<07:21, 26.00s/it]step:23 - train/loss:0.005 - train/lr(1e-3):0.009 - train/original_loss:0.527
+Epoch 1/2:  59%|█████▉    | 23/39 [09:48<06:39, 24.98s/it]step:24 - train/loss:0.005 - train/lr(1e-3):0.009 - train/original_loss:0.581
+Epoch 1/2:  62%|██████▏   | 24/39 [10:10<06:04, 24.32s/it]step:25 - train/loss:0.006 - train/lr(1e-3):0.008 - train/original_loss:0.471
+step:25 - val/loss:0.005 - val/original_loss:0.510
+Epoch 1/2:  64%|██████▍   | 25/39 [10:46<06:27, 27.67s/it]step:26 - train/loss:0.006 - train/lr(1e-3):0.008 - train/original_loss:0.521
+Epoch 1/2:  67%|██████▋   | 26/39 [11:09<05:42, 26.34s/it]step:27 - train/loss:0.005 - train/lr(1e-3):0.008 - train/original_loss:0.474
+Epoch 1/2:  69%|██████▉   | 27/39 [11:31<05:01, 25.11s/it]step:28 - train/loss:0.005 - train/lr(1e-3):0.008 - train/original_loss:0.514
+Epoch 1/2:  72%|███████▏  | 28/39 [11:55<04:29, 24.51s/it]step:29 - train/loss:0.006 - train/lr(1e-3):0.008 - train/original_loss:0.523
+Epoch 1/2:  74%|███████▍  | 29/39 [12:17<03:58, 23.83s/it]step:30 - train/loss:0.006 - train/lr(1e-3):0.008 - train/original_loss:0.555
+step:30 - val/loss:0.005 - val/original_loss:0.532
+Epoch 1/2:  77%|███████▋  | 30/39 [12:59<04:25, 29.49s/it]step:31 - train/loss:0.005 - train/lr(1e-3):0.007 - train/original_loss:0.493
+Epoch 1/2:  79%|███████▉  | 31/39 [13:22<03:38, 27.32s/it]step:32 - train/loss:0.005 - train/lr(1e-3):0.007 - train/original_loss:0.465
+Epoch 1/2:  82%|████████▏ | 32/39 [13:45<03:01, 26.00s/it]step:33 - train/loss:0.005 - train/lr(1e-3):0.007 - train/original_loss:0.523
+Epoch 1/2:  85%|████████▍ | 33/39 [14:07<02:29, 24.97s/it]step:34 - train/loss:0.005 - train/lr(1e-3):0.007 - train/original_loss:0.482
+Epoch 1/2:  87%|████████▋ | 34/39 [14:30<02:01, 24.33s/it]step:35 - train/loss:0.004 - train/lr(1e-3):0.007 - train/original_loss:0.540
+step:35 - val/loss:0.005 - val/original_loss:0.554
+Epoch 1/2:  90%|████████▉ | 35/39 [15:06<01:51, 27.76s/it]step:36 - train/loss:0.005 - train/lr(1e-3):0.006 - train/original_loss:0.546
+Epoch 1/2:  92%|█████████▏| 36/39 [15:29<01:18, 26.31s/it]step:37 - train/loss:0.005 - train/lr(1e-3):0.006 - train/original_loss:0.575
+Epoch 1/2:  95%|█████████▍| 37/39 [15:51<00:50, 25.18s/it]step:38 - train/loss:0.005 - train/lr(1e-3):0.006 - train/original_loss:0.534
+Epoch 1/2:  97%|█████████▋| 38/39 [16:14<00:24, 24.47s/it]step:39 - train/loss:0.005 - train/lr(1e-3):0.006 - train/original_loss:0.566
+Epoch 1/2: 100%|██████████| 39/39 [16:37<00:00, 23.88s/it]Epoch 1/2: 100%|██████████| 39/39 [16:37<00:00, 25.57s/it]
+Epoch 2/2:   0%|          | 0/39 [00:00<?, ?it/s]step:40 - train/loss:0.004 - train/lr(1e-3):0.006 - train/original_loss:0.526
+step:40 - val/loss:0.005 - val/original_loss:0.548
+Epoch 2/2:   3%|▎         | 1/39 [00:43<27:18, 43.11s/it]step:41 - train/loss:0.005 - train/lr(1e-3):0.005 - train/original_loss:0.490
+Epoch 2/2:   5%|▌         | 2/39 [01:05<19:07, 31.02s/it]step:42 - train/loss:0.005 - train/lr(1e-3):0.005 - train/original_loss:0.550
+Epoch 2/2:   8%|▊         | 3/39 [01:28<16:24, 27.35s/it]step:43 - train/loss:0.005 - train/lr(1e-3):0.005 - train/original_loss:0.517
+Epoch 2/2:  10%|█         | 4/39 [01:51<14:49, 25.43s/it]step:44 - train/loss:0.005 - train/lr(1e-3):0.005 - train/original_loss:0.492
+Epoch 2/2:  13%|█▎        | 5/39 [02:14<13:53, 24.51s/it]step:45 - train/loss:0.005 - train/lr(1e-3):0.004 - train/original_loss:0.577
+step:45 - val/loss:0.005 - val/original_loss:0.542
+Epoch 2/2:  15%|█▌        | 6/39 [02:49<15:34, 28.33s/it]step:46 - train/loss:0.005 - train/lr(1e-3):0.004 - train/original_loss:0.551
+Epoch 2/2:  18%|█▊        | 7/39 [03:12<14:10, 26.57s/it]step:47 - train/loss:0.005 - train/lr(1e-3):0.004 - train/original_loss:0.594
+Epoch 2/2:  21%|██        | 8/39 [03:35<13:04, 25.31s/it]step:48 - train/loss:0.005 - train/lr(1e-3):0.004 - train/original_loss:0.521
+Epoch 2/2:  23%|██▎       | 9/39 [03:58<12:16, 24.56s/it]step:49 - train/loss:0.005 - train/lr(1e-3):0.004 - train/original_loss:0.593
+Epoch 2/2:  26%|██▌       | 10/39 [04:20<11:33, 23.91s/it]step:50 - train/loss:0.005 - train/lr(1e-3):0.003 - train/original_loss:0.597
+step:50 - val/loss:0.005 - val/original_loss:0.557
+Epoch 2/2:  28%|██▊       | 11/39 [05:03<13:49, 29.62s/it]step:51 - train/loss:0.005 - train/lr(1e-3):0.003 - train/original_loss:0.560
+Epoch 2/2:  31%|███       | 12/39 [05:26<12:23, 27.55s/it]step:52 - train/loss:0.004 - train/lr(1e-3):0.003 - train/original_loss:0.533
+Epoch 2/2:  33%|███▎      | 13/39 [05:48<11:18, 26.08s/it]step:53 - train/loss:0.004 - train/lr(1e-3):0.003 - train/original_loss:0.537
+Epoch 2/2:  36%|███▌      | 14/39 [06:11<10:28, 25.13s/it]step:54 - train/loss:0.004 - train/lr(1e-3):0.003 - train/original_loss:0.548
+Epoch 2/2:  38%|███▊      | 15/39 [06:34<09:45, 24.39s/it]step:55 - train/loss:0.005 - train/lr(1e-3):0.002 - train/original_loss:0.578
+step:55 - val/loss:0.005 - val/original_loss:0.554
+Epoch 2/2:  41%|████      | 16/39 [07:10<10:43, 27.96s/it]step:56 - train/loss:0.004 - train/lr(1e-3):0.002 - train/original_loss:0.474
+Epoch 2/2:  44%|████▎     | 17/39 [07:33<09:42, 26.47s/it]step:57 - train/loss:0.004 - train/lr(1e-3):0.002 - train/original_loss:0.538
+Epoch 2/2:  46%|████▌     | 18/39 [07:56<08:54, 25.44s/it]step:58 - train/loss:0.004 - train/lr(1e-3):0.002 - train/original_loss:0.573
+Epoch 2/2:  49%|████▊     | 19/39 [08:19<08:11, 24.60s/it]step:59 - train/loss:0.005 - train/lr(1e-3):0.002 - train/original_loss:0.540
+Epoch 2/2:  51%|█████▏    | 20/39 [08:42<07:38, 24.11s/it]step:60 - train/loss:0.005 - train/lr(1e-3):0.002 - train/original_loss:0.570
+step:60 - val/loss:0.005 - val/original_loss:0.553
+Epoch 2/2:  54%|█████▍    | 21/39 [09:24<08:53, 29.66s/it]step:61 - train/loss:0.004 - train/lr(1e-3):0.001 - train/original_loss:0.586
+Epoch 2/2:  56%|█████▋    | 22/39 [09:47<07:49, 27.59s/it]step:62 - train/loss:0.005 - train/lr(1e-3):0.001 - train/original_loss:0.491
+Epoch 2/2:  59%|█████▉    | 23/39 [10:10<06:58, 26.16s/it]step:63 - train/loss:0.005 - train/lr(1e-3):0.001 - train/original_loss:0.530
+Epoch 2/2:  62%|██████▏   | 24/39 [10:33<06:17, 25.13s/it]step:64 - train/loss:0.005 - train/lr(1e-3):0.001 - train/original_loss:0.503
+Epoch 2/2:  64%|██████▍   | 25/39 [10:55<05:41, 24.41s/it]step:65 - train/loss:0.005 - train/lr(1e-3):0.001 - train/original_loss:0.531
+step:65 - val/loss:0.004 - val/original_loss:0.550
+Epoch 2/2:  67%|██████▋   | 26/39 [11:31<06:02, 27.89s/it]step:66 - train/loss:0.005 - train/lr(1e-3):0.001 - train/original_loss:0.600
+Epoch 2/2:  69%|██████▉   | 27/39 [11:54<05:16, 26.34s/it]step:67 - train/loss:0.005 - train/lr(1e-3):0.001 - train/original_loss:0.473
+Epoch 2/2:  72%|███████▏  | 28/39 [12:17<04:38, 25.31s/it]step:68 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.556
+Epoch 2/2:  74%|███████▍  | 29/39 [12:40<04:05, 24.53s/it]step:69 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.567
+Epoch 2/2:  77%|███████▋  | 30/39 [13:02<03:35, 23.97s/it]step:70 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.554
+step:70 - val/loss:0.005 - val/original_loss:0.551
+Epoch 2/2:  79%|███████▉  | 31/39 [13:45<03:56, 29.52s/it]step:71 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.561
+Epoch 2/2:  82%|████████▏ | 32/39 [14:08<03:13, 27.63s/it]step:72 - train/loss:0.004 - train/lr(1e-3):0.000 - train/original_loss:0.573
+Epoch 2/2:  85%|████████▍ | 33/39 [14:31<02:36, 26.14s/it]step:73 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.548
+Epoch 2/2:  87%|████████▋ | 34/39 [14:54<02:06, 25.25s/it]step:74 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.541
+Epoch 2/2:  90%|████████▉ | 35/39 [15:17<01:37, 24.46s/it]step:75 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.591
+step:75 - val/loss:0.005 - val/original_loss:0.549
+Epoch 2/2:  92%|█████████▏| 36/39 [15:53<01:24, 28.04s/it]step:76 - train/loss:0.004 - train/lr(1e-3):0.000 - train/original_loss:0.545
+Epoch 2/2:  95%|█████████▍| 37/39 [16:15<00:52, 26.36s/it]step:77 - train/loss:0.005 - train/lr(1e-3):0.000 - train/original_loss:0.530
+Epoch 2/2:  97%|█████████▋| 38/39 [16:39<00:25, 25.47s/it]step:78 - train/loss:0.004 - train/lr(1e-3):0.000 - train/original_loss:0.507
+step:78 - val/loss:0.005 - val/original_loss:0.550
+Final validation metrics: {'val/loss': 0.004502394702285528, 'val/original_loss': 0.5496212244033813}
+Epoch 2/2:  97%|█████████▋| 38/39 [17:21<00:27, 27.42s/it]
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:          train/loss ███▇▆▂▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:      train/lr(1e-3) ▂▃▄▅▆████████▇▇▇▇▇▆▆▆▅▅▅▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁
+wandb: train/original_loss ▁▁▁▁▁▃▄▆▆▆▆▇▇█▆▆▇▆▆▇▇█▇▇▇███▆▇▇█▇▇▆████▇
+wandb:            val/loss █▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   val/original_loss ▁▃▆▇▇███████████
+wandb: 
+wandb: Run summary:
+wandb:          train/loss 0.00447
+wandb:      train/lr(1e-3) 0
+wandb: train/original_loss 0.5074
+wandb:            val/loss 0.0045
+wandb:   val/original_loss 0.54962
+wandb: 
+wandb: 🚀 View run 1.5b_pi1_ndft_0821-0242 at: https://wandb.ai/coder66-RL-lab/dft/runs/p5e4ufbz
+wandb: ⭐️ View project at: https://wandb.ai/coder66-RL-lab/dft
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20250821_024254-p5e4ufbz/logs

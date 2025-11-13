@@ -1,0 +1,270 @@
+W0905 10:45:50.837000 91838 site-packages/torch/distributed/run.py:792] 
+W0905 10:45:50.837000 91838 site-packages/torch/distributed/run.py:792] *****************************************
+W0905 10:45:50.837000 91838 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0905 10:45:50.837000 91838 site-packages/torch/distributed/run.py:792] *****************************************
+Running positive/minus sft (PMSFT).
+Running positive/minus sft (PMSFT).Running positive/minus sft (PMSFT).
+
+Running positive/minus sft (PMSFT).
+Running positive/minus sft (PMSFT).
+Running positive/minus sft (PMSFT).
+Normalize batch size by dp 6
+Using sequence parallel size: 1
+Using remove padding: False
+Using FSDP rank 0 and size 6 for data distribution
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.27s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.26s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.25s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.27s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.27s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.31s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.21s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.28s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.22s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.22s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.26s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.29s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.25s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.25s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.22s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.23s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.23s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.24s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.30s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.47s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.64s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:07<00:02,  2.74s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.72s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.36s/it]
+functools.partial(<function _or_policy at 0x7fa866a38310>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7fa866a381f0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  3.15s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.65s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  3.23s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.74s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  3.24s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.76s/it]
+NCCL version 2.21.5+cuda12.4
+Number of steps/epoch 1250, number of epochs 1, total number of steps 1250
+{'data': {'train_batch_size': 2, 'micro_batch_size': None, 'micro_batch_size_per_gpu': 2, 'train_files': 'data/pi1/pi1_r128_pm_responses_16000.parquet', 'val_files': 'data/pi1/pi1_r128_pm_responses_16000_valid.parquet', 'prompt_key': 'prompt', 'response_key': 'response', 'prompt_dict_keys': None, 'response_dict_keys': None, 'multiturn': {'enable': False, 'messages_key': 'messages', 'tools_key': 'tools', 'enable_thinking_key': 'enable_thinking'}, 'max_length': 1920, 'truncation': 'right', 'balance_dp_token': False, 'chat_template': None, 'custom_cls': {'path': None, 'name': None}, 'use_shm': False}, 'model': {'partial_pretrain': '/homes/gws/lxh22/models/Qwen2.5-Math-7B', 'use_shm': False, 'fsdp_config': {'model_dtype': 'fp32', 'wrap_policy': {'min_num_params': 0}, 'cpu_offload': False, 'offload_params': False}, 'external_lib': None, 'enable_gradient_checkpointing': True, 'trust_remote_code': False, 'lora_rank': 0, 'lora_alpha': 16, 'target_modules': 'all-linear', 'use_liger': False, 'strategy': 'fsdp2'}, 'optim': {'lr': 1e-05, 'betas': [0.9, 0.95], 'weight_decay': 0.01, 'warmup_steps_ratio': 0.1, 'clip_grad': 1.0, 'lr_scheduler': 'cosine'}, 'ulysses_sequence_parallel_size': 1, 'use_remove_padding': False, 'trainer': {'default_local_dir': '/local1/lxh/save/offline_grpo/7b_pi1_pmsft', 'default_hdfs_dir': None, 'resume_path': None, 'project_name': 'dft', 'experiment_name': '7b_pi1_pmsft_0905-1045', 'total_epochs': 1, 'total_training_steps': 200, 'logger': ['console', 'wandb'], 'seed': 1, 'save_freq': 40, 'test_freq': 40, 'nnodes': 1, 'n_gpus_per_node': 8, 'max_ckpt_to_keep': None}}
+wandb: Currently logged in as: lixinghan2013 (coder66-RL-lab) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.1
+wandb: Run data is saved locally in /homes/gws/lxh22/rl-sft/DFT/verl/wandb/run-20250905_104627-no4ku2eo
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run 7b_pi1_pmsft_0905-1045
+wandb: ⭐️ View project at https://wandb.ai/coder66-RL-lab/dft
+wandb: 🚀 View run at https://wandb.ai/coder66-RL-lab/dft/runs/no4ku2eo
+Epoch 1/1:   0%|          | 0/1250 [00:00<?, ?it/s]step:1 - train/loss:0.035 - train/lr(1e-3):0.000 - train/original_loss:0.110
+Epoch 1/1:   0%|          | 1/1250 [00:08<2:56:55,  8.50s/it]step:2 - train/loss:0.038 - train/lr(1e-3):0.000 - train/original_loss:0.104
+Epoch 1/1:   0%|          | 2/1250 [00:14<2:28:47,  7.15s/it]step:3 - train/loss:-0.002 - train/lr(1e-3):0.000 - train/original_loss:0.135
+Epoch 1/1:   0%|          | 3/1250 [00:20<2:19:57,  6.73s/it]step:4 - train/loss:-0.025 - train/lr(1e-3):0.000 - train/original_loss:0.113
+Epoch 1/1:   0%|          | 4/1250 [00:27<2:15:20,  6.52s/it]step:5 - train/loss:-0.026 - train/lr(1e-3):0.000 - train/original_loss:-0.051
+Epoch 1/1:   0%|          | 5/1250 [00:33<2:12:36,  6.39s/it]step:6 - train/loss:-0.007 - train/lr(1e-3):0.000 - train/original_loss:0.103
+Epoch 1/1:   0%|          | 6/1250 [00:39<2:11:14,  6.33s/it]step:7 - train/loss:0.009 - train/lr(1e-3):0.001 - train/original_loss:0.093
+Epoch 1/1:   1%|          | 7/1250 [00:46<2:12:16,  6.39s/it]step:8 - train/loss:0.027 - train/lr(1e-3):0.001 - train/original_loss:0.122
+Epoch 1/1:   1%|          | 8/1250 [00:52<2:11:10,  6.34s/it]step:9 - train/loss:0.044 - train/lr(1e-3):0.001 - train/original_loss:0.103
+Epoch 1/1:   1%|          | 9/1250 [00:58<2:10:13,  6.30s/it]step:10 - train/loss:0.027 - train/lr(1e-3):0.001 - train/original_loss:0.116
+Epoch 1/1:   1%|          | 10/1250 [01:04<2:09:35,  6.27s/it]step:11 - train/loss:0.046 - train/lr(1e-3):0.001 - train/original_loss:0.091
+Epoch 1/1:   1%|          | 11/1250 [01:10<2:08:59,  6.25s/it]step:12 - train/loss:0.043 - train/lr(1e-3):0.001 - train/original_loss:0.112
+Epoch 1/1:   1%|          | 12/1250 [01:17<2:08:54,  6.25s/it]step:13 - train/loss:-0.034 - train/lr(1e-3):0.001 - train/original_loss:0.127
+Epoch 1/1:   1%|          | 13/1250 [01:23<2:08:17,  6.22s/it]step:14 - train/loss:-0.015 - train/lr(1e-3):0.001 - train/original_loss:0.080
+Epoch 1/1:   1%|          | 14/1250 [01:29<2:08:03,  6.22s/it]step:15 - train/loss:-0.009 - train/lr(1e-3):0.001 - train/original_loss:-0.030
+Epoch 1/1:   1%|          | 15/1250 [01:35<2:08:13,  6.23s/it]step:16 - train/loss:-0.049 - train/lr(1e-3):0.001 - train/original_loss:-0.060
+Epoch 1/1:   1%|▏         | 16/1250 [01:41<2:08:06,  6.23s/it]step:17 - train/loss:0.000 - train/lr(1e-3):0.001 - train/original_loss:-0.099
+Epoch 1/1:   1%|▏         | 17/1250 [01:48<2:07:31,  6.21s/it]step:18 - train/loss:-0.016 - train/lr(1e-3):0.001 - train/original_loss:-0.261
+Epoch 1/1:   1%|▏         | 18/1250 [01:54<2:07:16,  6.20s/it]step:19 - train/loss:0.023 - train/lr(1e-3):0.002 - train/original_loss:-0.150
+Epoch 1/1:   2%|▏         | 19/1250 [02:00<2:07:12,  6.20s/it]step:20 - train/loss:-0.034 - train/lr(1e-3):0.002 - train/original_loss:-0.062
+Epoch 1/1:   2%|▏         | 20/1250 [02:06<2:07:13,  6.21s/it]step:21 - train/loss:0.069 - train/lr(1e-3):0.002 - train/original_loss:-0.073
+Epoch 1/1:   2%|▏         | 21/1250 [02:12<2:06:51,  6.19s/it]step:22 - train/loss:-0.034 - train/lr(1e-3):0.002 - train/original_loss:-0.223
+Epoch 1/1:   2%|▏         | 22/1250 [02:19<2:06:43,  6.19s/it]step:23 - train/loss:-0.024 - train/lr(1e-3):0.002 - train/original_loss:-0.070
+Epoch 1/1:   2%|▏         | 23/1250 [02:25<2:06:44,  6.20s/it]step:24 - train/loss:0.011 - train/lr(1e-3):0.002 - train/original_loss:-0.074
+Epoch 1/1:   2%|▏         | 24/1250 [02:31<2:06:41,  6.20s/it]step:25 - train/loss:-0.079 - train/lr(1e-3):0.002 - train/original_loss:-0.049
+Epoch 1/1:   2%|▏         | 25/1250 [02:37<2:06:13,  6.18s/it]step:26 - train/loss:-0.022 - train/lr(1e-3):0.002 - train/original_loss:0.092
+Epoch 1/1:   2%|▏         | 26/1250 [02:43<2:06:14,  6.19s/it]step:27 - train/loss:-0.005 - train/lr(1e-3):0.002 - train/original_loss:-0.078
+Epoch 1/1:   2%|▏         | 27/1250 [02:50<2:06:15,  6.19s/it]step:28 - train/loss:-0.018 - train/lr(1e-3):0.002 - train/original_loss:0.056
+Epoch 1/1:   2%|▏         | 28/1250 [02:56<2:06:09,  6.19s/it]step:29 - train/loss:-0.067 - train/lr(1e-3):0.002 - train/original_loss:-0.077
+Epoch 1/1:   2%|▏         | 29/1250 [03:02<2:07:22,  6.26s/it]step:30 - train/loss:0.028 - train/lr(1e-3):0.002 - train/original_loss:0.129
+Epoch 1/1:   2%|▏         | 30/1250 [03:08<2:06:48,  6.24s/it]step:31 - train/loss:-0.031 - train/lr(1e-3):0.002 - train/original_loss:-0.064
+Epoch 1/1:   2%|▏         | 31/1250 [03:15<2:06:40,  6.24s/it]step:32 - train/loss:-0.016 - train/lr(1e-3):0.003 - train/original_loss:-0.160
+Epoch 1/1:   3%|▎         | 32/1250 [03:21<2:06:20,  6.22s/it]step:33 - train/loss:-0.050 - train/lr(1e-3):0.003 - train/original_loss:-0.184
+Epoch 1/1:   3%|▎         | 33/1250 [03:27<2:05:50,  6.20s/it]step:34 - train/loss:0.076 - train/lr(1e-3):0.003 - train/original_loss:0.090
+Epoch 1/1:   3%|▎         | 34/1250 [03:33<2:05:35,  6.20s/it]step:35 - train/loss:-0.091 - train/lr(1e-3):0.003 - train/original_loss:-0.336
+Epoch 1/1:   3%|▎         | 35/1250 [03:39<2:05:38,  6.20s/it]step:36 - train/loss:-0.027 - train/lr(1e-3):0.003 - train/original_loss:-0.092
+Epoch 1/1:   3%|▎         | 36/1250 [03:46<2:05:28,  6.20s/it]step:37 - train/loss:0.028 - train/lr(1e-3):0.003 - train/original_loss:-0.162
+Epoch 1/1:   3%|▎         | 37/1250 [03:52<2:05:10,  6.19s/it]step:38 - train/loss:0.032 - train/lr(1e-3):0.003 - train/original_loss:0.083
+Epoch 1/1:   3%|▎         | 38/1250 [03:58<2:05:05,  6.19s/it]step:39 - train/loss:-0.076 - train/lr(1e-3):0.003 - train/original_loss:-0.125
+Epoch 1/1:   3%|▎         | 39/1250 [04:04<2:05:00,  6.19s/it]step:40 - train/loss:-0.009 - train/lr(1e-3):0.003 - train/original_loss:-0.104
+step:40 - val/loss:-0.049 - val/original_loss:-0.049
+Epoch 1/1:   3%|▎         | 40/1250 [07:32<22:25:27, 66.72s/it]step:41 - train/loss:-0.019 - train/lr(1e-3):0.003 - train/original_loss:0.117
+Epoch 1/1:   3%|▎         | 41/1250 [07:38<16:18:49, 48.58s/it]step:42 - train/loss:-0.094 - train/lr(1e-3):0.003 - train/original_loss:-0.194
+Epoch 1/1:   3%|▎         | 42/1250 [07:44<12:01:57, 35.86s/it]step:43 - train/loss:-0.008 - train/lr(1e-3):0.003 - train/original_loss:-0.072
+Epoch 1/1:   3%|▎         | 43/1250 [07:51<9:02:36, 26.97s/it] step:44 - train/loss:-0.015 - train/lr(1e-3):0.004 - train/original_loss:0.123
+Epoch 1/1:   4%|▎         | 44/1250 [07:57<6:57:13, 20.76s/it]step:45 - train/loss:-0.114 - train/lr(1e-3):0.004 - train/original_loss:-0.394
+Epoch 1/1:   4%|▎         | 45/1250 [08:03<5:29:24, 16.40s/it]step:46 - train/loss:-0.022 - train/lr(1e-3):0.004 - train/original_loss:0.273
+Epoch 1/1:   4%|▎         | 46/1250 [08:09<4:27:54, 13.35s/it]step:47 - train/loss:-0.070 - train/lr(1e-3):0.004 - train/original_loss:-0.209
+Epoch 1/1:   4%|▍         | 47/1250 [08:16<3:44:50, 11.21s/it]step:48 - train/loss:-0.183 - train/lr(1e-3):0.004 - train/original_loss:-0.202
+Epoch 1/1:   4%|▍         | 48/1250 [08:22<3:14:39,  9.72s/it]step:49 - train/loss:-0.072 - train/lr(1e-3):0.004 - train/original_loss:0.101
+Epoch 1/1:   4%|▍         | 49/1250 [08:28<2:53:13,  8.65s/it]step:50 - train/loss:-0.198 - train/lr(1e-3):0.004 - train/original_loss:0.226
+Epoch 1/1:   4%|▍         | 50/1250 [08:34<2:38:19,  7.92s/it]step:51 - train/loss:-0.224 - train/lr(1e-3):0.004 - train/original_loss:-0.346
+Epoch 1/1:   4%|▍         | 51/1250 [08:40<2:27:57,  7.40s/it]step:52 - train/loss:-0.256 - train/lr(1e-3):0.004 - train/original_loss:-0.132
+Epoch 1/1:   4%|▍         | 52/1250 [08:47<2:20:51,  7.05s/it]step:53 - train/loss:-0.411 - train/lr(1e-3):0.004 - train/original_loss:-0.740
+Epoch 1/1:   4%|▍         | 53/1250 [08:53<2:15:36,  6.80s/it]step:54 - train/loss:-0.197 - train/lr(1e-3):0.004 - train/original_loss:-0.788
+Epoch 1/1:   4%|▍         | 54/1250 [08:59<2:11:49,  6.61s/it]step:55 - train/loss:-0.620 - train/lr(1e-3):0.004 - train/original_loss:-1.309
+Epoch 1/1:   4%|▍         | 55/1250 [09:05<2:09:25,  6.50s/it]step:56 - train/loss:-0.174 - train/lr(1e-3):0.004 - train/original_loss:0.374
+Epoch 1/1:   4%|▍         | 56/1250 [09:12<2:07:38,  6.41s/it]step:57 - train/loss:0.281 - train/lr(1e-3):0.005 - train/original_loss:-0.199
+Epoch 1/1:   5%|▍         | 57/1250 [09:18<2:06:10,  6.35s/it]step:58 - train/loss:0.031 - train/lr(1e-3):0.005 - train/original_loss:1.084
+Epoch 1/1:   5%|▍         | 58/1250 [09:24<2:04:55,  6.29s/it]step:59 - train/loss:-0.513 - train/lr(1e-3):0.005 - train/original_loss:-0.274
+Epoch 1/1:   5%|▍         | 59/1250 [09:30<2:04:18,  6.26s/it]step:60 - train/loss:-0.391 - train/lr(1e-3):0.005 - train/original_loss:0.628
+Epoch 1/1:   5%|▍         | 60/1250 [09:36<2:03:51,  6.24s/it]step:61 - train/loss:-0.072 - train/lr(1e-3):0.005 - train/original_loss:0.291
+Epoch 1/1:   5%|▍         | 61/1250 [09:42<2:03:24,  6.23s/it]step:62 - train/loss:-0.451 - train/lr(1e-3):0.005 - train/original_loss:-2.028
+Epoch 1/1:   5%|▍         | 62/1250 [09:49<2:03:03,  6.21s/it]step:63 - train/loss:0.290 - train/lr(1e-3):0.005 - train/original_loss:0.803
+Epoch 1/1:   5%|▌         | 63/1250 [09:55<2:04:22,  6.29s/it]step:64 - train/loss:-0.343 - train/lr(1e-3):0.005 - train/original_loss:-1.406
+Epoch 1/1:   5%|▌         | 64/1250 [10:01<2:03:51,  6.27s/it]step:65 - train/loss:-0.634 - train/lr(1e-3):0.005 - train/original_loss:-0.682
+Epoch 1/1:   5%|▌         | 65/1250 [10:07<2:03:21,  6.25s/it]step:66 - train/loss:-0.255 - train/lr(1e-3):0.005 - train/original_loss:-0.401
+Epoch 1/1:   5%|▌         | 66/1250 [10:14<2:02:47,  6.22s/it]step:67 - train/loss:-1.066 - train/lr(1e-3):0.005 - train/original_loss:-2.050
+Epoch 1/1:   5%|▌         | 67/1250 [10:20<2:02:38,  6.22s/it]step:68 - train/loss:-0.531 - train/lr(1e-3):0.005 - train/original_loss:0.997
+Epoch 1/1:   5%|▌         | 68/1250 [10:26<2:02:32,  6.22s/it]step:69 - train/loss:0.102 - train/lr(1e-3):0.006 - train/original_loss:0.206
+Epoch 1/1:   6%|▌         | 69/1250 [10:32<2:02:14,  6.21s/it]step:70 - train/loss:-1.088 - train/lr(1e-3):0.006 - train/original_loss:-0.793
+Epoch 1/1:   6%|▌         | 70/1250 [10:39<2:03:06,  6.26s/it]step:71 - train/loss:-1.865 - train/lr(1e-3):0.006 - train/original_loss:-1.088
+Epoch 1/1:   6%|▌         | 71/1250 [10:45<2:02:33,  6.24s/it]step:72 - train/loss:-0.988 - train/lr(1e-3):0.006 - train/original_loss:-2.076
+Epoch 1/1:   6%|▌         | 72/1250 [10:51<2:02:15,  6.23s/it]step:73 - train/loss:0.187 - train/lr(1e-3):0.006 - train/original_loss:-1.675
+Epoch 1/1:   6%|▌         | 73/1250 [10:57<2:03:16,  6.28s/it]step:74 - train/loss:-1.896 - train/lr(1e-3):0.006 - train/original_loss:1.496
+Epoch 1/1:   6%|▌         | 74/1250 [11:04<2:03:43,  6.31s/it]step:75 - train/loss:-1.317 - train/lr(1e-3):0.006 - train/original_loss:-2.038
+Epoch 1/1:   6%|▌         | 75/1250 [11:10<2:03:08,  6.29s/it]step:76 - train/loss:0.406 - train/lr(1e-3):0.006 - train/original_loss:-2.033
+Epoch 1/1:   6%|▌         | 76/1250 [11:16<2:02:37,  6.27s/it]step:77 - train/loss:-0.778 - train/lr(1e-3):0.006 - train/original_loss:1.079
+Epoch 1/1:   6%|▌         | 77/1250 [11:23<2:02:18,  6.26s/it]step:78 - train/loss:-1.541 - train/lr(1e-3):0.006 - train/original_loss:-3.913
+Epoch 1/1:   6%|▌         | 78/1250 [11:29<2:01:37,  6.23s/it]step:79 - train/loss:-0.869 - train/lr(1e-3):0.006 - train/original_loss:-7.228
+Epoch 1/1:   6%|▋         | 79/1250 [11:35<2:01:22,  6.22s/it]step:80 - train/loss:-0.495 - train/lr(1e-3):0.006 - train/original_loss:0.149
+step:80 - val/loss:-1.098 - val/original_loss:-1.098
+Epoch 1/1:   6%|▋         | 80/1250 [14:37<19:11:50, 59.07s/it]step:81 - train/loss:-0.236 - train/lr(1e-3):0.006 - train/original_loss:-2.425
+Epoch 1/1:   6%|▋         | 81/1250 [14:44<14:02:16, 43.23s/it]step:82 - train/loss:-0.204 - train/lr(1e-3):0.007 - train/original_loss:-8.906
+Epoch 1/1:   7%|▋         | 82/1250 [14:50<10:25:24, 32.13s/it]step:83 - train/loss:-1.082 - train/lr(1e-3):0.007 - train/original_loss:-0.155
+Epoch 1/1:   7%|▋         | 83/1250 [14:56<7:53:51, 24.36s/it] step:84 - train/loss:2.006 - train/lr(1e-3):0.007 - train/original_loss:1.633
+Epoch 1/1:   7%|▋         | 84/1250 [15:02<6:07:51, 18.93s/it]step:85 - train/loss:0.586 - train/lr(1e-3):0.007 - train/original_loss:-0.486
+Epoch 1/1:   7%|▋         | 85/1250 [15:09<4:53:38, 15.12s/it]step:86 - train/loss:-0.974 - train/lr(1e-3):0.007 - train/original_loss:-2.445
+Epoch 1/1:   7%|▋         | 86/1250 [15:15<4:01:34, 12.45s/it]step:87 - train/loss:-1.029 - train/lr(1e-3):0.007 - train/original_loss:-2.908
+Epoch 1/1:   7%|▋         | 87/1250 [15:21<3:25:20, 10.59s/it]step:88 - train/loss:-1.381 - train/lr(1e-3):0.007 - train/original_loss:1.604
+Epoch 1/1:   7%|▋         | 88/1250 [15:27<2:59:49,  9.29s/it]step:89 - train/loss:-0.540 - train/lr(1e-3):0.007 - train/original_loss:1.364
+Epoch 1/1:   7%|▋         | 89/1250 [15:33<2:41:56,  8.37s/it]step:90 - train/loss:-1.062 - train/lr(1e-3):0.007 - train/original_loss:0.877
+Epoch 1/1:   7%|▋         | 90/1250 [15:40<2:29:00,  7.71s/it]step:91 - train/loss:-1.434 - train/lr(1e-3):0.007 - train/original_loss:0.934
+Epoch 1/1:   7%|▋         | 91/1250 [15:46<2:20:03,  7.25s/it]step:92 - train/loss:-2.323 - train/lr(1e-3):0.007 - train/original_loss:1.559
+Epoch 1/1:   7%|▋         | 92/1250 [15:52<2:13:50,  6.93s/it]step:93 - train/loss:-0.880 - train/lr(1e-3):0.007 - train/original_loss:5.001
+Epoch 1/1:   7%|▋         | 93/1250 [15:58<2:09:28,  6.71s/it]step:94 - train/loss:0.120 - train/lr(1e-3):0.008 - train/original_loss:1.811
+Epoch 1/1:   8%|▊         | 94/1250 [16:04<2:06:25,  6.56s/it]step:95 - train/loss:-2.278 - train/lr(1e-3):0.008 - train/original_loss:2.063
+Epoch 1/1:   8%|▊         | 95/1250 [16:11<2:04:17,  6.46s/it]step:96 - train/loss:-2.190 - train/lr(1e-3):0.008 - train/original_loss:3.682
+Epoch 1/1:   8%|▊         | 96/1250 [16:17<2:02:43,  6.38s/it]step:97 - train/loss:-5.698 - train/lr(1e-3):0.008 - train/original_loss:2.012
+Epoch 1/1:   8%|▊         | 97/1250 [16:23<2:01:32,  6.32s/it]step:98 - train/loss:-6.328 - train/lr(1e-3):0.008 - train/original_loss:-8.887
+Epoch 1/1:   8%|▊         | 98/1250 [16:29<2:01:32,  6.33s/it]step:99 - train/loss:5.629 - train/lr(1e-3):0.008 - train/original_loss:10.765
+Epoch 1/1:   8%|▊         | 99/1250 [16:36<2:00:31,  6.28s/it]step:100 - train/loss:-4.017 - train/lr(1e-3):0.008 - train/original_loss:-20.398
+Epoch 1/1:   8%|▊         | 100/1250 [16:42<2:00:00,  6.26s/it]step:101 - train/loss:4.382 - train/lr(1e-3):0.008 - train/original_loss:12.782
+Epoch 1/1:   8%|▊         | 101/1250 [16:48<1:59:26,  6.24s/it]step:102 - train/loss:-5.069 - train/lr(1e-3):0.008 - train/original_loss:-8.386
+Epoch 1/1:   8%|▊         | 102/1250 [16:54<1:59:02,  6.22s/it]step:103 - train/loss:0.371 - train/lr(1e-3):0.008 - train/original_loss:-4.857
+Epoch 1/1:   8%|▊         | 103/1250 [17:00<1:58:44,  6.21s/it]step:104 - train/loss:-0.432 - train/lr(1e-3):0.008 - train/original_loss:-3.317
+Epoch 1/1:   8%|▊         | 104/1250 [17:07<2:00:02,  6.28s/it]step:105 - train/loss:-0.816 - train/lr(1e-3):0.008 - train/original_loss:1.295
+Epoch 1/1:   8%|▊         | 105/1250 [17:13<2:00:47,  6.33s/it]step:106 - train/loss:0.155 - train/lr(1e-3):0.008 - train/original_loss:1.461
+Epoch 1/1:   8%|▊         | 106/1250 [17:19<1:59:52,  6.29s/it]step:107 - train/loss:-0.179 - train/lr(1e-3):0.009 - train/original_loss:2.405
+Epoch 1/1:   9%|▊         | 107/1250 [17:26<1:59:14,  6.26s/it]step:108 - train/loss:-2.459 - train/lr(1e-3):0.009 - train/original_loss:-7.882
+Epoch 1/1:   9%|▊         | 108/1250 [17:32<1:58:50,  6.24s/it]step:109 - train/loss:-1.782 - train/lr(1e-3):0.009 - train/original_loss:1.988
+Epoch 1/1:   9%|▊         | 109/1250 [17:38<1:59:48,  6.30s/it]step:110 - train/loss:-2.402 - train/lr(1e-3):0.009 - train/original_loss:-4.533
+Epoch 1/1:   9%|▉         | 110/1250 [17:44<1:59:05,  6.27s/it]step:111 - train/loss:-1.089 - train/lr(1e-3):0.009 - train/original_loss:1.306
+Epoch 1/1:   9%|▉         | 111/1250 [17:51<1:58:33,  6.25s/it]step:112 - train/loss:-7.925 - train/lr(1e-3):0.009 - train/original_loss:0.957
+Epoch 1/1:   9%|▉         | 112/1250 [17:57<1:58:17,  6.24s/it]step:113 - train/loss:-1.753 - train/lr(1e-3):0.009 - train/original_loss:0.753
+Epoch 1/1:   9%|▉         | 113/1250 [18:03<1:57:56,  6.22s/it]step:114 - train/loss:-8.165 - train/lr(1e-3):0.009 - train/original_loss:-5.803
+Epoch 1/1:   9%|▉         | 114/1250 [18:09<1:57:45,  6.22s/it]step:115 - train/loss:-6.267 - train/lr(1e-3):0.009 - train/original_loss:-12.200
+Epoch 1/1:   9%|▉         | 115/1250 [18:15<1:57:31,  6.21s/it]step:116 - train/loss:-3.988 - train/lr(1e-3):0.009 - train/original_loss:1.528
+Epoch 1/1:   9%|▉         | 116/1250 [18:22<1:57:18,  6.21s/it]step:117 - train/loss:-12.581 - train/lr(1e-3):0.009 - train/original_loss:-32.891
+Epoch 1/1:   9%|▉         | 117/1250 [18:28<1:57:03,  6.20s/it]step:118 - train/loss:0.636 - train/lr(1e-3):0.009 - train/original_loss:-14.515
+Epoch 1/1:   9%|▉         | 118/1250 [18:34<1:57:01,  6.20s/it]step:119 - train/loss:-7.388 - train/lr(1e-3):0.010 - train/original_loss:10.969
+Epoch 1/1:  10%|▉         | 119/1250 [18:40<1:56:53,  6.20s/it]step:120 - train/loss:-0.470 - train/lr(1e-3):0.010 - train/original_loss:-15.153
+step:120 - val/loss:-7.154 - val/original_loss:-7.154
+Epoch 1/1:  10%|▉         | 120/1250 [21:42<18:27:45, 58.82s/it]step:121 - train/loss:-3.813 - train/lr(1e-3):0.010 - train/original_loss:-15.730
+Epoch 1/1:  10%|▉         | 121/1250 [21:48<13:30:09, 43.06s/it]step:122 - train/loss:-2.986 - train/lr(1e-3):0.010 - train/original_loss:3.614
+Epoch 1/1:  10%|▉         | 122/1250 [21:54<10:01:56, 32.02s/it]step:123 - train/loss:-3.015 - train/lr(1e-3):0.010 - train/original_loss:-24.983
+Epoch 1/1:  10%|▉         | 123/1250 [22:01<7:35:57, 24.27s/it] step:124 - train/loss:-4.847 - train/lr(1e-3):0.010 - train/original_loss:-35.471
+Epoch 1/1:  10%|▉         | 124/1250 [22:07<5:53:59, 18.86s/it]step:125 - train/loss:-1.217 - train/lr(1e-3):0.010 - train/original_loss:14.115
+Epoch 1/1:  10%|█         | 125/1250 [22:13<4:42:42, 15.08s/it]step:126 - train/loss:-1.392 - train/lr(1e-3):0.010 - train/original_loss:0.822
+Epoch 1/1:  10%|█         | 126/1250 [22:19<3:52:50, 12.43s/it]step:127 - train/loss:-11.088 - train/lr(1e-3):0.010 - train/original_loss:-3.020
+Epoch 1/1:  10%|█         | 127/1250 [22:25<3:17:36, 10.56s/it]step:128 - train/loss:-5.921 - train/lr(1e-3):0.010 - train/original_loss:-9.748
+Epoch 1/1:  10%|█         | 128/1250 [22:32<2:53:12,  9.26s/it]step:129 - train/loss:-6.073 - train/lr(1e-3):0.010 - train/original_loss:1.743
+Epoch 1/1:  10%|█         | 129/1250 [22:38<2:36:01,  8.35s/it]step:130 - train/loss:-19.443 - train/lr(1e-3):0.010 - train/original_loss:-17.180
+Epoch 1/1:  10%|█         | 130/1250 [22:44<2:23:51,  7.71s/it]step:131 - train/loss:-21.714 - train/lr(1e-3):0.010 - train/original_loss:-18.559
+Epoch 1/1:  10%|█         | 131/1250 [22:50<2:15:01,  7.24s/it]step:132 - train/loss:-24.257 - train/lr(1e-3):0.010 - train/original_loss:-20.274
+Epoch 1/1:  11%|█         | 132/1250 [22:56<2:09:05,  6.93s/it]step:133 - train/loss:-1.773 - train/lr(1e-3):0.010 - train/original_loss:16.987
+Epoch 1/1:  11%|█         | 133/1250 [23:03<2:06:34,  6.80s/it]step:134 - train/loss:-13.916 - train/lr(1e-3):0.010 - train/original_loss:26.707
+Epoch 1/1:  11%|█         | 134/1250 [23:09<2:03:19,  6.63s/it]step:135 - train/loss:-15.272 - train/lr(1e-3):0.010 - train/original_loss:-63.207
+Epoch 1/1:  11%|█         | 135/1250 [23:15<2:00:37,  6.49s/it]step:136 - train/loss:-4.620 - train/lr(1e-3):0.010 - train/original_loss:-64.495
+Epoch 1/1:  11%|█         | 136/1250 [23:22<1:59:58,  6.46s/it]step:137 - train/loss:7.076 - train/lr(1e-3):0.010 - train/original_loss:-12.054
+Epoch 1/1:  11%|█         | 137/1250 [23:28<1:59:49,  6.46s/it]step:138 - train/loss:-22.493 - train/lr(1e-3):0.010 - train/original_loss:0.787
+Epoch 1/1:  11%|█         | 138/1250 [23:34<1:58:17,  6.38s/it]step:139 - train/loss:-26.420 - train/lr(1e-3):0.010 - train/original_loss:-66.767
+Epoch 1/1:  11%|█         | 139/1250 [23:41<1:57:54,  6.37s/it]step:140 - train/loss:0.083 - train/lr(1e-3):0.010 - train/original_loss:30.618
+Epoch 1/1:  11%|█         | 140/1250 [23:47<1:56:47,  6.31s/it]step:141 - train/loss:-25.403 - train/lr(1e-3):0.010 - train/original_loss:3.343
+Epoch 1/1:  11%|█▏        | 141/1250 [23:53<1:56:07,  6.28s/it]step:142 - train/loss:-13.989 - train/lr(1e-3):0.010 - train/original_loss:33.645
+Epoch 1/1:  11%|█▏        | 142/1250 [23:59<1:55:35,  6.26s/it]step:143 - train/loss:-6.223 - train/lr(1e-3):0.010 - train/original_loss:0.803
+Epoch 1/1:  11%|█▏        | 143/1250 [24:06<1:55:13,  6.25s/it]step:144 - train/loss:-25.030 - train/lr(1e-3):0.010 - train/original_loss:3.485
+Epoch 1/1:  12%|█▏        | 144/1250 [24:12<1:54:50,  6.23s/it]step:145 - train/loss:-7.642 - train/lr(1e-3):0.010 - train/original_loss:0.649
+Epoch 1/1:  12%|█▏        | 145/1250 [24:18<1:54:38,  6.22s/it]step:146 - train/loss:-16.415 - train/lr(1e-3):0.010 - train/original_loss:2.297
+Epoch 1/1:  12%|█▏        | 146/1250 [24:24<1:54:32,  6.23s/it]step:147 - train/loss:-46.328 - train/lr(1e-3):0.010 - train/original_loss:-88.030
+Epoch 1/1:  12%|█▏        | 147/1250 [24:30<1:54:15,  6.22s/it]step:148 - train/loss:-8.402 - train/lr(1e-3):0.010 - train/original_loss:12.157
+Epoch 1/1:  12%|█▏        | 148/1250 [24:37<1:54:04,  6.21s/it]step:149 - train/loss:-37.679 - train/lr(1e-3):0.010 - train/original_loss:-42.291
+Epoch 1/1:  12%|█▏        | 149/1250 [24:43<1:54:04,  6.22s/it]step:150 - train/loss:-12.526 - train/lr(1e-3):0.010 - train/original_loss:-26.345
+Epoch 1/1:  12%|█▏        | 150/1250 [24:49<1:53:59,  6.22s/it]step:151 - train/loss:-54.569 - train/lr(1e-3):0.010 - train/original_loss:-57.546
+Epoch 1/1:  12%|█▏        | 151/1250 [24:55<1:53:39,  6.21s/it]step:152 - train/loss:-47.538 - train/lr(1e-3):0.010 - train/original_loss:3.651
+Epoch 1/1:  12%|█▏        | 152/1250 [25:01<1:53:30,  6.20s/it]step:153 - train/loss:26.632 - train/lr(1e-3):0.010 - train/original_loss:48.720
+Epoch 1/1:  12%|█▏        | 153/1250 [25:08<1:53:28,  6.21s/it]step:154 - train/loss:39.882 - train/lr(1e-3):0.010 - train/original_loss:12.361
+Epoch 1/1:  12%|█▏        | 154/1250 [25:14<1:53:28,  6.21s/it]step:155 - train/loss:7.128 - train/lr(1e-3):0.010 - train/original_loss:82.551
+Epoch 1/1:  12%|█▏        | 155/1250 [25:20<1:53:10,  6.20s/it]step:156 - train/loss:12.607 - train/lr(1e-3):0.010 - train/original_loss:90.264
+Epoch 1/1:  12%|█▏        | 156/1250 [25:26<1:53:01,  6.20s/it]step:157 - train/loss:-16.696 - train/lr(1e-3):0.010 - train/original_loss:-56.473
+Epoch 1/1:  13%|█▎        | 157/1250 [25:32<1:52:56,  6.20s/it]step:158 - train/loss:3.065 - train/lr(1e-3):0.010 - train/original_loss:73.786
+Epoch 1/1:  13%|█▎        | 158/1250 [25:39<1:52:44,  6.19s/it]step:159 - train/loss:2.618 - train/lr(1e-3):0.010 - train/original_loss:-4.769
+Epoch 1/1:  13%|█▎        | 159/1250 [25:45<1:52:36,  6.19s/it]step:160 - train/loss:17.735 - train/lr(1e-3):0.010 - train/original_loss:22.155
+step:160 - val/loss:0.194 - val/original_loss:0.194
+Epoch 1/1:  13%|█▎        | 160/1250 [28:48<17:56:01, 59.23s/it]step:161 - train/loss:0.149 - train/lr(1e-3):0.010 - train/original_loss:-17.162
+Epoch 1/1:  13%|█▎        | 161/1250 [28:54<13:06:27, 43.33s/it]step:162 - train/loss:-2.167 - train/lr(1e-3):0.010 - train/original_loss:-4.059
+Epoch 1/1:  13%|█▎        | 162/1250 [29:00<9:43:59, 32.20s/it] step:163 - train/loss:0.685 - train/lr(1e-3):0.010 - train/original_loss:99.113
+Epoch 1/1:  13%|█▎        | 163/1250 [29:06<7:22:18, 24.41s/it]step:164 - train/loss:-20.838 - train/lr(1e-3):0.010 - train/original_loss:-53.991
+Epoch 1/1:  13%|█▎        | 164/1250 [29:13<5:43:00, 18.95s/it]step:165 - train/loss:70.292 - train/lr(1e-3):0.010 - train/original_loss:-58.078
+Epoch 1/1:  13%|█▎        | 165/1250 [29:19<4:33:36, 15.13s/it]step:166 - train/loss:23.823 - train/lr(1e-3):0.010 - train/original_loss:98.885
+Epoch 1/1:  13%|█▎        | 166/1250 [29:26<3:47:22, 12.59s/it]step:167 - train/loss:-1.224 - train/lr(1e-3):0.010 - train/original_loss:-181.384
+Epoch 1/1:  13%|█▎        | 167/1250 [29:32<3:12:43, 10.68s/it]step:168 - train/loss:-5.178 - train/lr(1e-3):0.010 - train/original_loss:87.250
+Epoch 1/1:  13%|█▎        | 168/1250 [29:38<2:49:42,  9.41s/it]step:169 - train/loss:-39.755 - train/lr(1e-3):0.010 - train/original_loss:6.942
+Epoch 1/1:  14%|█▎        | 169/1250 [29:44<2:32:11,  8.45s/it]step:170 - train/loss:-40.775 - train/lr(1e-3):0.010 - train/original_loss:-56.629
+Epoch 1/1:  14%|█▎        | 170/1250 [29:51<2:19:56,  7.77s/it]step:171 - train/loss:-33.252 - train/lr(1e-3):0.010 - train/original_loss:-130.014
+Epoch 1/1:  14%|█▎        | 171/1250 [29:57<2:12:36,  7.37s/it]step:172 - train/loss:-16.882 - train/lr(1e-3):0.010 - train/original_loss:25.835
+Epoch 1/1:  14%|█▍        | 172/1250 [30:03<2:05:57,  7.01s/it]step:173 - train/loss:-58.846 - train/lr(1e-3):0.010 - train/original_loss:-9.258
+Epoch 1/1:  14%|█▍        | 173/1250 [30:09<2:01:34,  6.77s/it]step:174 - train/loss:-10.626 - train/lr(1e-3):0.010 - train/original_loss:0.919
+Epoch 1/1:  14%|█▍        | 174/1250 [30:16<1:58:21,  6.60s/it]step:175 - train/loss:-13.945 - train/lr(1e-3):0.010 - train/original_loss:-1.472
+Epoch 1/1:  14%|█▍        | 175/1250 [30:22<1:55:58,  6.47s/it]step:176 - train/loss:-27.200 - train/lr(1e-3):0.010 - train/original_loss:30.093
+Epoch 1/1:  14%|█▍        | 176/1250 [30:28<1:54:04,  6.37s/it]step:177 - train/loss:-49.708 - train/lr(1e-3):0.010 - train/original_loss:1.849
+Epoch 1/1:  14%|█▍        | 177/1250 [30:34<1:53:04,  6.32s/it]step:178 - train/loss:-2.667 - train/lr(1e-3):0.010 - train/original_loss:-78.846
+Epoch 1/1:  14%|█▍        | 178/1250 [30:40<1:52:22,  6.29s/it]step:179 - train/loss:-8.634 - train/lr(1e-3):0.010 - train/original_loss:-29.350
+Epoch 1/1:  14%|█▍        | 179/1250 [30:47<1:51:51,  6.27s/it]step:180 - train/loss:-31.153 - train/lr(1e-3):0.010 - train/original_loss:-52.594
+Epoch 1/1:  14%|█▍        | 180/1250 [30:53<1:51:04,  6.23s/it]step:181 - train/loss:-32.548 - train/lr(1e-3):0.010 - train/original_loss:9.034
+Epoch 1/1:  14%|█▍        | 181/1250 [30:59<1:50:43,  6.22s/it]step:182 - train/loss:-19.348 - train/lr(1e-3):0.010 - train/original_loss:-187.825
+Epoch 1/1:  15%|█▍        | 182/1250 [31:05<1:50:30,  6.21s/it]step:183 - train/loss:-4.566 - train/lr(1e-3):0.010 - train/original_loss:-40.169
+Epoch 1/1:  15%|█▍        | 183/1250 [31:11<1:50:18,  6.20s/it]step:184 - train/loss:-10.472 - train/lr(1e-3):0.010 - train/original_loss:1.155
+Epoch 1/1:  15%|█▍        | 184/1250 [31:17<1:50:05,  6.20s/it]step:185 - train/loss:11.541 - train/lr(1e-3):0.010 - train/original_loss:-66.460
+Epoch 1/1:  15%|█▍        | 185/1250 [31:24<1:49:58,  6.20s/it]step:186 - train/loss:4.905 - train/lr(1e-3):0.010 - train/original_loss:87.902
+Epoch 1/1:  15%|█▍        | 186/1250 [31:30<1:49:53,  6.20s/it]step:187 - train/loss:-11.171 - train/lr(1e-3):0.010 - train/original_loss:-200.385
+Epoch 1/1:  15%|█▍        | 187/1250 [31:36<1:49:53,  6.20s/it]step:188 - train/loss:-8.907 - train/lr(1e-3):0.010 - train/original_loss:42.590
+Epoch 1/1:  15%|█▌        | 188/1250 [31:42<1:49:37,  6.19s/it]step:189 - train/loss:-36.697 - train/lr(1e-3):0.010 - train/original_loss:-87.624
+Epoch 1/1:  15%|█▌        | 189/1250 [31:48<1:49:25,  6.19s/it]step:190 - train/loss:-24.309 - train/lr(1e-3):0.010 - train/original_loss:-59.254
+Epoch 1/1:  15%|█▌        | 190/1250 [31:55<1:49:27,  6.20s/it]step:191 - train/loss:-14.448 - train/lr(1e-3):0.010 - train/original_loss:-70.880
+Epoch 1/1:  15%|█▌        | 191/1250 [32:01<1:49:15,  6.19s/it]step:192 - train/loss:43.570 - train/lr(1e-3):0.010 - train/original_loss:35.417
+Epoch 1/1:  15%|█▌        | 192/1250 [32:07<1:48:56,  6.18s/it]step:193 - train/loss:-34.248 - train/lr(1e-3):0.010 - train/original_loss:55.625
+Epoch 1/1:  15%|█▌        | 193/1250 [32:13<1:48:53,  6.18s/it]step:194 - train/loss:-8.850 - train/lr(1e-3):0.010 - train/original_loss:17.091
+Epoch 1/1:  16%|█▌        | 194/1250 [32:19<1:48:55,  6.19s/it]step:195 - train/loss:-23.080 - train/lr(1e-3):0.010 - train/original_loss:0.099
+Epoch 1/1:  16%|█▌        | 195/1250 [32:26<1:48:51,  6.19s/it]step:196 - train/loss:7.366 - train/lr(1e-3):0.010 - train/original_loss:-93.509
+Epoch 1/1:  16%|█▌        | 196/1250 [32:32<1:48:33,  6.18s/it]step:197 - train/loss:8.856 - train/lr(1e-3):0.010 - train/original_loss:56.181
+Epoch 1/1:  16%|█▌        | 197/1250 [32:38<1:48:34,  6.19s/it]step:198 - train/loss:-14.333 - train/lr(1e-3):0.010 - train/original_loss:-93.718
+Epoch 1/1:  16%|█▌        | 198/1250 [32:44<1:48:36,  6.19s/it]step:199 - train/loss:-17.831 - train/lr(1e-3):0.010 - train/original_loss:-76.433
+Epoch 1/1:  16%|█▌        | 199/1250 [32:50<1:48:37,  6.20s/it]step:200 - train/loss:-31.803 - train/lr(1e-3):0.010 - train/original_loss:-25.592
+step:200 - val/loss:-23.209 - val/original_loss:-23.209
+Final validation metrics: {'val/loss': -23.208822384059047, 'val/original_loss': -23.208822384059047}
+Epoch 1/1:  16%|█▌        | 199/1250 [35:54<3:09:38, 10.83s/it]
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:          train/loss ▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▄▅▅▄▄▄▆▅▂▂▂▄▁▃▄█▄▂
+wandb:      train/lr(1e-3) ▁▁▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▇▇▇▇▇███████████████
+wandb: train/original_loss ▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▅▆▆▅▅▆▅▄▆▆▄█▄▆▁▆▅
+wandb:            val/loss ██▆█▁
+wandb:   val/original_loss ██▆█▁
+wandb: 
+wandb: Run summary:
+wandb:          train/loss -31.80298
+wandb:      train/lr(1e-3) 0.00989
+wandb: train/original_loss -25.5924
+wandb:            val/loss -23.20882
+wandb:   val/original_loss -23.20882
+wandb: 
+wandb: 🚀 View run 7b_pi1_pmsft_0905-1045 at: https://wandb.ai/coder66-RL-lab/dft/runs/no4ku2eo
+wandb: ⭐️ View project at: https://wandb.ai/coder66-RL-lab/dft
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20250905_104627-no4ku2eo/logs

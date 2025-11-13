@@ -1,0 +1,11 @@
+{"time":"2025-08-22T03:02:38.570981318-07:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-22T03:02:38.78034695-07:00","level":"INFO","msg":"stream: created new stream","id":"mapmgaap"}
+{"time":"2025-08-22T03:02:38.78039192-07:00","level":"INFO","msg":"stream: started","id":"mapmgaap"}
+{"time":"2025-08-22T03:02:38.780419-07:00","level":"INFO","msg":"writer: started","stream_id":"mapmgaap"}
+{"time":"2025-08-22T03:02:38.78043206-07:00","level":"INFO","msg":"handler: started","stream_id":"mapmgaap"}
+{"time":"2025-08-22T03:02:38.78046259-07:00","level":"INFO","msg":"sender: started","stream_id":"mapmgaap"}
+{"time":"2025-08-22T03:02:43.477158505-07:00","level":"INFO","msg":"stream: closing","id":"mapmgaap"}
+{"time":"2025-08-22T03:02:43.90219428-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-22T03:02:44.054891473-07:00","level":"INFO","msg":"handler: closed","stream_id":"mapmgaap"}
+{"time":"2025-08-22T03:02:44.056683807-07:00","level":"INFO","msg":"sender: closed","stream_id":"mapmgaap"}
+{"time":"2025-08-22T03:02:44.056703667-07:00","level":"INFO","msg":"stream: closed","id":"mapmgaap"}

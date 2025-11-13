@@ -1,0 +1,64 @@
+W0821 02:36:07.675000 3057156 site-packages/torch/distributed/run.py:792] 
+W0821 02:36:07.675000 3057156 site-packages/torch/distributed/run.py:792] *****************************************
+W0821 02:36:07.675000 3057156 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0821 02:36:07.675000 3057156 site-packages/torch/distributed/run.py:792] *****************************************
+Running normalized dynamic fine-tuning (NDFT).
+Error executing job with overrides: ['data.train_files=data/pi1/pi1_r128_responses_16000.parquet', 'data.val_files=data/pi1/pi1_r128_responses_16000_valid.parquet', 'data.prompt_key=extra_info', 'data.response_key=extra_info', 'data.train_batch_size=128', 'data.max_length=2048', 'optim.lr=5e-5', 'data.prompt_dict_keys=[question]', 'data.response_dict_keys=[answer]', 'data.micro_batch_size_per_gpu=4', 'model.partial_pretrain=Qwen/Qwen2.5-Math-1.5B', 'model.use_liger=True', 'model.fsdp_config.model_dtype=bf16', 'trainer.default_local_dir=checkpoints/pi1-r16k-ndft-qwen-2.5-math-1.5b', 'trainer.project_name=dft', 'trainer.experiment_name=pi1-r16k-ndft-qwen-2.5-math-1.5b-20250821-023606', 'trainer.logger=[console,wandb]', 'trainer.default_hdfs_dir=null', 'trainer.test_freq=10', 'trainer.save_freq=50', 'trainer.total_epochs=3', 'ulysses_sequence_parallel_size=1', 'use_remove_padding=true']
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ndft_trainer.py", line 685, in main
+    run_sft(config)
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ndft_trainer.py", line 665, in run_sft
+    train_dataset = create_sft_dataset(config.data.train_files, config.data, tokenizer)
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ndft_trainer.py", line 704, in create_sft_dataset
+    dataset = dataset_cls(parquet_files=data_paths, tokenizer=tokenizer, config=data_config)
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/utils/dataset/sft_dataset.py", line 71, in __init__
+    self._read_files_and_tokenize()
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/utils/dataset/sft_dataset.py", line 92, in _read_files_and_tokenize
+    self.prompts = self.dataframe[self.prompt_key]
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 6261, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['extra_info'], dtype='object')] are in the [columns]"
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[rank7]:[W821 02:36:22.302411812 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0821 02:36:23.082000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3057225 closing signal SIGTERM
+W0821 02:36:23.083000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3057226 closing signal SIGTERM
+W0821 02:36:23.084000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3057227 closing signal SIGTERM
+W0821 02:36:23.085000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3057228 closing signal SIGTERM
+W0821 02:36:23.086000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3057229 closing signal SIGTERM
+W0821 02:36:23.087000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3057230 closing signal SIGTERM
+W0821 02:36:23.088000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3057231 closing signal SIGTERM
+E0821 02:36:24.148000 3057156 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 7 (pid: 3057232) of binary: /homes/gws/lxh22/miniconda3/envs/DFT/bin/python3.10
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+verl.trainer.fsdp_ndft_trainer FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-21_02:36:23
+  host      : du-exxact-0.cs.washington.edu
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 3057232)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

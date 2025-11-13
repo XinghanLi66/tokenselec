@@ -25,7 +25,7 @@ def load_model_and_tokenizer(ckpt: str, mp: str = "bf16"):
         tok.pad_token = tok.eos_token
 
     config = AutoConfig.from_pretrained(ckpt)
-    accelerator.print(f"config: {config}")
+    # accelerator.print(f"config: {config}")
     config.use_cache = False
     model = AutoModelForCausalLM.from_pretrained(
         ckpt,

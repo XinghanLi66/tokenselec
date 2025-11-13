@@ -1,0 +1,72 @@
+Epoch 1/1:  45%|████▍     | 26/58 [08:26<10:45, 20.17s/it]
+step:1 - train/loss:0.001 - train/lr(1e-3):0.002 - train/original_loss:-0.009
+step:2 - train/loss:-0.001 - train/lr(1e-3):0.004 - train/original_loss:0.009
+step:3 - train/loss:-0.003 - train/lr(1e-3):0.006 - train/original_loss:-0.003
+step:4 - train/loss:-0.002 - train/lr(1e-3):0.008 - train/original_loss:-0.038
+step:5 - train/loss:0.002 - train/lr(1e-3):0.010 - train/original_loss:-0.001
+step:5 - val/loss:-0.003 - val/original_loss:-0.014
+step:6 - train/loss:-0.002 - train/lr(1e-3):0.010 - train/original_loss:0.028
+step:7 - train/loss:-0.001 - train/lr(1e-3):0.010 - train/original_loss:-0.006
+step:8 - train/loss:-0.003 - train/lr(1e-3):0.010 - train/original_loss:-0.055
+step:9 - train/loss:-0.001 - train/lr(1e-3):0.010 - train/original_loss:0.029
+step:10 - train/loss:-0.006 - train/lr(1e-3):0.010 - train/original_loss:-0.019
+step:10 - val/loss:-0.005 - val/original_loss:-0.030
+step:11 - train/loss:-0.007 - train/lr(1e-3):0.010 - train/original_loss:-0.060
+step:12 - train/loss:-0.008 - train/lr(1e-3):0.010 - train/original_loss:-0.025
+step:13 - train/loss:-0.006 - train/lr(1e-3):0.009 - train/original_loss:0.004
+step:14 - train/loss:-0.008 - train/lr(1e-3):0.009 - train/original_loss:0.068
+step:15 - train/loss:-0.012 - train/lr(1e-3):0.009 - train/original_loss:-0.145
+step:15 - val/loss:-0.008 - val/original_loss:-0.045
+step:16 - train/loss:-0.009 - train/lr(1e-3):0.009 - train/original_loss:0.038
+step:17 - train/loss:-0.009 - train/lr(1e-3):0.009 - train/original_loss:-0.290
+step:18 - train/loss:-0.015 - train/lr(1e-3):0.009 - train/original_loss:-0.126
+step:19 - train/loss:-0.020 - train/lr(1e-3):0.008 - train/original_loss:-0.103
+step:20 - train/loss:-0.020 - train/lr(1e-3):0.008 - train/original_loss:-0.171
+step:20 - val/loss:-0.015 - val/original_loss:-0.127
+step:21 - train/loss:-0.018 - train/lr(1e-3):0.008 - train/original_loss:-0.138
+step:22 - train/loss:-0.007 - train/lr(1e-3):0.008 - train/original_loss:-0.235
+step:23 - train/loss:-0.038 - train/lr(1e-3):0.007 - train/original_loss:-0.396
+step:24 - train/loss:-0.035 - train/lr(1e-3):0.007 - train/original_loss:-0.558
+step:25 - train/loss:-0.027 - train/lr(1e-3):0.007 - train/original_loss:-0.882
+step:25 - val/loss:-0.017 - val/original_loss:-0.362
+step:26 - train/loss:-0.000 - train/lr(1e-3):0.007 - train/original_loss:-0.067
+step:27 - train/loss:-0.012 - train/lr(1e-3):0.006 - train/original_loss:-0.228
+step:28 - train/loss:-0.017 - train/lr(1e-3):0.006 - train/original_loss:-1.270
+step:29 - train/loss:-0.011 - train/lr(1e-3):0.006 - train/original_loss:-0.238
+step:30 - train/loss:-0.016 - train/lr(1e-3):0.005 - train/original_loss:-1.037
+step:30 - val/loss:-0.005 - val/original_loss:-0.876
+step:31 - train/loss:-0.010 - train/lr(1e-3):0.005 - train/original_loss:-2.384
+step:32 - train/loss:-0.005 - train/lr(1e-3):0.005 - train/original_loss:0.278
+step:33 - train/loss:-0.005 - train/lr(1e-3):0.005 - train/original_loss:0.463
+step:34 - train/loss:-0.009 - train/lr(1e-3):0.004 - train/original_loss:-1.871
+step:35 - train/loss:-0.005 - train/lr(1e-3):0.004 - train/original_loss:-2.308
+step:35 - val/loss:-0.001 - val/original_loss:-1.288
+step:36 - train/loss:-0.007 - train/lr(1e-3):0.004 - train/original_loss:-0.275
+step:37 - train/loss:-0.005 - train/lr(1e-3):0.003 - train/original_loss:0.233
+step:38 - train/loss:-0.005 - train/lr(1e-3):0.003 - train/original_loss:-1.158
+step:39 - train/loss:-0.006 - train/lr(1e-3):0.003 - train/original_loss:-1.448
+step:40 - train/loss:-0.000 - train/lr(1e-3):0.003 - train/original_loss:0.553
+step:40 - val/loss:-0.003 - val/original_loss:-1.400
+step:41 - train/loss:-0.006 - train/lr(1e-3):0.002 - train/original_loss:-0.097
+step:42 - train/loss:-0.005 - train/lr(1e-3):0.002 - train/original_loss:-2.117
+step:43 - train/loss:-0.004 - train/lr(1e-3):0.002 - train/original_loss:-1.466
+step:44 - train/loss:-0.005 - train/lr(1e-3):0.002 - train/original_loss:-1.680
+step:45 - train/loss:-0.003 - train/lr(1e-3):0.001 - train/original_loss:-1.335
+step:45 - val/loss:-0.002 - val/original_loss:-1.549
+step:46 - train/loss:-0.008 - train/lr(1e-3):0.001 - train/original_loss:-3.687
+step:47 - train/loss:-0.004 - train/lr(1e-3):0.001 - train/original_loss:-2.806
+step:48 - train/loss:-0.005 - train/lr(1e-3):0.001 - train/original_loss:-0.718
+step:49 - train/loss:0.002 - train/lr(1e-3):0.001 - train/original_loss:-3.651
+step:50 - train/loss:-0.002 - train/lr(1e-3):0.001 - train/original_loss:-3.111
+step:50 - val/loss:-0.003 - val/original_loss:-1.592
+step:51 - train/loss:-0.004 - train/lr(1e-3):0.000 - train/original_loss:-2.474
+step:52 - train/loss:-0.004 - train/lr(1e-3):0.000 - train/original_loss:-2.172
+step:53 - train/loss:-0.006 - train/lr(1e-3):0.000 - train/original_loss:-3.147
+step:54 - train/loss:-0.007 - train/lr(1e-3):0.000 - train/original_loss:-0.497
+step:55 - train/loss:-0.006 - train/lr(1e-3):0.000 - train/original_loss:-2.014
+step:55 - val/loss:-0.003 - val/original_loss:-1.589
+step:56 - train/loss:-0.012 - train/lr(1e-3):0.000 - train/original_loss:-1.326
+step:57 - train/loss:-0.007 - train/lr(1e-3):0.000 - train/original_loss:-0.458
+step:58 - train/loss:-0.006 - train/lr(1e-3):0.000 - train/original_loss:-2.007
+step:58 - val/loss:-0.003 - val/original_loss:-1.592
+Final validation metrics: {'val/loss': -0.003069083317669132, 'val/original_loss': -1.5921948100849626}

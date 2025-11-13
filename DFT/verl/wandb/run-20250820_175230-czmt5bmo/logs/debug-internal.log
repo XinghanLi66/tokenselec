@@ -1,0 +1,6 @@
+{"time":"2025-08-20T17:52:31.207785952-07:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-20T17:52:31.421511067-07:00","level":"INFO","msg":"stream: created new stream","id":"czmt5bmo"}
+{"time":"2025-08-20T17:52:31.421558537-07:00","level":"INFO","msg":"stream: started","id":"czmt5bmo"}
+{"time":"2025-08-20T17:52:31.421620007-07:00","level":"INFO","msg":"writer: started","stream_id":"czmt5bmo"}
+{"time":"2025-08-20T17:52:31.421635106-07:00","level":"INFO","msg":"handler: started","stream_id":"czmt5bmo"}
+{"time":"2025-08-20T17:52:31.421973325-07:00","level":"INFO","msg":"sender: started","stream_id":"czmt5bmo"}

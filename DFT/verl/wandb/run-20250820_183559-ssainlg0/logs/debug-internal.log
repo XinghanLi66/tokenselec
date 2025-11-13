@@ -1,0 +1,12 @@
+{"time":"2025-08-20T18:36:00.097353792-07:00","level":"INFO","msg":"stream: starting","core version":"0.21.1"}
+{"time":"2025-08-20T18:36:00.303045768-07:00","level":"INFO","msg":"stream: created new stream","id":"ssainlg0"}
+{"time":"2025-08-20T18:36:00.303090298-07:00","level":"INFO","msg":"stream: started","id":"ssainlg0"}
+{"time":"2025-08-20T18:36:00.303170687-07:00","level":"INFO","msg":"writer: started","stream_id":"ssainlg0"}
+{"time":"2025-08-20T18:36:00.303186307-07:00","level":"INFO","msg":"handler: started","stream_id":"ssainlg0"}
+{"time":"2025-08-20T18:36:00.303247847-07:00","level":"INFO","msg":"sender: started","stream_id":"ssainlg0"}
+{"time":"2025-08-20T21:42:40.87701702-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-20T21:42:41.057338548-07:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-08-20T21:42:41.068323419-07:00","level":"INFO","msg":"stream: closing","id":"ssainlg0"}
+{"time":"2025-08-20T21:42:41.068351019-07:00","level":"INFO","msg":"handler: closed","stream_id":"ssainlg0"}
+{"time":"2025-08-20T21:42:41.069891626-07:00","level":"INFO","msg":"sender: closed","stream_id":"ssainlg0"}
+{"time":"2025-08-20T21:42:41.069905496-07:00","level":"INFO","msg":"stream: closed","id":"ssainlg0"}

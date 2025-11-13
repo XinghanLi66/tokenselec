@@ -1,0 +1,106 @@
+{
+  "os": "Linux-5.14.0-570.28.1.el9_6.x86_64-x86_64-with-glibc2.34",
+  "python": "CPython 3.10.18",
+  "startedAt": "2025-09-05T18:57:25.816986Z",
+  "args": [
+    "data.train_files=data/pi1/pi1_r128_responses_16000.parquet",
+    "data.val_files=data/pi1/pi1_r128_responses_16000_valid.parquet",
+    "data.max_length=1920",
+    "data.prompt_key=prompt",
+    "data.response_key=response",
+    "data.train_batch_size=12",
+    "data.micro_batch_size_per_gpu=2",
+    "model.partial_pretrain=/homes/gws/lxh22/models/Qwen2.5-Math-7B",
+    "trainer.default_local_dir=/local1/lxh/save/offline_grpo/7b_pi1_sft",
+    "trainer.project_name=dft",
+    "trainer.experiment_name=7b_pi1_sft_0905-1156",
+    "trainer.total_epochs=1",
+    "trainer.test_freq=40",
+    "trainer.save_freq=40",
+    "trainer.total_training_steps=200",
+    "trainer.logger=[console,wandb]",
+    "trainer.default_hdfs_dir=null"
+  ],
+  "program": "-m verl.trainer.fsdp_sft_trainer",
+  "git": {
+    "remote": "git@github.com:xh092113/rl-sft.git",
+    "commit": "1b94c1c106a51b8901fcdfb31cb862c1fcab6b64"
+  },
+  "email": "lixinghan2013@163.com",
+  "root": "/homes/gws/lxh22/rl-sft/DFT/verl",
+  "host": "fazel-du-exxact-0.cs.washington.edu",
+  "executable": "/homes/gws/lxh22/miniconda3/envs/DFT/bin/python3.10",
+  "cpu_count": 128,
+  "cpu_count_logical": 255,
+  "gpu": "NVIDIA RTX A6000",
+  "gpu_count": 8,
+  "disk": {
+    "/": {
+      "total": "274608492544",
+      "used": "28786176000"
+    }
+  },
+  "memory": {
+    "total": "1081979883520"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-c9bba159-5476-3617-7251-130c2b28c0af"
+    },
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-2a207ebe-3917-0535-32af-fb9963b34e7a"
+    },
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-28ddb46e-709a-a007-62ea-c7a0b97ed33d"
+    },
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-5af35f33-8a6b-7b5b-17dd-c4024f600e47"
+    },
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-1a9efb90-4ca1-08c4-82c9-2c1fe3539b3f"
+    },
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-3ff18936-8430-23c0-ded1-7bcea6f2963e"
+    },
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-4c4af347-6692-5350-713c-8bfba0d4eed4"
+    },
+    {
+      "name": "NVIDIA RTX A6000",
+      "memoryTotal": "51527024640",
+      "cudaCores": 10752,
+      "architecture": "Ampere",
+      "uuid": "GPU-54b7145f-87d4-16a1-08b9-a9a67cddc759"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "7p9z18q01g850fmmwcnr4umtvc49lkxf"
+}

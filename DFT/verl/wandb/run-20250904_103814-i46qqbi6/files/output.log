@@ -1,0 +1,16 @@
+Epoch 1/1:   0%|          | 0/58 [00:22<?, ?it/s]
+Error executing job with overrides: ['data.train_files=data/pi1/pi1_r128_pm_responses_16000.parquet', 'data.val_files=data/pi1/pi1_r128_pm_responses_16000_valid.parquet', 'data.max_length=1920', 'data.prompt_key=prompt', 'data.response_key=response', 'data.train_batch_size=256', 'data.micro_batch_size_per_gpu=4', 'model.partial_pretrain=/homes/gws/lxh22/models/Qwen2.5-Math-7B', 'trainer.default_local_dir=/local1/lxh/save/offline_grpo/7b_pi1_ofrl', 'trainer.project_name=dft', 'trainer.experiment_name=7b_pi1_ofrl_0904-1037', 'trainer.total_epochs=1', 'trainer.test_freq=10', 'trainer.save_freq=10', 'trainer.total_training_steps=40', 'trainer.logger=[console,wandb]', 'trainer.default_hdfs_dir=null']
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ofrl_trainer.py", line 697, in main
+    run_sft(config)
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ofrl_trainer.py", line 689, in run_sft
+    trainer.fit()
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ofrl_trainer.py", line 624, in fit
+    metric = self.training_step(data)
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ofrl_trainer.py", line 489, in training_step
+    loss, original_loss = self._compute_loss_and_backward(batch=micro_batch)
+  File "/homes/gws/lxh22/rl-sft/DFT/verl/verl/trainer/fsdp_ofrl_trainer.py", line 383, in _compute_loss_and_backward
+    probs = torch.softmax(shift_logits, dim=-1)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.35 GiB. GPU 0 has a total capacity of 47.41 GiB of which 1.07 GiB is free. Process 3669000 has 14.72 GiB memory in use. Process 3824311 has 306.00 MiB memory in use. Process 3824317 has 306.00 MiB memory in use. Process 3824316 has 306.00 MiB memory in use. Process 3824314 has 306.00 MiB memory in use. Including non-PyTorch memory, this process has 29.47 GiB memory in use. Process 3824312 has 306.00 MiB memory in use. Process 3824315 has 306.00 MiB memory in use. Process 3824313 has 306.00 MiB memory in use. Of the allocated memory 25.02 GiB is allocated by PyTorch, and 3.95 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

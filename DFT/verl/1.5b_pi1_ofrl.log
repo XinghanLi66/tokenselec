@@ -1,0 +1,105 @@
+W0822 14:21:04.719000 4164221 site-packages/torch/distributed/run.py:792] 
+W0822 14:21:04.719000 4164221 site-packages/torch/distributed/run.py:792] *****************************************
+W0822 14:21:04.719000 4164221 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0822 14:21:04.719000 4164221 site-packages/torch/distributed/run.py:792] *****************************************
+Running offline RL (OFRL).
+Running offline RL (OFRL).
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Running offline RL (OFRL).
+Running offline RL (OFRL).
+Running offline RL (OFRL).
+Running offline RL (OFRL).
+Running offline RL (OFRL).
+Running offline RL (OFRL).
+Normalize batch size by dp 8
+Using sequence parallel size: 1
+Using remove padding: False
+Using FSDP rank 0 and size 8 for data distribution
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+functools.partial(<function _or_policy at 0x7fa8bc2e0310>, policies=[functools.partial(<function transformer_auto_wrap_policy at 0x7fa8bc2e01f0>, transformer_layer_cls={<class 'transformers.models.qwen2.modeling_qwen2.Qwen2DecoderLayer'>})])
+NCCL version 2.21.5+cuda12.4
+Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen2ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Number of steps/epoch 58, number of epochs 1, total number of steps 58
+{'data': {'train_batch_size': 32, 'micro_batch_size': None, 'micro_batch_size_per_gpu': 4, 'train_files': 'data/pi1/pi1_r128_pm_responses_16000.parquet', 'val_files': 'data/pi1/pi1_r128_pm_responses_16000_valid.parquet', 'prompt_key': 'prompt', 'response_key': 'response', 'prompt_dict_keys': None, 'response_dict_keys': None, 'multiturn': {'enable': False, 'messages_key': 'messages', 'tools_key': 'tools', 'enable_thinking_key': 'enable_thinking'}, 'max_length': 1920, 'truncation': 'right', 'balance_dp_token': False, 'chat_template': None, 'custom_cls': {'path': None, 'name': None}, 'use_shm': False}, 'model': {'partial_pretrain': '/homes/gws/lxh22/models/Qwen2.5-Math-1.5B', 'use_shm': False, 'fsdp_config': {'model_dtype': 'fp32', 'wrap_policy': {'min_num_params': 0}, 'cpu_offload': False, 'offload_params': False}, 'external_lib': None, 'enable_gradient_checkpointing': True, 'trust_remote_code': False, 'lora_rank': 0, 'lora_alpha': 16, 'target_modules': 'all-linear', 'use_liger': False, 'strategy': 'fsdp2'}, 'optim': {'lr': 1e-05, 'betas': [0.9, 0.95], 'weight_decay': 0.01, 'warmup_steps_ratio': 0.1, 'clip_grad': 1.0, 'lr_scheduler': 'cosine'}, 'ulysses_sequence_parallel_size': 1, 'use_remove_padding': False, 'trainer': {'default_local_dir': '/local1/lxh/save/offline_grpo/1.5b_pi1_ofrl', 'default_hdfs_dir': None, 'resume_path': None, 'project_name': 'dft', 'experiment_name': '1.5b_pi1_ofrl_0822-1420', 'total_epochs': 1, 'total_training_steps': 20, 'logger': ['console', 'wandb'], 'seed': 1, 'save_freq': 1, 'test_freq': 1, 'nnodes': 1, 'n_gpus_per_node': 8, 'max_ckpt_to_keep': None}}
+wandb: Currently logged in as: lixinghan2013 (coder66-RL-lab) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.21.1
+wandb: Run data is saved locally in /homes/gws/lxh22/rl-sft/DFT/verl/wandb/run-20250822_142154-ipd0ga87
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run 1.5b_pi1_ofrl_0822-1420
+wandb: ⭐️ View project at https://wandb.ai/coder66-RL-lab/dft
+wandb: 🚀 View run at https://wandb.ai/coder66-RL-lab/dft/runs/ipd0ga87
+Epoch 1/1:   0%|          | 0/58 [00:00<?, ?it/s]step:1 - train/loss:0.001 - train/lr(1e-3):0.002 - train/original_loss:-0.009
+step:1 - val/loss:-0.002 - val/original_loss:-0.006
+Epoch 1/1:   2%|▏         | 1/58 [00:39<37:41, 39.67s/it]step:2 - train/loss:-0.001 - train/lr(1e-3):0.004 - train/original_loss:0.009
+step:2 - val/loss:-0.002 - val/original_loss:-0.006
+Epoch 1/1:   3%|▎         | 2/58 [01:16<35:33, 38.10s/it]step:3 - train/loss:-0.003 - train/lr(1e-3):0.006 - train/original_loss:-0.003
+step:3 - val/loss:-0.002 - val/original_loss:-0.006
+Epoch 1/1:   5%|▌         | 3/58 [01:53<34:27, 37.59s/it]step:4 - train/loss:-0.002 - train/lr(1e-3):0.008 - train/original_loss:-0.039
+step:4 - val/loss:-0.002 - val/original_loss:-0.008
+Epoch 1/1:   7%|▋         | 4/58 [02:30<33:42, 37.46s/it]step:5 - train/loss:0.002 - train/lr(1e-3):0.010 - train/original_loss:-0.001
+step:5 - val/loss:-0.003 - val/original_loss:-0.014
+Epoch 1/1:   9%|▊         | 5/58 [03:07<32:56, 37.30s/it]step:6 - train/loss:-0.002 - train/lr(1e-3):0.010 - train/original_loss:0.028
+step:6 - val/loss:-0.003 - val/original_loss:-0.017
+Epoch 1/1:  10%|█         | 6/58 [03:45<32:20, 37.31s/it]step:7 - train/loss:-0.001 - train/lr(1e-3):0.010 - train/original_loss:-0.006
+step:7 - val/loss:-0.003 - val/original_loss:-0.026
+Epoch 1/1:  12%|█▏        | 7/58 [04:22<31:37, 37.20s/it]step:8 - train/loss:-0.003 - train/lr(1e-3):0.010 - train/original_loss:-0.055
+step:8 - val/loss:-0.003 - val/original_loss:-0.027
+Epoch 1/1:  14%|█▍        | 8/58 [04:59<30:57, 37.15s/it]step:9 - train/loss:-0.001 - train/lr(1e-3):0.010 - train/original_loss:0.029
+step:9 - val/loss:-0.004 - val/original_loss:-0.028
+Epoch 1/1:  16%|█▌        | 9/58 [05:36<30:22, 37.20s/it]step:10 - train/loss:-0.006 - train/lr(1e-3):0.010 - train/original_loss:-0.019
+step:10 - val/loss:-0.005 - val/original_loss:-0.030
+Epoch 1/1:  17%|█▋        | 10/58 [06:33<34:35, 43.23s/it]step:11 - train/loss:-0.007 - train/lr(1e-3):0.010 - train/original_loss:-0.060
+step:11 - val/loss:-0.006 - val/original_loss:-0.031
+Epoch 1/1:  19%|█▉        | 11/58 [07:10<32:21, 41.32s/it]step:12 - train/loss:-0.008 - train/lr(1e-3):0.010 - train/original_loss:-0.025
+step:12 - val/loss:-0.006 - val/original_loss:-0.033
+Epoch 1/1:  21%|██        | 12/58 [07:47<30:40, 40.01s/it]step:13 - train/loss:-0.006 - train/lr(1e-3):0.009 - train/original_loss:0.004
+step:13 - val/loss:-0.007 - val/original_loss:-0.036
+Epoch 1/1:  22%|██▏       | 13/58 [08:24<29:21, 39.15s/it]step:14 - train/loss:-0.008 - train/lr(1e-3):0.009 - train/original_loss:0.068
+step:14 - val/loss:-0.008 - val/original_loss:-0.040
+Epoch 1/1:  24%|██▍       | 14/58 [09:02<28:21, 38.68s/it]step:15 - train/loss:-0.012 - train/lr(1e-3):0.009 - train/original_loss:-0.146
+step:15 - val/loss:-0.008 - val/original_loss:-0.045
+Epoch 1/1:  26%|██▌       | 15/58 [09:39<27:21, 38.17s/it]step:16 - train/loss:-0.009 - train/lr(1e-3):0.009 - train/original_loss:0.038
+step:16 - val/loss:-0.009 - val/original_loss:-0.051
+Epoch 1/1:  28%|██▊       | 16/58 [10:16<26:28, 37.81s/it]step:17 - train/loss:-0.009 - train/lr(1e-3):0.009 - train/original_loss:-0.291
+step:17 - val/loss:-0.011 - val/original_loss:-0.059
+Epoch 1/1:  29%|██▉       | 17/58 [10:53<25:43, 37.64s/it]step:18 - train/loss:-0.015 - train/lr(1e-3):0.009 - train/original_loss:-0.126
+step:18 - val/loss:-0.013 - val/original_loss:-0.072
+Epoch 1/1:  31%|███       | 18/58 [11:30<25:04, 37.61s/it]step:19 - train/loss:-0.020 - train/lr(1e-3):0.008 - train/original_loss:-0.104
+step:19 - val/loss:-0.015 - val/original_loss:-0.094
+Epoch 1/1:  33%|███▎      | 19/58 [12:07<24:19, 37.42s/it]step:20 - train/loss:-0.020 - train/lr(1e-3):0.008 - train/original_loss:-0.172
+step:20 - val/loss:-0.015 - val/original_loss:-0.129
+Final validation metrics: {'val/loss': -0.015000584121247907, 'val/original_loss': -0.12901690211242076}
+Epoch 1/1:  33%|███▎      | 19/58 [13:05<26:52, 41.35s/it]
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:          train/loss █▇▆▇█▇▇▆▇▅▅▅▅▅▄▄▄▂▁▁
+wandb:      train/lr(1e-3) ▁▃▅▆█████████▇▇▇▇▇▇▆
+wandb: train/original_loss ▇▇▇▆▇▇▇▆▇▆▆▆▇█▄▇▁▄▅▃
+wandb:            val/loss ████▇▇▇▇▇▆▆▆▅▅▅▄▃▂▁▁
+wandb:   val/original_loss █████▇▇▇▇▇▇▆▆▆▆▅▅▄▃▁
+wandb: 
+wandb: Run summary:
+wandb:          train/loss -0.01981
+wandb:      train/lr(1e-3) 0.00815
+wandb: train/original_loss -0.17233
+wandb:            val/loss -0.015
+wandb:   val/original_loss -0.12902
+wandb: 
+wandb: 🚀 View run 1.5b_pi1_ofrl_0822-1420 at: https://wandb.ai/coder66-RL-lab/dft/runs/ipd0ga87
+wandb: ⭐️ View project at: https://wandb.ai/coder66-RL-lab/dft
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20250822_142154-ipd0ga87/logs

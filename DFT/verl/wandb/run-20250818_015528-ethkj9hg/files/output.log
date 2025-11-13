@@ -1,0 +1,5 @@
+Checkpoint tracker file does not exist: /local1/lxh/save/latest_checkpointed_iteration.txt
+Training from scratch
+test_gen_batch meta info: {'eos_token_id': 151643, 'pad_token_id': 151643, 'recompute_log_prob': False, 'do_sample': False, 'validate': True}
+validation generation end
+To use Math-Verify, please install it first by running `pip install math-verify`.

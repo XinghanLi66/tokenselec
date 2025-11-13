@@ -1,0 +1,1967 @@
+2025-09-04 10:38:14,888 INFO    MainThread:3824310 [wandb_setup.py:_flush():80] Current SDK version is 0.21.1
+2025-09-04 10:38:14,888 INFO    MainThread:3824310 [wandb_setup.py:_flush():80] Configure stats pid to 3824310
+2025-09-04 10:38:14,888 INFO    MainThread:3824310 [wandb_setup.py:_flush():80] Loading settings from /homes/gws/lxh22/.config/wandb/settings
+2025-09-04 10:38:14,889 INFO    MainThread:3824310 [wandb_setup.py:_flush():80] Loading settings from /homes/gws/lxh22/rl-sft/DFT/verl/wandb/settings
+2025-09-04 10:38:14,889 INFO    MainThread:3824310 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-09-04 10:38:14,890 INFO    MainThread:3824310 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /homes/gws/lxh22/rl-sft/DFT/verl/wandb/run-20250904_103814-i46qqbi6/logs/debug.log
+2025-09-04 10:38:14,891 INFO    MainThread:3824310 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /homes/gws/lxh22/rl-sft/DFT/verl/wandb/run-20250904_103814-i46qqbi6/logs/debug-internal.log
+2025-09-04 10:38:14,892 INFO    MainThread:3824310 [wandb_init.py:init():830] calling init triggers
+2025-09-04 10:38:14,893 INFO    MainThread:3824310 [wandb_init.py:init():835] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-09-04 10:38:14,894 INFO    MainThread:3824310 [wandb_init.py:init():871] starting backend
+2025-09-04 10:38:15,118 INFO    MainThread:3824310 [wandb_init.py:init():874] sending inform_init request
+2025-09-04 10:38:15,127 INFO    MainThread:3824310 [wandb_init.py:init():882] backend started and connected
+2025-09-04 10:38:15,128 INFO    MainThread:3824310 [wandb_init.py:init():953] updated telemetry
+2025-09-04 10:38:15,150 INFO    MainThread:3824310 [wandb_init.py:init():977] communicating run to backend with 90.0 second timeout
+2025-09-04 10:38:15,552 INFO    MainThread:3824310 [wandb_init.py:init():1029] starting run threads in backend
+2025-09-04 10:38:16,028 INFO    MainThread:3824310 [wandb_run.py:_console_start():2494] atexit reg
+2025-09-04 10:38:16,028 INFO    MainThread:3824310 [wandb_run.py:_redirect():2342] redirect: wrap_raw
+2025-09-04 10:38:16,028 INFO    MainThread:3824310 [wandb_run.py:_redirect():2411] Wrapping output streams.
+2025-09-04 10:38:16,028 INFO    MainThread:3824310 [wandb_run.py:_redirect():2434] Redirects installed.
+2025-09-04 10:38:16,035 INFO    MainThread:3824310 [wandb_init.py:init():1075] run started, returning control to user process
+2025-09-04 10:38:39,032 INFO    MsgRouterThr:3824310 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.
+2025-09-04 10:38:39,958 INFO    MainThread:3824310 [wandb_run.py:_finish():2260] finishing run coder66-RL-lab/dft/i46qqbi6
+2025-09-04 10:38:39,959 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,077 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,080 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,081 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,082 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,083 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,084 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,084 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,084 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,085 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,085 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,085 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,086 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,086 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,087 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,087 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,088 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,088 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,088 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,088 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,089 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,089 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,089 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,090 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,091 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,091 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,092 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,092 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,092 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,093 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,094 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,094 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,094 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,105 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,105 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,105 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,106 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,106 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,107 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,108 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,108 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,108 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,108 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,110 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,110 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,110 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,111 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,111 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,111 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,111 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,112 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,112 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,113 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,113 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,114 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,114 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,114 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,114 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,115 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,115 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,115 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,117 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,117 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,117 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,117 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,118 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,119 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,119 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,119 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,119 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,120 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe
+2025-09-04 10:38:40,121 ERROR   MainThread:3824310 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2421, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 1583, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface.py", line 771, in publish_output_raw
+    self._publish_output_raw(o)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 38, in _publish_output_raw
+    self._publish(rec)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/interface/interface_sock.py", line 39, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 166, in send_record_publish
+    self.send_server_request(server_req)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 146, in send_server_request
+    self._send_message(msg)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 143, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/homes/gws/lxh22/miniconda3/envs/DFT/lib/python3.10/site-packages/wandb/sdk/lib/sock_client.py", line 122, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe

@@ -1,0 +1,5 @@
+Epoch 1/1:   0%|          | 4/937 [00:32<2:00:33,  7.75s/it]
+step:1 - train/loss:0.014 - train/lr(1e-3):0.000 - train/original_loss:0.121
+step:2 - train/loss:0.001 - train/lr(1e-3):0.000 - train/original_loss:-0.086
+step:3 - train/loss:-0.010 - train/lr(1e-3):0.000 - train/original_loss:-0.054
+step:4 - train/loss:-0.004 - train/lr(1e-3):0.000 - train/original_loss:-0.240
