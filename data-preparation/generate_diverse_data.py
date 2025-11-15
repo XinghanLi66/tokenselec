@@ -119,14 +119,14 @@ def run_generation(input_csv: Path, temperature: float, out_dir: Path, args) -> 
 
 
 def get_run_files(dataset_dir: Path):
-    """Return paths to correct/incorrect parquet files for a run."""
-    return dataset_dir / "correct.parquet", dataset_dir / "incorrect.parquet"
+    """Return paths to correct/incorrect CSV files for a run."""
+    return dataset_dir / "correct.csv", dataset_dir / "incorrect.csv"
 
 
 def load_responses(path: Path) -> pd.DataFrame:
     if not path.exists():
-        raise FileNotFoundError(f"Expected parquet not found: {path}")
-    df = pd.read_parquet(path)
+        raise FileNotFoundError(f"Expected CSV not found: {path}")
+    df = pd.read_csv(path)
     # Standardize column names for downstream merging
     expected = {"prompt", "response"}
     missing = expected - set(df.columns)
@@ -167,14 +167,14 @@ def orchestrate_runs(args):
         runs.append(("pi1", temp, out_dir))
 
     # Phase 2: combinations at T=1.0
-    for n in COMBO_STAGES:
-        subset_name = {2: "pi1_pi2", 3: "pi1_pi2_pi13", 4: "pi1_pi2_pi13_pi1209"}[n]
-        subset_path = write_subset(full_df, n, subset_root / f"{subset_name}.csv")
-        temp = 1.0
-        out_dir = Path(args.base_output_dir) / f"{subset_name}_temp_{str(temp).replace('.', '_')}"
-        out_dir.mkdir(parents=True, exist_ok=True)
-        run_generation(subset_path, temp, out_dir, args)
-        runs.append((subset_name, temp, out_dir))
+    # for n in COMBO_STAGES:
+    #     subset_name = {2: "pi1_pi2", 3: "pi1_pi2_pi13", 4: "pi1_pi2_pi13_pi1209"}[n]
+    #     subset_path = write_subset(full_df, n, subset_root / f"{subset_name}.csv")
+    #     temp = 1.0
+    #     out_dir = Path(args.base_output_dir) / f"{subset_name}_temp_{str(temp).replace('.', '_')}"
+    #     out_dir.mkdir(parents=True, exist_ok=True)
+    #     run_generation(subset_path, temp, out_dir, args)
+    #     runs.append((subset_name, temp, out_dir))
 
     print(f"[summary] Completed {len(runs)} runs.")
     return runs
@@ -185,10 +185,10 @@ def orchestrate_runs(args):
 
 def parse_args():
     p = argparse.ArgumentParser(description="Generate 8 datasets: 5 temperature runs of pi1 + 3 combination runs at T=1.0.")
-    p.add_argument("--model_path", type=str, default="/cephfs/lxh/models/qwen2.5-math-1.5b")
+    p.add_argument("--model_path", type=str, default="/cephfs/shared/Qwen2.5-Math-1.5B")
     p.add_argument("--base_output_dir", type=str, default="data")
     p.add_argument("--total_samples", type=int, default=16000, help="Total samples to generate per run.")
-    p.add_argument("--batch_size", type=int, default=256)
+    p.add_argument("--batch_size", type=int, default=1024)
     p.add_argument("--precision", type=str, default="bf16", choices=["bf16", "fp16", "fp32"])
     p.add_argument("--launcher", type=str, default="accelerate", choices=["none", "accelerate", "torchrun"],
                    help="Launcher to use for spawning multi-GPU processes for each generation run.")

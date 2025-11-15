@@ -1,220 +1,504 @@
 The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
 	`--num_machines` was set to a value of `1`
 	`--mixed_precision` was set to a value of `'no'`
 	`--dynamo_backend` was set to a value of `'no'`
 To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
 Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 160 responses: 160 per prompt * 1 prompts
-Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]
+Sampling on GPU 0:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 1:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 2:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 3:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 4:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 5:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 7:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 6:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 4:  50%|█████     | 1/2 [00:26<00:26, 26.54s/it][A
+Sampling on GPU 3:  50%|█████     | 1/2 [00:27<00:27, 27.36s/it][A
+Sampling on GPU 5:  50%|█████     | 1/2 [00:27<00:27, 27.75s/it][A
+Sampling on GPU 0:  50%|█████     | 1/2 [00:28<00:28, 28.38s/it][A
+Sampling on GPU 2:  50%|█████     | 1/2 [00:28<00:28, 28.71s/it][A
+Sampling on GPU 6:  50%|█████     | 1/2 [00:29<00:29, 29.74s/it][A
+Sampling on GPU 7:  50%|█████     | 1/2 [00:31<00:31, 31.52s/it][A
+Sampling on GPU 1:  50%|█████     | 1/2 [00:32<00:32, 32.11s/it][A
+Sampling on GPU 4: 100%|██████████| 2/2 [00:50<00:00, 24.78s/it][ASampling on GPU 4: 100%|██████████| 2/2 [00:50<00:00, 25.04s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.53s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.53s/it]
-gathered_ids.shape, torch.Size([160, 795])
+Filtering valid responses on rank 4:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 4: 100%|██████████| 25/25 [00:00<00:00, 1448.29it/s]
+Prompts: 100%|██████████| 1/1 [00:51<00:00, 51.32s/it]Prompts: 100%|██████████| 1/1 [00:51<00:00, 51.32s/it]
+saved csv files for rank 4 at data/pi1_temp_0_2/all_4.csv
 
-Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 2907.31it/s]
-Prompts: 100%|██████████| 1/1 [00:38<00:00, 38.64s/it]Prompts: 100%|██████████| 1/1 [00:38<00:00, 38.64s/it]
-Saved CSV files: correct=129 incorrect=31 total=160 in data/pi1_temp_0_2
+Sampling on GPU 3: 100%|██████████| 2/2 [00:51<00:00, 25.39s/it][ASampling on GPU 3: 100%|██████████| 2/2 [00:51<00:00, 25.69s/it]
+
+Filtering valid responses on rank 3:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 3: 100%|██████████| 25/25 [00:00<00:00, 1612.23it/s]
+Prompts: 100%|██████████| 1/1 [00:52<00:00, 52.60s/it]Prompts: 100%|██████████| 1/1 [00:52<00:00, 52.60s/it]
+saved csv files for rank 3 at data/pi1_temp_0_2/all_3.csv
+
+Sampling on GPU 0: 100%|██████████| 2/2 [00:52<00:00, 25.96s/it][ASampling on GPU 0: 100%|██████████| 2/2 [00:52<00:00, 26.33s/it]
+
+Filtering valid responses on rank 0:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 0: 100%|██████████| 25/25 [00:00<00:00, 1601.61it/s]
+Prompts: 100%|██████████| 1/1 [00:53<00:00, 53.88s/it]Prompts: 100%|██████████| 1/1 [00:53<00:00, 53.88s/it]
+saved csv files for rank 0 at data/pi1_temp_0_2/all_0.csv
+
+Sampling on GPU 2: 100%|██████████| 2/2 [00:53<00:00, 26.16s/it][ASampling on GPU 2: 100%|██████████| 2/2 [00:53<00:00, 26.54s/it]
+
+Filtering valid responses on rank 2:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 2: 100%|██████████| 25/25 [00:00<00:00, 1487.83it/s]
+Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.31s/it]Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.31s/it]
+saved csv files for rank 2 at data/pi1_temp_0_2/all_2.csv
+
+Sampling on GPU 5: 100%|██████████| 2/2 [00:53<00:00, 26.36s/it][ASampling on GPU 5: 100%|██████████| 2/2 [00:53<00:00, 26.57s/it]
+
+Filtering valid responses on rank 5:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 5: 100%|██████████| 25/25 [00:00<00:00, 1593.48it/s]
+Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.37s/it]Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.37s/it]
+saved csv files for rank 5 at data/pi1_temp_0_2/all_5.csv
+
+Sampling on GPU 6: 100%|██████████| 2/2 [00:53<00:00, 26.49s/it][ASampling on GPU 6: 100%|██████████| 2/2 [00:53<00:00, 26.98s/it]
+
+Filtering valid responses on rank 6:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 6: 100%|██████████| 25/25 [00:00<00:00, 1631.67it/s]
+Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.18s/it]Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.18s/it]
+saved csv files for rank 6 at data/pi1_temp_0_2/all_6.csv
+
+Sampling on GPU 7: 100%|██████████| 2/2 [00:56<00:00, 27.57s/it][ASampling on GPU 7: 100%|██████████| 2/2 [00:56<00:00, 28.17s/it]
+
+Filtering valid responses on rank 7:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 7: 100%|██████████| 25/25 [00:00<00:00, 1439.36it/s]
+Prompts: 100%|██████████| 1/1 [00:57<00:00, 57.56s/it]Prompts: 100%|██████████| 1/1 [00:57<00:00, 57.56s/it]
+saved csv files for rank 7 at data/pi1_temp_0_2/all_7.csv
+
+Sampling on GPU 1: 100%|██████████| 2/2 [00:57<00:00, 27.97s/it][ASampling on GPU 1: 100%|██████████| 2/2 [00:57<00:00, 28.59s/it]
+
+Filtering valid responses on rank 1:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 1: 100%|██████████| 25/25 [00:00<00:00, 1528.07it/s]
+Prompts: 100%|██████████| 1/1 [00:58<00:00, 58.41s/it]Prompts: 100%|██████████| 1/1 [00:58<00:00, 58.41s/it]
+saved csv files for rank 1 at data/pi1_temp_0_2/all_1.csv
+Saved CSV files: correct=147 incorrect=53 total=200 in data/pi1_temp_0_2
 The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
 	`--num_machines` was set to a value of `1`
 	`--mixed_precision` was set to a value of `'no'`
 	`--dynamo_backend` was set to a value of `'no'`
 To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
 Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 160 responses: 160 per prompt * 1 prompts
-Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]
+Sampling on GPU 0:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 2:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 1:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 3:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 4:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 5:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 7:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 6:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 7:  50%|█████     | 1/2 [00:27<00:27, 27.64s/it][A
+Sampling on GPU 1:  50%|█████     | 1/2 [00:28<00:28, 28.11s/it][A
+Sampling on GPU 5:  50%|█████     | 1/2 [00:28<00:28, 28.35s/it][A
+Sampling on GPU 2:  50%|█████     | 1/2 [00:28<00:28, 28.78s/it][A
+Sampling on GPU 0:  50%|█████     | 1/2 [00:29<00:29, 29.58s/it][A
+Sampling on GPU 3:  50%|█████     | 1/2 [00:30<00:30, 30.13s/it][A
+Sampling on GPU 6:  50%|█████     | 1/2 [00:31<00:31, 31.48s/it][A
+Sampling on GPU 4:  50%|█████     | 1/2 [00:35<00:35, 35.46s/it][A
+Sampling on GPU 3: 100%|██████████| 2/2 [00:52<00:00, 25.86s/it][ASampling on GPU 3: 100%|██████████| 2/2 [00:52<00:00, 26.50s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:42<00:00, 42.60s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:42<00:00, 42.60s/it]
-gathered_ids.shape, torch.Size([160, 840])
+Filtering valid responses on rank 3:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 3: 100%|██████████| 25/25 [00:00<00:00, 645.17it/s]
+Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.04s/it]Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.04s/it]
+saved csv files for rank 3 at data/pi1_temp_0_4/all_3.csv
 
-Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
-Filtering valid responses:  44%|████▍     | 71/160 [00:00<00:00, 556.84it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 900.13it/s]
-Prompts: 100%|██████████| 1/1 [00:42<00:00, 42.83s/it]Prompts: 100%|██████████| 1/1 [00:42<00:00, 42.83s/it]
-Saved CSV files: correct=134 incorrect=26 total=160 in data/pi1_temp_0_4
+Sampling on GPU 0: 100%|██████████| 2/2 [00:53<00:00, 26.24s/it][ASampling on GPU 0: 100%|██████████| 2/2 [00:53<00:00, 26.74s/it]
+
+Filtering valid responses on rank 0:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 0: 100%|██████████| 25/25 [00:00<00:00, 380.55it/s]
+Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.55s/it]Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.55s/it]
+saved csv files for rank 0 at data/pi1_temp_0_4/all_0.csv
+
+Sampling on GPU 2: 100%|██████████| 2/2 [00:53<00:00, 26.49s/it][ASampling on GPU 2: 100%|██████████| 2/2 [00:53<00:00, 26.83s/it]
+
+Filtering valid responses on rank 2:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 2: 100%|██████████| 25/25 [00:00<00:00, 1406.43it/s]
+Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.68s/it]Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.68s/it]
+saved csv files for rank 2 at data/pi1_temp_0_4/all_2.csv
+
+Sampling on GPU 1: 100%|██████████| 2/2 [00:53<00:00, 26.69s/it][ASampling on GPU 1: 100%|██████████| 2/2 [00:53<00:00, 26.90s/it]
+
+Filtering valid responses on rank 1:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 1: 100%|██████████| 25/25 [00:00<00:00, 1719.60it/s]
+Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.82s/it]Prompts: 100%|██████████| 1/1 [00:54<00:00, 54.82s/it]
+saved csv files for rank 1 at data/pi1_temp_0_4/all_1.csv
+
+Sampling on GPU 5: 100%|██████████| 2/2 [00:54<00:00, 26.79s/it][ASampling on GPU 5: 100%|██████████| 2/2 [00:54<00:00, 27.02s/it]
+
+Filtering valid responses on rank 5:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 5: 100%|██████████| 25/25 [00:00<00:00, 1865.99it/s]
+Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.06s/it]Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.06s/it]
+saved csv files for rank 5 at data/pi1_temp_0_4/all_5.csv
+
+Sampling on GPU 7: 100%|██████████| 2/2 [00:54<00:00, 27.12s/it][ASampling on GPU 7: 100%|██████████| 2/2 [00:54<00:00, 27.20s/it]
+
+Filtering valid responses on rank 7:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 7: 100%|██████████| 25/25 [00:00<00:00, 1832.15it/s]
+Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.42s/it]Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.42s/it]
+saved csv files for rank 7 at data/pi1_temp_0_4/all_7.csv
+
+Sampling on GPU 6: 100%|██████████| 2/2 [00:54<00:00, 26.56s/it][ASampling on GPU 6: 100%|██████████| 2/2 [00:54<00:00, 27.30s/it]
+
+Filtering valid responses on rank 6:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 6: 100%|██████████| 25/25 [00:00<00:00, 1588.25it/s]
+Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.62s/it]Prompts: 100%|██████████| 1/1 [00:55<00:00, 55.62s/it]
+saved csv files for rank 6 at data/pi1_temp_0_4/all_6.csv
+
+Sampling on GPU 4: 100%|██████████| 2/2 [00:58<00:00, 28.00s/it][ASampling on GPU 4: 100%|██████████| 2/2 [00:58<00:00, 29.12s/it]
+
+Filtering valid responses on rank 4:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 4: 100%|██████████| 25/25 [00:00<00:00, 1679.36it/s]
+Prompts: 100%|██████████| 1/1 [00:59<00:00, 59.25s/it]Prompts: 100%|██████████| 1/1 [00:59<00:00, 59.25s/it]
+saved csv files for rank 4 at data/pi1_temp_0_4/all_4.csv
+Saved CSV files: correct=169 incorrect=31 total=200 in data/pi1_temp_0_4
 The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
 	`--num_machines` was set to a value of `1`
 	`--mixed_precision` was set to a value of `'no'`
 	`--dynamo_backend` was set to a value of `'no'`
 To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
 Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 160 responses: 160 per prompt * 1 prompts
-Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]
+Sampling on GPU 0:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 1:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 2:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 3:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 5:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 4:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 7:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 6:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 1:  50%|█████     | 1/2 [00:27<00:27, 27.83s/it][A
+Sampling on GPU 4:  50%|█████     | 1/2 [00:29<00:29, 29.22s/it][A
+Sampling on GPU 2:  50%|█████     | 1/2 [00:29<00:29, 29.95s/it][A
+Sampling on GPU 3:  50%|█████     | 1/2 [00:31<00:31, 31.27s/it][A
+Sampling on GPU 7:  50%|█████     | 1/2 [00:37<00:37, 37.20s/it][A
+Sampling on GPU 1: 100%|██████████| 2/2 [00:50<00:00, 24.85s/it][ASampling on GPU 1: 100%|██████████| 2/2 [00:50<00:00, 25.30s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.73s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.73s/it]
-gathered_ids.shape, torch.Size([160, 1420])
+Filtering valid responses on rank 1:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 1: 100%|██████████| 25/25 [00:00<00:00, 1784.93it/s]
+Prompts: 100%|██████████| 1/1 [00:51<00:00, 51.73s/it]Prompts: 100%|██████████| 1/1 [00:51<00:00, 51.73s/it]
+saved csv files for rank 1 at data/pi1_temp_0_6/all_1.csv
 
-Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
-Filtering valid responses:  32%|███▎      | 52/160 [00:00<00:00, 386.08it/s][A
-Filtering valid responses:  57%|█████▋    | 91/160 [00:00<00:00, 298.94it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 462.13it/s]
-Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.13s/it]Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.13s/it]
-Saved CSV files: correct=127 incorrect=33 total=160 in data/pi1_temp_0_6
+Sampling on GPU 3: 100%|██████████| 2/2 [00:55<00:00, 26.90s/it][ASampling on GPU 3: 100%|██████████| 2/2 [00:55<00:00, 27.55s/it]
+
+Filtering valid responses on rank 3:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 3: 100%|██████████| 25/25 [00:00<00:00, 680.05it/s]
+Prompts: 100%|██████████| 1/1 [00:56<00:00, 56.25s/it]Prompts: 100%|██████████| 1/1 [00:56<00:00, 56.25s/it]
+saved csv files for rank 3 at data/pi1_temp_0_6/all_3.csv
+
+Sampling on GPU 2: 100%|██████████| 2/2 [00:58<00:00, 29.15s/it][ASampling on GPU 2: 100%|██████████| 2/2 [00:58<00:00, 29.27s/it]
+
+Filtering valid responses on rank 2:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 2: 100%|██████████| 25/25 [00:00<00:00, 1540.82it/s]
+Prompts: 100%|██████████| 1/1 [00:59<00:00, 59.67s/it]Prompts: 100%|██████████| 1/1 [00:59<00:00, 59.67s/it]
+saved csv files for rank 2 at data/pi1_temp_0_6/all_2.csv
+
+Sampling on GPU 5:  50%|█████     | 1/2 [01:03<01:03, 63.35s/it][A
+Sampling on GPU 4: 100%|██████████| 2/2 [01:05<00:00, 33.41s/it][ASampling on GPU 4: 100%|██████████| 2/2 [01:05<00:00, 32.78s/it]
+
+Filtering valid responses on rank 4:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 4: 100%|██████████| 25/25 [00:00<00:00, 323.96it/s]
+Prompts: 100%|██████████| 1/1 [01:06<00:00, 66.75s/it]Prompts: 100%|██████████| 1/1 [01:06<00:00, 66.75s/it]
+saved csv files for rank 4 at data/pi1_temp_0_6/all_4.csv
+
+Sampling on GPU 0:  50%|█████     | 1/2 [01:07<01:07, 67.64s/it][A
+Sampling on GPU 6:  50%|█████     | 1/2 [01:09<01:09, 69.85s/it][A
+Sampling on GPU 5: 100%|██████████| 2/2 [01:27<00:00, 40.33s/it][ASampling on GPU 5: 100%|██████████| 2/2 [01:27<00:00, 43.79s/it]
+
+Filtering valid responses on rank 5:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 5:  92%|█████████▏| 23/25 [00:00<00:00, 124.55it/s][AFiltering valid responses on rank 5: 100%|██████████| 25/25 [00:00<00:00, 134.77it/s]
+Prompts: 100%|██████████| 1/1 [01:28<00:00, 88.87s/it]Prompts: 100%|██████████| 1/1 [01:28<00:00, 88.87s/it]
+saved csv files for rank 5 at data/pi1_temp_0_6/all_5.csv
+
+Sampling on GPU 7: 100%|██████████| 2/2 [01:28<00:00, 45.52s/it][ASampling on GPU 7: 100%|██████████| 2/2 [01:28<00:00, 44.27s/it]
+
+Filtering valid responses on rank 7:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 7: 100%|██████████| 25/25 [00:00<00:00, 1716.61it/s]
+Prompts: 100%|██████████| 1/1 [01:29<00:00, 89.65s/it]Prompts: 100%|██████████| 1/1 [01:29<00:00, 89.65s/it]
+saved csv files for rank 7 at data/pi1_temp_0_6/all_7.csv
+
+Sampling on GPU 0: 100%|██████████| 2/2 [02:02<00:00, 59.86s/it][ASampling on GPU 0: 100%|██████████| 2/2 [02:02<00:00, 61.02s/it]
+
+Filtering valid responses on rank 0:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 0: 100%|██████████| 25/25 [00:00<00:00, 631.60it/s]
+Prompts: 100%|██████████| 1/1 [02:03<00:00, 123.21s/it]Prompts: 100%|██████████| 1/1 [02:03<00:00, 123.21s/it]
+saved csv files for rank 0 at data/pi1_temp_0_6/all_0.csv
+
+Sampling on GPU 6: 100%|██████████| 2/2 [02:05<00:00, 61.78s/it][ASampling on GPU 6: 100%|██████████| 2/2 [02:05<00:00, 62.99s/it]
+
+Filtering valid responses on rank 6:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 6: 100%|██████████| 25/25 [00:00<00:00, 632.46it/s]
+Prompts: 100%|██████████| 1/1 [02:07<00:00, 127.13s/it]Prompts: 100%|██████████| 1/1 [02:07<00:00, 127.13s/it]
+saved csv files for rank 6 at data/pi1_temp_0_6/all_6.csv
+Saved CSV files: correct=165 incorrect=35 total=200 in data/pi1_temp_0_6
 The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
 	`--num_machines` was set to a value of `1`
 	`--mixed_precision` was set to a value of `'no'`
 	`--dynamo_backend` was set to a value of `'no'`
 To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
 Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 160 responses: 160 per prompt * 1 prompts
-Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]
+Sampling on GPU 0:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 1:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 2:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 3:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 4:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 5:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 6:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 7:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 5:  50%|█████     | 1/2 [00:30<00:30, 30.64s/it][A
+Sampling on GPU 6:  50%|█████     | 1/2 [00:32<00:32, 32.97s/it][A
+Sampling on GPU 2:  50%|█████     | 1/2 [00:35<00:35, 35.63s/it][A
+Sampling on GPU 6: 100%|██████████| 2/2 [01:00<00:00, 29.62s/it][ASampling on GPU 6: 100%|██████████| 2/2 [01:00<00:00, 30.12s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [01:48<00:00, 108.07s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:48<00:00, 108.07s/it]
-gathered_ids.shape, torch.Size([160, 1420])
+Filtering valid responses on rank 6:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 6:   4%|▍         | 1/25 [00:00<00:03,  6.71it/s][AFiltering valid responses on rank 6: 100%|██████████| 25/25 [00:00<00:00, 118.38it/s]
+Prompts: 100%|██████████| 1/1 [01:01<00:00, 61.68s/it]Prompts: 100%|██████████| 1/1 [01:01<00:00, 61.68s/it]
+saved csv files for rank 6 at data/pi1_temp_0_8/all_6.csv
 
-Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
-Filtering valid responses:   2%|▏         | 3/160 [00:00<00:08, 17.77it/s][A
-Filtering valid responses:   7%|▋         | 11/160 [00:00<00:03, 42.54it/s][A
-Filtering valid responses:  44%|████▍     | 70/160 [00:00<00:00, 239.48it/s][A
-Filtering valid responses:  61%|██████▏   | 98/160 [00:00<00:00, 173.05it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 222.74it/s]
-Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.85s/it]Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.85s/it]
-Saved CSV files: correct=112 incorrect=48 total=160 in data/pi1_temp_0_8
+Sampling on GPU 7:  50%|█████     | 1/2 [01:02<01:02, 62.11s/it][A
+Sampling on GPU 0:  50%|█████     | 1/2 [01:02<01:02, 62.20s/it][A
+Sampling on GPU 1:  50%|█████     | 1/2 [01:02<01:02, 62.28s/it][A
+Sampling on GPU 4:  50%|█████     | 1/2 [01:02<01:02, 62.51s/it][A
+Sampling on GPU 3:  50%|█████     | 1/2 [01:05<01:05, 65.64s/it][A
+Sampling on GPU 5: 100%|██████████| 2/2 [01:23<00:00, 43.93s/it][ASampling on GPU 5: 100%|██████████| 2/2 [01:23<00:00, 41.93s/it]
+
+Filtering valid responses on rank 5:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 5: 100%|██████████| 25/25 [00:00<00:00, 337.58it/s]
+Prompts: 100%|██████████| 1/1 [01:25<00:00, 85.17s/it]Prompts: 100%|██████████| 1/1 [01:25<00:00, 85.17s/it]
+saved csv files for rank 5 at data/pi1_temp_0_8/all_5.csv
+
+Sampling on GPU 4: 100%|██████████| 2/2 [01:25<00:00, 39.36s/it][ASampling on GPU 4: 100%|██████████| 2/2 [01:25<00:00, 42.83s/it]
+
+Filtering valid responses on rank 4:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 4: 100%|██████████| 25/25 [00:00<00:00, 538.02it/s]
+Prompts: 100%|██████████| 1/1 [01:26<00:00, 86.93s/it]Prompts: 100%|██████████| 1/1 [01:26<00:00, 86.93s/it]
+saved csv files for rank 4 at data/pi1_temp_0_8/all_4.csv
+
+Sampling on GPU 2: 100%|██████████| 2/2 [01:31<00:00, 47.77s/it][ASampling on GPU 2: 100%|██████████| 2/2 [01:31<00:00, 45.95s/it]
+
+Filtering valid responses on rank 2:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 2: 100%|██████████| 25/25 [00:00<00:00, 395.00it/s]
+Prompts: 100%|██████████| 1/1 [01:33<00:00, 93.19s/it]Prompts: 100%|██████████| 1/1 [01:33<00:00, 93.19s/it]
+saved csv files for rank 2 at data/pi1_temp_0_8/all_2.csv
+
+Sampling on GPU 7: 100%|██████████| 2/2 [01:36<00:00, 45.64s/it][ASampling on GPU 7: 100%|██████████| 2/2 [01:36<00:00, 48.11s/it]
+
+Filtering valid responses on rank 7:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 7:  12%|█▏        | 3/25 [00:00<00:01, 19.96it/s][AFiltering valid responses on rank 7: 100%|██████████| 25/25 [00:00<00:00, 110.00it/s]
+Prompts: 100%|██████████| 1/1 [01:37<00:00, 97.67s/it]Prompts: 100%|██████████| 1/1 [01:37<00:00, 97.67s/it]
+saved csv files for rank 7 at data/pi1_temp_0_8/all_7.csv
+
+Sampling on GPU 0: 100%|██████████| 2/2 [01:54<00:00, 56.08s/it][ASampling on GPU 0: 100%|██████████| 2/2 [01:54<00:00, 57.00s/it]
+
+Filtering valid responses on rank 0:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 0: 100%|██████████| 25/25 [00:00<00:00, 1426.60it/s]
+Prompts: 100%|██████████| 1/1 [01:55<00:00, 115.25s/it]Prompts: 100%|██████████| 1/1 [01:55<00:00, 115.25s/it]
+saved csv files for rank 0 at data/pi1_temp_0_8/all_0.csv
+
+Sampling on GPU 1: 100%|██████████| 2/2 [01:57<00:00, 58.26s/it][ASampling on GPU 1: 100%|██████████| 2/2 [01:57<00:00, 58.87s/it]
+
+Filtering valid responses on rank 1:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 1:  88%|████████▊ | 22/25 [00:00<00:00, 168.92it/s][AFiltering valid responses on rank 1: 100%|██████████| 25/25 [00:00<00:00, 190.77it/s]
+Prompts: 100%|██████████| 1/1 [01:59<00:00, 119.09s/it]Prompts: 100%|██████████| 1/1 [01:59<00:00, 119.09s/it]
+saved csv files for rank 1 at data/pi1_temp_0_8/all_1.csv
+
+Sampling on GPU 3: 100%|██████████| 2/2 [01:59<00:00, 58.94s/it][ASampling on GPU 3: 100%|██████████| 2/2 [01:59<00:00, 59.95s/it]
+
+Filtering valid responses on rank 3:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 3: 100%|██████████| 25/25 [00:00<00:00, 1171.67it/s]
+Prompts: 100%|██████████| 1/1 [02:01<00:00, 121.15s/it]Prompts: 100%|██████████| 1/1 [02:01<00:00, 121.15s/it]
+saved csv files for rank 3 at data/pi1_temp_0_8/all_3.csv
+Saved CSV files: correct=140 incorrect=60 total=200 in data/pi1_temp_0_8
 The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
 	`--num_machines` was set to a value of `1`
 	`--mixed_precision` was set to a value of `'no'`
 	`--dynamo_backend` was set to a value of `'no'`
 To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
 Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 160 responses: 160 per prompt * 1 prompts
-Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 160 samples per process, total 160 samples (requested 160)
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Required 200 samples in total for 1 prompts using 8 processes.
+For each prompt, we generate 200 responses, with 25 per rank.
+In total, we generate 200 responses.
+Prompts:   0%|          | 0/1 [00:00<?, ?it/s]Prompts:   0%|          | 0/1 [00:00<?, ?it/s]
+Sampling on GPU 0:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 2:   0%|          | 0/2 [00:00<?, ?it/s]
+[ASampling on GPU 1:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 3:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 4:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 5:   0%|          | 0/2 [00:00<?, ?it/s]
+[ASampling on GPU 6:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 7:   0%|          | 0/2 [00:00<?, ?it/s][A
+Sampling on GPU 5:  50%|█████     | 1/2 [00:37<00:37, 37.21s/it][A
+Sampling on GPU 3:  50%|█████     | 1/2 [00:39<00:39, 39.39s/it][A
+Sampling on GPU 7:  50%|█████     | 1/2 [00:58<00:58, 58.90s/it][A
+Sampling on GPU 4:  50%|█████     | 1/2 [01:02<01:02, 62.65s/it][A
+Sampling on GPU 6:  50%|█████     | 1/2 [01:04<01:04, 64.55s/it][A
+Sampling on GPU 0:  50%|█████     | 1/2 [01:07<01:07, 67.22s/it][A
+Sampling on GPU 1:  50%|█████     | 1/2 [01:07<01:07, 67.85s/it][A
+Sampling on GPU 2:  50%|█████     | 1/2 [01:09<01:09, 69.25s/it][A
+Sampling on GPU 3: 100%|██████████| 2/2 [01:11<00:00, 34.97s/it][ASampling on GPU 3: 100%|██████████| 2/2 [01:11<00:00, 35.63s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.75s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:47<00:00, 107.75s/it]
-gathered_ids.shape, torch.Size([160, 1420])
+Filtering valid responses on rank 3:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 3: 100%|██████████| 25/25 [00:00<00:00, 1746.67it/s]
+Prompts: 100%|██████████| 1/1 [01:12<00:00, 72.52s/it]Prompts: 100%|██████████| 1/1 [01:12<00:00, 72.52s/it]
+saved csv files for rank 3 at data/pi1_temp_1_0/all_3.csv
 
-Filtering valid responses:   0%|          | 0/160 [00:00<?, ?it/s][A
-Filtering valid responses:   1%|          | 1/160 [00:00<00:23,  6.66it/s][A
-Filtering valid responses:  28%|██▊       | 45/160 [00:00<00:00, 210.10it/s][A
-Filtering valid responses:  44%|████▍     | 71/160 [00:00<00:00, 228.70it/s][A
-Filtering valid responses:  86%|████████▋ | 138/160 [00:00<00:00, 364.42it/s][AFiltering valid responses: 100%|██████████| 160/160 [00:00<00:00, 325.46it/s]
-Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.29s/it]Prompts: 100%|██████████| 1/1 [01:48<00:00, 108.29s/it]
-Saved CSV files: correct=76 incorrect=84 total=160 in data/pi1_temp_1_0
-The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
-	`--num_machines` was set to a value of `1`
-	`--mixed_precision` was set to a value of `'no'`
-	`--dynamo_backend` was set to a value of `'no'`
-To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
-Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 160 responses: 80 per prompt * 2 prompts
-Prompts:   0%|          | 0/2 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 80 samples per process, total 80 samples (requested 80)
+Sampling on GPU 5: 100%|██████████| 2/2 [01:29<00:00, 46.24s/it][ASampling on GPU 5: 100%|██████████| 2/2 [01:29<00:00, 44.89s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [01:00<00:00, 60.91s/it][ASampling on GPU 0: 100%|██████████| 1/1 [01:00<00:00, 60.91s/it]
-gathered_ids.shape, torch.Size([80, 1420])
+Filtering valid responses on rank 5:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 5:  12%|█▏        | 3/25 [00:00<00:01, 19.65it/s][AFiltering valid responses on rank 5: 100%|██████████| 25/25 [00:00<00:00, 136.84it/s]
+Prompts: 100%|██████████| 1/1 [01:31<00:00, 91.21s/it]Prompts: 100%|██████████| 1/1 [01:31<00:00, 91.21s/it]
+saved csv files for rank 5 at data/pi1_temp_1_0/all_5.csv
 
-Filtering valid responses:   0%|          | 0/80 [00:00<?, ?it/s][A
-Filtering valid responses:   1%|▏         | 1/80 [00:00<00:11,  6.72it/s][A
-Filtering valid responses:  48%|████▊     | 38/80 [00:00<00:00, 170.74it/s][AFiltering valid responses: 100%|██████████| 80/80 [00:00<00:00, 231.01it/s]
-Prompts:  50%|█████     | 1/2 [01:01<01:01, 61.30s/it]Multi-GPU sampling: 1 processes, 80 samples per process, total 80 samples (requested 80)
+Sampling on GPU 4: 100%|██████████| 2/2 [01:31<00:00, 42.72s/it][ASampling on GPU 4: 100%|██████████| 2/2 [01:31<00:00, 45.71s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:56<00:00, 56.67s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:56<00:00, 56.67s/it]
-gathered_ids.shape, torch.Size([80, 1345])
+Filtering valid responses on rank 4:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 4: 100%|██████████| 25/25 [00:00<00:00, 1468.98it/s]
+Prompts: 100%|██████████| 1/1 [01:32<00:00, 92.68s/it]Prompts: 100%|██████████| 1/1 [01:32<00:00, 92.68s/it]
+saved csv files for rank 4 at data/pi1_temp_1_0/all_4.csv
 
-Filtering valid responses:   0%|          | 0/80 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 80/80 [00:00<00:00, 2809.71it/s]
-Prompts: 100%|██████████| 2/2 [01:58<00:00, 58.61s/it]Prompts: 100%|██████████| 2/2 [01:58<00:00, 59.01s/it]
-Saved CSV files: correct=49 incorrect=111 total=160 in data/pi1_pi2_temp_1_0
-The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
-	`--num_machines` was set to a value of `1`
-	`--mixed_precision` was set to a value of `'no'`
-	`--dynamo_backend` was set to a value of `'no'`
-To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
-Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 162 responses: 54 per prompt * 3 prompts
-Prompts:   0%|          | 0/3 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 54 samples per process, total 54 samples (requested 54)
+Sampling on GPU 7: 100%|██████████| 2/2 [01:50<00:00, 54.85s/it][ASampling on GPU 7: 100%|██████████| 2/2 [01:50<00:00, 55.46s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:46<00:00, 46.15s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:46<00:00, 46.15s/it]
-gathered_ids.shape, torch.Size([54, 1420])
+Filtering valid responses on rank 7:   0%|          | 0/25 [00:00<?, ?it/s][AFiltering valid responses on rank 7: 100%|██████████| 25/25 [00:00<00:00, 595.29it/s]
+Prompts: 100%|██████████| 1/1 [01:52<00:00, 112.20s/it]Prompts: 100%|██████████| 1/1 [01:52<00:00, 112.20s/it]
+saved csv files for rank 7 at data/pi1_temp_1_0/all_7.csv
 
-Filtering valid responses:   0%|          | 0/54 [00:00<?, ?it/s][A
-Filtering valid responses:   4%|▎         | 2/54 [00:00<00:03, 13.25it/s][A
-Filtering valid responses:  43%|████▎     | 23/54 [00:00<00:00, 104.08it/s][A
-Filtering valid responses:  93%|█████████▎| 50/54 [00:00<00:00, 169.04it/s][AFiltering valid responses: 100%|██████████| 54/54 [00:00<00:00, 148.71it/s]
-Prompts:  33%|███▎      | 1/3 [00:46<01:33, 46.55s/it]Multi-GPU sampling: 1 processes, 54 samples per process, total 54 samples (requested 54)
+Sampling on GPU 6: 100%|██████████| 2/2 [01:58<00:00, 58.54s/it][ASampling on GPU 6: 100%|██████████| 2/2 [01:58<00:00, 59.44s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:43<00:00, 43.58s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:43<00:00, 43.58s/it]
-gathered_ids.shape, torch.Size([54, 1345])
+Filtering valid responses on rank 6:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 6:  16%|█▌        | 4/25 [00:00<00:00, 36.32it/s][A
+Filtering valid responses on rank 6:  32%|███▏      | 8/25 [00:00<00:00, 38.12it/s][AFiltering valid responses on rank 6: 100%|██████████| 25/25 [00:00<00:00, 105.24it/s]
+Prompts: 100%|██████████| 1/1 [02:00<00:00, 120.37s/it]Prompts: 100%|██████████| 1/1 [02:00<00:00, 120.37s/it]
+saved csv files for rank 6 at data/pi1_temp_1_0/all_6.csv
 
-Filtering valid responses:   0%|          | 0/54 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 54/54 [00:00<00:00, 2157.95it/s]
-Prompts:  67%|██████▋   | 2/3 [01:30<00:44, 44.83s/it]Multi-GPU sampling: 1 processes, 54 samples per process, total 54 samples (requested 54)
+Sampling on GPU 0: 100%|██████████| 2/2 [02:01<00:00, 59.79s/it][ASampling on GPU 0: 100%|██████████| 2/2 [02:01<00:00, 60.90s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:45<00:00, 45.30s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:45<00:00, 45.30s/it]
-gathered_ids.shape, torch.Size([54, 1414])
+Filtering valid responses on rank 0:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 0: 100%|██████████| 25/25 [00:00<00:00, 210.46it/s][AFiltering valid responses on rank 0: 100%|██████████| 25/25 [00:00<00:00, 210.13it/s]
+Prompts: 100%|██████████| 1/1 [02:03<00:00, 123.18s/it]Prompts: 100%|██████████| 1/1 [02:03<00:00, 123.18s/it]
+saved csv files for rank 0 at data/pi1_temp_1_0/all_0.csv
 
-Filtering valid responses:   0%|          | 0/54 [00:00<?, ?it/s][A
-Filtering valid responses:  24%|██▍       | 13/54 [00:00<00:00, 43.34it/s][A
-Filtering valid responses:  44%|████▍     | 24/54 [00:00<00:00, 49.57it/s][A
-Filtering valid responses:  87%|████████▋ | 47/54 [00:00<00:00, 86.23it/s][AFiltering valid responses: 100%|██████████| 54/54 [00:00<00:00, 66.67it/s]
-Prompts: 100%|██████████| 3/3 [02:16<00:00, 45.43s/it]Prompts: 100%|██████████| 3/3 [02:16<00:00, 45.44s/it]
-Saved CSV files: correct=34 incorrect=128 total=162 in data/pi1_pi2_pi13_temp_1_0
-The following values were not passed to `accelerate launch` and had defaults used instead:
-	`--num_processes` was set to a value of `1`
-	`--num_machines` was set to a value of `1`
-	`--mixed_precision` was set to a value of `'no'`
-	`--dynamo_backend` was set to a value of `'no'`
-To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
-Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-`torch_dtype` is deprecated! Use `dtype` instead!
-Planning to generate 160 responses: 40 per prompt * 4 prompts
-Prompts:   0%|          | 0/4 [00:00<?, ?it/s]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
+Sampling on GPU 1: 100%|██████████| 2/2 [02:03<00:00, 60.69s/it][ASampling on GPU 1: 100%|██████████| 2/2 [02:03<00:00, 61.76s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.58s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.58s/it]
-gathered_ids.shape, torch.Size([40, 1420])
+Filtering valid responses on rank 1:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 1:  72%|███████▏  | 18/25 [00:00<00:00, 112.07it/s][AFiltering valid responses on rank 1: 100%|██████████| 25/25 [00:00<00:00, 102.29it/s]
+Prompts: 100%|██████████| 1/1 [02:05<00:00, 125.02s/it]Prompts: 100%|██████████| 1/1 [02:05<00:00, 125.02s/it]
+saved csv files for rank 1 at data/pi1_temp_1_0/all_1.csv
 
-Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][A
-Filtering valid responses:   2%|▎         | 1/40 [00:00<00:04,  9.55it/s][A
-Filtering valid responses:  20%|██        | 8/40 [00:00<00:00, 41.42it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 129.95it/s]
-Prompts:  25%|██▌       | 1/4 [00:39<01:59, 39.92s/it]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
+Sampling on GPU 2: 100%|██████████| 2/2 [02:03<00:00, 60.71s/it][ASampling on GPU 2: 100%|██████████| 2/2 [02:03<00:00, 61.99s/it]
 
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:37<00:00, 37.42s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:37<00:00, 37.42s/it]
-gathered_ids.shape, torch.Size([40, 1345])
-
-Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 1306.74it/s]
-Prompts:  50%|█████     | 2/4 [01:17<01:16, 38.48s/it]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
-
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.60s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:38<00:00, 38.60s/it]
-gathered_ids.shape, torch.Size([40, 1414])
-
-Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][A
-Filtering valid responses:  52%|█████▎    | 21/40 [00:00<00:00, 73.65it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 107.96it/s]
-Prompts:  75%|███████▌  | 3/4 [01:56<00:38, 38.71s/it]Multi-GPU sampling: 1 processes, 40 samples per process, total 40 samples (requested 40)
-
-Sampling on GPU 0:   0%|          | 0/1 [00:00<?, ?it/s][A
-Sampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.74s/it][ASampling on GPU 0: 100%|██████████| 1/1 [00:39<00:00, 39.74s/it]
-gathered_ids.shape, torch.Size([40, 1489])
-
-Filtering valid responses:   0%|          | 0/40 [00:00<?, ?it/s][AFiltering valid responses: 100%|██████████| 40/40 [00:00<00:00, 2550.39it/s]
-Prompts: 100%|██████████| 4/4 [02:36<00:00, 39.13s/it]Prompts: 100%|██████████| 4/4 [02:36<00:00, 39.04s/it]
-Saved CSV files: correct=30 incorrect=130 total=160 in data/pi1_pi2_pi13_pi1209_temp_1_0
-[auto] single GPU detected or torch not available; proceeding with 1 process.
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_2 --total_samples 160 --batch_size 256 --temperature 0.2 --precision bf16
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_4 --total_samples 160 --batch_size 256 --temperature 0.4 --precision bf16
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_6 --total_samples 160 --batch_size 256 --temperature 0.6 --precision bf16
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_8 --total_samples 160 --batch_size 256 --temperature 0.8 --precision bf16
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1_pi2.csv --output_dir data/pi1_pi2_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1_pi2_pi13.csv --output_dir data/pi1_pi2_pi13_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
-[run] accelerate launch data-preparation/generate_all_responses.py --model_path /cephfs/lxh/models/qwen2.5-math-1.5b --input_data data-preparation/input-data/subsets/pi1_pi2_pi13_pi1209.csv --output_dir data/pi1_pi2_pi13_pi1209_temp_1_0 --total_samples 160 --batch_size 256 --temperature 1.0 --precision bf16
-[summary] Completed 8 runs.
+Filtering valid responses on rank 2:   0%|          | 0/25 [00:00<?, ?it/s][A
+Filtering valid responses on rank 2:  84%|████████▍ | 21/25 [00:00<00:00, 120.78it/s][AFiltering valid responses on rank 2: 100%|██████████| 25/25 [00:00<00:00, 142.58it/s]
+Prompts: 100%|██████████| 1/1 [02:05<00:00, 125.41s/it]Prompts: 100%|██████████| 1/1 [02:05<00:00, 125.41s/it]
+saved csv files for rank 2 at data/pi1_temp_1_0/all_2.csv
+Saved CSV files: correct=104 incorrect=96 total=200 in data/pi1_temp_1_0
+[auto] num_processes not set; using detected GPU count: 8
+[run] accelerate launch --num_processes 8 data-preparation/generate_all_responses.py --model_path /cephfs/shared/Qwen2.5-Math-1.5B --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_2 --total_samples 200 --batch_size 16 --temperature 0.2 --precision bf16
+[run] accelerate launch --num_processes 8 data-preparation/generate_all_responses.py --model_path /cephfs/shared/Qwen2.5-Math-1.5B --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_4 --total_samples 200 --batch_size 16 --temperature 0.4 --precision bf16
+[run] accelerate launch --num_processes 8 data-preparation/generate_all_responses.py --model_path /cephfs/shared/Qwen2.5-Math-1.5B --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_6 --total_samples 200 --batch_size 16 --temperature 0.6 --precision bf16
+[run] accelerate launch --num_processes 8 data-preparation/generate_all_responses.py --model_path /cephfs/shared/Qwen2.5-Math-1.5B --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_0_8 --total_samples 200 --batch_size 16 --temperature 0.8 --precision bf16
+[run] accelerate launch --num_processes 8 data-preparation/generate_all_responses.py --model_path /cephfs/shared/Qwen2.5-Math-1.5B --input_data data-preparation/input-data/subsets/pi1.csv --output_dir data/pi1_temp_1_0 --total_samples 200 --batch_size 16 --temperature 1.0 --precision bf16
+[summary] Completed 5 runs.
 
 All done. You can inspect datasets under: data

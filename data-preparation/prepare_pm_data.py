@@ -165,7 +165,7 @@ def judge_answers(texts: list[str], answer: str) -> tuple[list[str], list[str]]:
     """Retain responses that contain the reference answer as a substring."""
     correct_answers = []
     incorrect_answers = []
-    answer_value = float(answer)
+    answer_value = float(answer) ## maybe can consider latex2sympy later
     lower_bound = answer_value * 0.9
     upper_bound = answer_value * 1.1
     if lower_bound > upper_bound:
