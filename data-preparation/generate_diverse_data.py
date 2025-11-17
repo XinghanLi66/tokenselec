@@ -117,6 +117,12 @@ def run_generation(input_csv: Path, temperature: float, out_dir: Path, args) -> 
     else:
         print("[dry-run] skipped generation")
 
+    print(f"[run] python data-preparation/merge_all_csvs.py {out_dir}")
+    if not args.dry_run:
+        subprocess.run(["python", "data-preparation/merge_all_csvs.py", str(out_dir)], check=True)
+    else:
+        print("[dry-run] skipped merging")
+
 
 def get_run_files(dataset_dir: Path):
     """Return paths to correct/incorrect CSV files for a run."""

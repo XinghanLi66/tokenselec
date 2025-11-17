@@ -137,6 +137,8 @@ def sample_many(
             # print("current_ids shape:", current_ids.shape)
             ids.append(current_ids)
         remaining_samples -= cur_batch_size
+
+        # accelerator.wait_for_everyone()
         
     pad_id = tok.pad_token_id
     max_len_local = max(t.shape[1] for t in ids)
@@ -300,6 +302,7 @@ def main():
         "pad_token_id": tok.pad_token_id,
     }
 
+    all_records = []
     for idx, row in tqdm(df.iterrows(), total=len(df), desc="Prompts"):
         prompt_text = extract_prompt(row["prompt"])
         answer_text = extract_answer(row["reward_model"])
@@ -307,35 +310,36 @@ def main():
 
         gen_texts = sample_many(acc, model, tok, formatted_prompt,
                                 cur_n=per_rank_target, batch=batch_size, gen_kwargs=gen_kwargs)
-        all_records = judge_answers(acc, formatted_prompt, int(idx), gen_texts, answer_text)
+        all_records.extend(judge_answers(acc, formatted_prompt, int(idx), gen_texts, answer_text))
     
     rank = acc.process_index
     cur_path = out_dir / f"all_{rank}.csv"
     cur_df = pd.DataFrame(all_records)
     cur_df.to_csv(cur_path, index=False)
     print(f"saved csv files for rank {rank} at {cur_path}")
-    acc.wait_for_everyone()
+    # acc.wait_for_everyone() 
 
+    ## Moved this to merge_all_csvs.py, eliminate nccl dependency
     ## only main process gathers all csv
-    if acc.is_main_process:
-        all_dfs = []
-        for r in range(acc.num_processes):
-            path_r = out_dir / f"all_{r}.csv"
-            all_dfs.append(pd.read_csv(path_r))
-            os.remove(path_r)
+    # if acc.is_main_process:
+    #     all_dfs = []
+    #     for r in range(acc.num_processes):
+    #         path_r = out_dir / f"all_{r}.csv"
+    #         all_dfs.append(pd.read_csv(path_r))
+    #         os.remove(path_r)
 
-        out_df = pd.concat(all_dfs, ignore_index=True)
-        correct_df = out_df[out_df.correct == 1].copy()
-        incorrect_df = out_df[out_df.correct == 0].copy()
+    #     out_df = pd.concat(all_dfs, ignore_index=True)
+    #     correct_df = out_df[out_df.correct == 1].copy()
+    #     incorrect_df = out_df[out_df.correct == 0].copy()
 
-        correct_df.to_csv(out_dir / "correct.csv", index=False)
-        incorrect_df.to_csv(out_dir / "incorrect.csv", index=False)
-        out_df.to_csv(out_dir / "all.csv", index=False)
+    #     correct_df.to_csv(out_dir / "correct.csv", index=False)
+    #     incorrect_df.to_csv(out_dir / "incorrect.csv", index=False)
+    #     out_df.to_csv(out_dir / "all.csv", index=False)
 
-        print(
-            f"Saved CSV files: correct={len(correct_df)} "
-            f"incorrect={len(incorrect_df)} total={len(out_df)} in {out_dir}"
-        )
+    #     print(
+    #         f"Saved CSV files: correct={len(correct_df)} "
+    #         f"incorrect={len(incorrect_df)} total={len(out_df)} in {out_dir}"
+    #     )
 
 
 if __name__ == "__main__":
